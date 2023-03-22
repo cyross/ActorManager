@@ -7,14 +7,19 @@ namespace VHActorManager.WebService
     internal class WebServer
     {
         private const string DOCUMENT_ROOT = "docroot";
-        private bool isRunning = false;
+        private string baseUrl;
+        private bool isRunning;
         private User userMaster;
 
         public bool IsRunning { get { return isRunning; } }
 
-        public WebServer(User userMaster)
+        public string BaseUrl { get { return baseUrl; } }
+
+        public WebServer(User user)
         {
-            this.userMaster = userMaster;
+            userMaster = user;
+            baseUrl = "";
+            isRunning = false;
         }
 
         public async void Start()
@@ -26,7 +31,8 @@ namespace VHActorManager.WebService
                 server.UseContentFolders();
 
                 string serverPort = PortFinder.FindNextLocalOpenPort(userMaster.Server.Port);
-                server.Prefixes.Add($"http://localhost:{serverPort}/");
+                baseUrl = $"http://localhost:{serverPort}/";
+                server.Prefixes.Add(baseUrl);
 
                 server.AutoParseFormUrlEncodedData();
 
@@ -42,6 +48,9 @@ namespace VHActorManager.WebService
             }
         }
 
-        public void Stop() { isRunning = false; }
+        public void Stop() {
+            baseUrl = "";
+            isRunning = false;
+        }
     }
 }

@@ -40,6 +40,7 @@
             OpenFileDialog = new OpenFileDialog();
             SaveUserYAMLButton = new Button();
             ServerStatusBox = new TextBox();
+            BaseUrlBox = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             ServerStartButton.FlatStyle = FlatStyle.Flat;
             ServerStartButton.Font = new Font("メイリオ", 9F, FontStyle.Bold, GraphicsUnit.Point);
             ServerStartButton.ForeColor = Color.White;
-            ServerStartButton.Location = new Point(284, 125);
+            ServerStartButton.Location = new Point(72, 125);
             ServerStartButton.Margin = new Padding(3, 4, 3, 4);
             ServerStartButton.Name = "ServerStartButton";
             ServerStartButton.Size = new Size(98, 28);
@@ -82,7 +83,7 @@
             ServerStopButton.FlatStyle = FlatStyle.Flat;
             ServerStopButton.Font = new Font("メイリオ", 9F, FontStyle.Bold, GraphicsUnit.Point);
             ServerStopButton.ForeColor = Color.Black;
-            ServerStopButton.Location = new Point(388, 125);
+            ServerStopButton.Location = new Point(176, 125);
             ServerStopButton.Margin = new Padding(3, 4, 3, 4);
             ServerStopButton.Name = "ServerStopButton";
             ServerStopButton.Size = new Size(98, 28);
@@ -188,11 +189,20 @@
             // 
             ServerStatusBox.BackColor = Color.FromArgb(192, 255, 192);
             ServerStatusBox.BorderStyle = BorderStyle.None;
-            ServerStatusBox.Location = new Point(502, 130);
+            ServerStatusBox.Location = new Point(290, 130);
             ServerStatusBox.Name = "ServerStatusBox";
-            ServerStatusBox.Size = new Size(194, 18);
+            ServerStatusBox.Size = new Size(56, 18);
             ServerStatusBox.TabIndex = 14;
             ServerStatusBox.Text = "停止中";
+            ServerStatusBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // BaseUrlBox
+            // 
+            BaseUrlBox.BorderStyle = BorderStyle.FixedSingle;
+            BaseUrlBox.Location = new Point(352, 127);
+            BaseUrlBox.Name = "BaseUrlBox";
+            BaseUrlBox.Size = new Size(374, 25);
+            BaseUrlBox.TabIndex = 15;
             // 
             // Form1
             // 
@@ -201,6 +211,7 @@
             BackColor = Color.OldLace;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(797, 160);
+            Controls.Add(BaseUrlBox);
             Controls.Add(ServerStatusBox);
             Controls.Add(SaveUserYAMLButton);
             Controls.Add(groupBox1);
@@ -234,5 +245,6 @@
         private OpenFileDialog OpenFileDialog;
         private Button SaveUserYAMLButton;
         private TextBox ServerStatusBox;
+        private TextBox BaseUrlBox;
     }
 }

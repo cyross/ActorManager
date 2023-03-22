@@ -66,6 +66,7 @@ namespace VHActorManager
             ServerStartButton.Enabled = false;
             ServerStopButton.Enabled = true;
             ServerStatusBox.Text = SERVER_RUNNING;
+            BaseUrlBox.Text = webServer.BaseUrl;
         }
 
         private void ServerStopButton_Click(object sender, EventArgs e)
@@ -74,6 +75,7 @@ namespace VHActorManager
             ServerStartButton.Enabled = true;
             ServerStopButton.Enabled = false;
             ServerStatusBox.Text = SERVER_STOPPING;
+            BaseUrlBox.Text = "";
         }
     }
 }
