@@ -1,12 +1,17 @@
 using VHActorManager.Master;
+using VHActorManager.WebService;
 
 namespace VHActorManager
 {
     public partial class Form1 : Form
     {
+        private const string SERVER_RUNNING = "‹N“®’†";
+        private const string SERVER_STOPPING = "’âŽ~’†";
+
         private readonly User user;
         private readonly ActorMaster actorMaster;
         private readonly VoiceEngineMaster voiceEngineMaster;
+        private readonly WebServer webServer;
 
         public Form1()
         {
@@ -19,9 +24,14 @@ namespace VHActorManager
             voiceEngineMaster = new();
             voiceEngineMaster.Load();
 
+            webServer = new WebServer(user);
+
             InitializeComponent();
 
-            MasterYAMLPathBox.Text = user.MasterFilepath;
+            ServerStartButton.Enabled = true;
+            ServerStopButton.Enabled = false;
+            ServerStatusBox.Text = SERVER_STOPPING;
+
             PortBox.Text = user.Server.Port.ToString();
             VSYAMLEnableCheck.Checked = user.VHYaml.Enable;
             VSYAMLFilePathBox.Text = user.VHYaml.Path;
@@ -30,15 +40,6 @@ namespace VHActorManager
         private void QuitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void MasterYAMLPathButton_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog.FileName = MasterYAMLPathBox.Text;
-
-            if(OpenFileDialog.ShowDialog() == DialogResult.Cancel) { return; }
-
-            MasterYAMLPathBox.Text = OpenFileDialog.FileName;
         }
 
         private void VSYAMLFilePathButton_Click(object sender, EventArgs e)
@@ -52,12 +53,27 @@ namespace VHActorManager
 
         private void SaveUserYAMLButton_Click(object sender, EventArgs e)
         {
-            user.MasterFilepath = MasterYAMLPathBox.Text;
             user.Server.Port = int.Parse(PortBox.Text);
             user.VHYaml.Enable = VSYAMLEnableCheck.Checked;
             user.VHYaml.Path = VSYAMLFilePathBox.Text;
 
             user.Save();
+        }
+
+        private void ServerStartButton_Click(object sender, EventArgs e)
+        {
+            webServer.Start();
+            ServerStartButton.Enabled = false;
+            ServerStopButton.Enabled = true;
+            ServerStatusBox.Text = SERVER_RUNNING;
+        }
+
+        private void ServerStopButton_Click(object sender, EventArgs e)
+        {
+            webServer.Stop();
+            ServerStartButton.Enabled = true;
+            ServerStopButton.Enabled = false;
+            ServerStatusBox.Text = SERVER_STOPPING;
         }
     }
 }

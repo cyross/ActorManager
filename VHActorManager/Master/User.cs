@@ -1,13 +1,10 @@
 ﻿using YamlDotNet.RepresentationModel;
-using VHYAML;
-using System.Diagnostics;
 
 namespace VHActorManager.Master
 {
     public class User: MasterBase
     {
         private const string DEFAULT_FILE = "user.yaml";
-        private const string MASTER_FILEPATH = "MasterFilepath";
         private const string SERVER_KEY = "Server";
         private const string SERVER_PORT = "Port";
         private const string VSY_KEY = "VegasScriptYAML";
@@ -15,19 +12,12 @@ namespace VHActorManager.Master
         private const string VSY_PATH = "Path";
         private const string EXT_DATA = "ExtData";
 
-        private string master_filepath;
         public ServerSpec Server;
         public VHYamlSpec VHYaml;
         public Dictionary<string, string> ExtData;
 
-        public string MasterFilepath {
-            get { return master_filepath; }
-            set { master_filepath = value; }
-        }
-
         public User(string fileName = DEFAULT_FILE): base(fileName)
         {
-            master_filepath = "";
             Server = new ServerSpec()
             {
                 Port = 3300
@@ -75,12 +65,7 @@ namespace VHActorManager.Master
 
         private void CbSclDepth1(YamlScalarNode node)
         {
-            switch (CurrentKey)
-            {
-                case MASTER_FILEPATH:
-                    master_filepath = GetString(node);
-                    break;
-            }
+            // 昔は項目があったが現在は削除
         }
 
         private void CbSclDepth2(YamlScalarNode node)

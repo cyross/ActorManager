@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Grapevine" Version="5.0.0-rc.10" />
     <PackageReference Include="YamlDotNet" Version="13.0.2" />
   </ItemGroup>
 
@@ -33,7 +34,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(SolutionDir)\voice_engine_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\actor_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\user.yaml $(OutDir)&#xD;&#xA;" />
+    <Exec Command="copy $(SolutionDir)\voice_engine_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\actor_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\user.yaml $(OutDir)&#xD;&#xA;xcopy /E /I /Y $(SolutionDir)\docroot $(OutDir)\docroot&#xD;&#xA;" />
   </Target>
 
 </Project>
