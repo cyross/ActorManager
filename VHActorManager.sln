@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VHActorManager", "VHActorManager\VHActorManager.csproj", "{01080E41-8EA3-4F1A-B182-3FD9740D9D3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{57941F71-4D63-43D9-AEFD-8704EE8E4287}"
+	ProjectSection(SolutionItems) = preProject
+		actor_master.yaml = actor_master.yaml
+		user.yaml = user.yaml
+		voice_engine_master.yaml = voice_engine_master.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VHYAML", "YAMLManager\VHYAML.csproj", "{65F9433C-E984-4F3D-813F-65A3D79507BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01080E41-8EA3-4F1A-B182-3FD9740D9D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01080E41-8EA3-4F1A-B182-3FD9740D9D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01080E41-8EA3-4F1A-B182-3FD9740D9D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01080E41-8EA3-4F1A-B182-3FD9740D9D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F9433C-E984-4F3D-813F-65A3D79507BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F9433C-E984-4F3D-813F-65A3D79507BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F9433C-E984-4F3D-813F-65A3D79507BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F9433C-E984-4F3D-813F-65A3D79507BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFBABEE9-6520-424A-B9B0-4FA672ADC77E}
+	EndGlobalSection
+EndGlobal

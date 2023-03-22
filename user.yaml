@@ -1,0 +1,6 @@
+MasterFilepath: ""
+Server:
+  Port: 3300
+VegasScriptYAML:
+  Enable: false
+  Path: ""
