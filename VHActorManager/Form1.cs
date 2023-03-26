@@ -10,6 +10,7 @@ namespace VHActorManager
 
         private readonly User user;
         private readonly ActorMaster actorMaster;
+        private readonly ColorMaster colorMaster;
         private readonly VoiceEngineMaster voiceEngineMaster;
         private readonly WebServer webServer;
 
@@ -20,6 +21,9 @@ namespace VHActorManager
 
             actorMaster = new();
             actorMaster.Load();
+
+            colorMaster = new();
+            colorMaster.Load();
 
             voiceEngineMaster = new();
             voiceEngineMaster.Load();

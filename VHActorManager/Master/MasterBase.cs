@@ -73,7 +73,19 @@ namespace VHActorManager.Master
             }
             else
             {
-                throw new("YAML Node の値が null か、書式が整数ではありません");
+                throw new("YAML Node の値が null か、書式がInt整数ではありません");
+            }
+        }
+
+        protected byte GetByte(YamlScalarNode node)
+        {
+            if (byte.TryParse(node.Value, out byte value))
+            {
+                return value;
+            }
+            else
+            {
+                throw new("YAML Node の値が null か、書式がByte整数ではありません");
             }
         }
 

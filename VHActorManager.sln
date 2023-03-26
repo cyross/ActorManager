@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{57941F71-4D63-43D9-AEFD-8704EE8E4287}"
 	ProjectSection(SolutionItems) = preProject
 		actor_master.yaml = actor_master.yaml
+		color_master.yaml = color_master.yaml
 		user.yaml = user.yaml
 		voice_engine_master.yaml = voice_engine_master.yaml
 	EndProjectSection

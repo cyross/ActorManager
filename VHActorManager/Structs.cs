@@ -1,4 +1,6 @@
-﻿namespace VHActorManager
+﻿using System.Drawing;
+
+namespace VHActorManager
 {
     public struct ServerSpec
     {
@@ -42,5 +44,19 @@
         public TextAttr JimakuAttr;
         public TextAttr ActorAttr;
         public Dictionary<string, string> ExtData;
+    }
+
+    public struct ColorSpec
+    {
+        public string Name;
+        public string Hex;
+        public ColorType Type;
+        public byte R;
+        public byte G;
+        public byte B;
+        public string ToHex()
+        {
+            return string.Format("#{0:X2}{1:X2}{2:X2}", R, G, B);
+        }
     }
 }
