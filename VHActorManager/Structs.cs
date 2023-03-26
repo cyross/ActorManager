@@ -106,4 +106,10 @@ namespace VHActorManager
             return Set(ResultStatus.FATAL, msg);
         }
     }
+
+    public struct NameListElement
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
 }

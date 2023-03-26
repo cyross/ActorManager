@@ -39,12 +39,28 @@ namespace VHActorManager.Master
 
         public List<ActorSpec> Specs { get { return specs; } }
 
-        public override string ToJson()
+        public override string NameListToJson() {
+            List<NameListElement> names = new List<NameListElement>();
+
+            for (int i = 0; i< specs.Count; i++)
+            {
+                NameListElement nameElement = new NameListElement()
+                {
+                    Id = i,
+                    Name = specs[i].Name
+                };
+                names.Add(nameElement);
+            }
+
+            return JsonSerializer.Serialize(names);
+        }
+
+        public override string SpecsToJson()
         {
             return JsonSerializer.Serialize(specs);
         }
 
-        public override string ToJson(string indexParam)
+        public override string SpecToJson(string indexParam)
         {
             if(!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
 
@@ -53,7 +69,7 @@ namespace VHActorManager.Master
             return JsonSerializer.Serialize(specs[index]);
         }
 
-        public override string FromJson(string json)
+        public override string SpecsFromJson(string json)
         {
             ActorSpec? spec = JsonSerializer.Deserialize<ActorSpec>(json);
 
@@ -64,7 +80,7 @@ namespace VHActorManager.Master
             return ResponseSucceed();
         }
 
-        public override string FromJson(string indexParam, string json)
+        public override string SpecFromJson(string indexParam, string json)
         {
             if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
 
@@ -79,7 +95,7 @@ namespace VHActorManager.Master
             return ResponseSucceed();
         }
 
-        public override string Delete(string indexParam)
+        public override string DeleteSpec(string indexParam)
         {
             if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
 

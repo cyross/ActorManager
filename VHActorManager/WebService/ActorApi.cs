@@ -9,39 +9,34 @@ namespace VHActorManager.WebService
         [RestRoute("Get", "/SaveActor")]
         public async Task Save(IHttpContext context)
         {
-            IHttpResponse response = context.Response as IHttpResponse;
+            ActorMaster.Instance().Save();
 
-            ResponseMessage status = new ResponseMessage().Succeed();
+            await ApiUtils.CreateAndSendResponse(context, new ResponseMessage().Succeed().ToJson());
+        }
 
-            string json = status.ToJson();
+        [RestRoute("Get", "/ActorSpec/Index")]
+        public async Task GetNameList(IHttpContext context)
+        {
+            string json = ActorMaster.Instance().NameListToJson();
 
-            response.ContentType = ContentType.Json;
-            await response.SendResponseAsync(json);
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Get", "/ActorSpec")]
         public async Task Get(IHttpContext context)
         {
-            ActorMaster master = ActorMaster.Instance();
-            string json = master.ToJson();
+            string json = ActorMaster.Instance().SpecsToJson();
 
-            IHttpResponse response = context.Response as IHttpResponse;
-            response.ContentType = ContentType.Json;
-
-            await response.SendResponseAsync(json);
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Get", "/ActorSpec/{index}")]
         public async Task GetByIndex(IHttpContext context)
         {
             var paramIndex = context.Request.PathParameters["index"];
-            ActorMaster master = ActorMaster.Instance();
-            string json = master.ToJson(paramIndex);
+            string json = ActorMaster.Instance().SpecToJson(paramIndex);
 
-            IHttpResponse response = context.Response as IHttpResponse;
-            response.ContentType = ContentType.Json;
-
-            await response.SendResponseAsync(json);
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Post", "/ActorSpec/{index}")]

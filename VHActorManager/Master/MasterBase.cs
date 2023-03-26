@@ -52,15 +52,17 @@ namespace VHActorManager.Master
 
         protected static string ResponseIllegalParamaterError() { return JsonSerializer.Serialize(new ResponseMessage().Error("パラメータの書式が不正です")); }
 
-        public virtual string ToJson() { return ResponseNone(); }
+        public virtual string NameListToJson() { return ResponseNone(); }
 
-        public virtual string ToJson(string index) { return ResponseNone(); }
+        public virtual string SpecsToJson() { return ResponseNone(); }
 
-        public virtual string FromJson(string json){ return ResponseNone(); }
+        public virtual string SpecToJson(string index) { return ResponseNone(); }
 
-        public virtual string FromJson(string index, string json) { return ResponseNone(); }
+        public virtual string SpecsFromJson(string json){ return ResponseNone(); }
 
-        public virtual string Delete(string index) { return ResponseNone(); }
+        public virtual string SpecFromJson(string index, string json) { return ResponseNone(); }
+
+        public virtual string DeleteSpec(string index) { return ResponseNone(); }
 
         public void Load(string? path = null)
         {

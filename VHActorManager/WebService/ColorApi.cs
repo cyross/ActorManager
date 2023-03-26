@@ -9,39 +9,34 @@ namespace VHActorManager.WebService
         [RestRoute("Get", "/SaveColor")]
         public async Task Save(IHttpContext context)
         {
-            IHttpResponse response = context.Response as IHttpResponse;
+            ColorMaster.Instance().Save();
 
-            ResponseMessage status = new ResponseMessage().Succeed();
+            await ApiUtils.CreateAndSendResponse(context, new ResponseMessage().Succeed().ToJson());
+        }
 
-            string json = status.ToJson();
+        [RestRoute("Get", "/ColorSpec/Index")]
+        public async Task GetNameList(IHttpContext context)
+        {
+            string json = ColorMaster.Instance().NameListToJson();
 
-            response.ContentType = ContentType.Json;
-            await response.SendResponseAsync(json);
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Get", "/ColorSpec")]
         public async Task Get(IHttpContext context)
         {
-            ColorMaster master = ColorMaster.Instance();
-            string json = master.ToJson();
+            string json = ColorMaster.Instance().SpecsToJson();
 
-            IHttpResponse response = context.Response as IHttpResponse;
-            response.ContentType = ContentType.Json;
-
-            await response.SendResponseAsync(json);
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Get", "/ColorSpec/{index}")]
         public async Task GetByIndex(IHttpContext context)
         {
             var paramIndex = context.Request.PathParameters["index"];
-            ColorMaster master = ColorMaster.Instance();
-            string json = master.ToJson(paramIndex);
+            string json = ColorMaster.Instance().SpecToJson(paramIndex);
 
-            IHttpResponse response = context.Response as IHttpResponse;
-            response.ContentType = ContentType.Json;
-
-            await response.SendResponseAsync(json);
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Post", "/ColorSpec/{index}")]

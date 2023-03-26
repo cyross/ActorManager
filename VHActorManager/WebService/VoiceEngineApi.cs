@@ -9,39 +9,42 @@ namespace VHActorManager.WebService
         [RestRoute("Get", "/SaveVoiceEngine")]
         public async Task Save(IHttpContext context)
         {
-            IHttpResponse response = context.Response as IHttpResponse;
+            VoiceEngineMaster.Instance().Save();
 
-            ResponseMessage status = new ResponseMessage().Succeed();
+            await ApiUtils.CreateAndSendResponse(context, new ResponseMessage().Succeed().ToJson());
+        }
 
-            string json = status.ToJson();
+        [RestRoute("Get", "/VoiceEngineSpec/Index")]
+        public async Task GetNameList(IHttpContext context)
+        {
+            string json = VoiceEngineMaster.Instance().NameListToJson();
 
-            response.ContentType = ContentType.Json;
-            await response.SendResponseAsync(json);
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Get", "/VoiceEngineSpec")]
         public async Task Get(IHttpContext context)
         {
-            VoiceEngineMaster master = VoiceEngineMaster.Instance();
-            string json = master.ToJson();
+            string json = VoiceEngineMaster.Instance().SpecsToJson();
 
             IHttpResponse response = context.Response as IHttpResponse;
             response.ContentType = ContentType.Json;
 
             await response.SendResponseAsync(json);
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Get", "/VoiceEngineSpec/{index}")]
         public async Task GetByIndex(IHttpContext context)
         {
             var paramIndex = context.Request.PathParameters["index"];
-            VoiceEngineMaster master = VoiceEngineMaster.Instance();
-            string json = master.ToJson(paramIndex);
+            string json = VoiceEngineMaster.Instance().SpecToJson(paramIndex);
 
             IHttpResponse response = context.Response as IHttpResponse;
             response.ContentType = ContentType.Json;
 
             await response.SendResponseAsync(json);
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Post", "/VoiceEngineSpec/{index}")]
