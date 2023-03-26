@@ -1,9 +1,12 @@
 ﻿using YamlDotNet.RepresentationModel;
+using System.Text.Json;
 
 namespace VHActorManager.Master
 {
     public class VoiceEngineMaster: MasterBase
     {
+        private static VoiceEngineMaster? _instance;
+
         private const string DEFAULT_PATH = "voice_engine_master.yaml";
 
         private const string SPEC_KEY = "Spec";
@@ -18,13 +21,22 @@ namespace VHActorManager.Master
         private const string NONES_KEY = "NoneVoiceEngines";
         private const string SEPS_KEY = "SeparateActorEngines";
 
-        private List<VoiceEngineStruct> specs;
-        private Dictionary<string, List<SanitizeRegexpStruct>> sanitizers;
-        private List<string> noneVoiceEngines;
-        private List<string> separateActorEngines;
+        private const string ID_PREFIX = "音声合成エンジンID";
+
+        private readonly List<VoiceEngineStruct> specs;
+        private readonly Dictionary<string, List<SanitizeRegexpStruct>> sanitizers;
+        private readonly List<string> noneVoiceEngines;
+        private readonly List<string> separateActorEngines;
 
         private VoiceEngineStruct currentSpec;
         private SanitizeRegexpStruct currentSanitize;
+
+        public static VoiceEngineMaster Instance(string fileName = DEFAULT_PATH)
+        {
+            _instance ??= new VoiceEngineMaster(fileName);
+
+            return _instance;
+        }
 
         public VoiceEngineMaster(string fileName = DEFAULT_PATH) : base(fileName) {
             specs = new List<VoiceEngineStruct>();
@@ -38,6 +50,57 @@ namespace VHActorManager.Master
         public Dictionary<string, List<SanitizeRegexpStruct>> SanitizeRegexp { get { return sanitizers; } }
         public List<string> NoneVoiceEngines { get { return noneVoiceEngines; } }
         public List<string> SeparateActorEngines { get { return separateActorEngines; } }
+
+        public override string ToJson()
+        {
+            return JsonSerializer.Serialize(this);
+        }
+
+        public override string ToJson(string indexParam)
+        {
+            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+
+            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+
+            return JsonSerializer.Serialize(specs[index]);
+        }
+
+        public override string FromJson(string json)
+        {
+            VoiceEngineStruct? spec = JsonSerializer.Deserialize<VoiceEngineStruct>(json);
+
+            if (spec == null) { return ResponseIllegalRequestDataError(); }
+
+            specs.Add((VoiceEngineStruct)spec);
+
+            return ResponseSucceed();
+        }
+
+        public override string FromJson(string indexParam, string json)
+        {
+            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+
+            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+
+            VoiceEngineStruct? spec = JsonSerializer.Deserialize<VoiceEngineStruct>(json);
+
+            if (spec == null) { return ResponseIllegalRequestDataError(); }
+
+            specs[index] = (VoiceEngineStruct)spec;
+
+            return ResponseSucceed();
+        }
+
+        public override string Delete(string indexParam)
+        {
+            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+
+            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+
+            specs.RemoveAt(index);
+
+            return ResponseSucceed();
+        }
 
         public new void Load(string? path = null)
         {

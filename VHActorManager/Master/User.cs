@@ -4,6 +4,8 @@ namespace VHActorManager.Master
 {
     public class User: MasterBase
     {
+        private static User? _instance;
+
         private const string DEFAULT_FILE = "user.yaml";
         private const string SERVER_KEY = "Server";
         private const string SERVER_PORT = "Port";
@@ -16,6 +18,13 @@ namespace VHActorManager.Master
         public ServerSpec Server;
         public VHYamlSpec VHYaml;
         public Dictionary<string, string> ExtData;
+
+        public static User Instance(string fileName = DEFAULT_FILE)
+        {
+            _instance ??= new User(fileName);
+
+            return _instance;
+        }
 
         public User(string fileName = DEFAULT_FILE): base(fileName)
         {

@@ -1,7 +1,5 @@
 ﻿using Grapevine;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
-using System.Security.Policy;
 using VHActorManager.Master;
 
 namespace VHActorManager.WebService
@@ -11,7 +9,7 @@ namespace VHActorManager.WebService
         private const string DOCUMENT_ROOT = "docroot";
         private string baseUrl;
         private bool isRunning;
-        private User userMaster;
+        private readonly User userMaster;
 
         public bool IsRunning { get { return isRunning; } }
 

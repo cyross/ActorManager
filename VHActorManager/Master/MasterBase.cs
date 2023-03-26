@@ -1,5 +1,6 @@
 ﻿using YamlDotNet.RepresentationModel;
 using VHYAML;
+using System.Text.Json;
 
 namespace VHActorManager.Master
 {
@@ -35,6 +36,32 @@ namespace VHActorManager.Master
             BaseKey = "";
         }
 
+        public static string ResponseNone() { return new ResponseMessage().None().ToJson(); }
+
+        public static string ResponseSucceed() { return new ResponseMessage().Succeed().ToJson(); }
+
+        protected static string ResponseWarning(string msg) { return JsonSerializer.Serialize(new ResponseMessage().Warning(msg)); }
+
+        protected static string ResponseError(string msg) { return JsonSerializer.Serialize(new ResponseMessage().Error(msg)); }
+
+        protected static string ResponseFatal(string msg) { return JsonSerializer.Serialize(new ResponseMessage().Fatal(msg)); }
+
+        protected static string ResponseOutOfIndexError(string prefix) { return JsonSerializer.Serialize(new ResponseMessage().Error($"{prefix}の値が範囲外です")); }
+
+        protected static string ResponseIllegalRequestDataError() { return JsonSerializer.Serialize(new ResponseMessage().Error("入力されたデータが不正です")); }
+
+        protected static string ResponseIllegalParamaterError() { return JsonSerializer.Serialize(new ResponseMessage().Error("パラメータの書式が不正です")); }
+
+        public virtual string ToJson() { return ResponseNone(); }
+
+        public virtual string ToJson(string index) { return ResponseNone(); }
+
+        public virtual string FromJson(string json){ return ResponseNone(); }
+
+        public virtual string FromJson(string index, string json) { return ResponseNone(); }
+
+        public virtual string Delete(string index) { return ResponseNone(); }
+
         public void Load(string? path = null)
         {
             YamlManager.Load(path);
@@ -55,7 +82,7 @@ namespace VHActorManager.Master
             }
         }
 
-        protected string GetString(YamlScalarNode node)
+        protected static string GetString(YamlScalarNode node)
         {
             if (node.Value == null)
             {
@@ -65,7 +92,7 @@ namespace VHActorManager.Master
             return node.Value;
         }
 
-        protected int GetInt(YamlScalarNode node)
+        protected static int GetInt(YamlScalarNode node)
         {
             if (int.TryParse(node.Value, out int value))
             {
@@ -77,7 +104,7 @@ namespace VHActorManager.Master
             }
         }
 
-        protected byte GetByte(YamlScalarNode node)
+        protected static byte GetByte(YamlScalarNode node)
         {
             if (byte.TryParse(node.Value, out byte value))
             {
@@ -89,7 +116,7 @@ namespace VHActorManager.Master
             }
         }
 
-        protected double GetDouble(YamlScalarNode node)
+        protected static double GetDouble(YamlScalarNode node)
         {
             if (double.TryParse(node.Value, out double value))
             {
@@ -101,7 +128,7 @@ namespace VHActorManager.Master
             }
         }
 
-        protected bool GetBool(YamlScalarNode node)
+        protected static bool GetBool(YamlScalarNode node)
         {
             if (bool.TryParse(node.Value, out bool value))
             {
@@ -113,7 +140,7 @@ namespace VHActorManager.Master
             }
         }
 
-        protected Color GetColor(YamlScalarNode node)
+        protected static Color GetColor(YamlScalarNode node)
         {
             if(node.Value == null) { return Color.White; }
 

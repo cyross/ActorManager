@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YamlDotNet.RepresentationModel;
+﻿using YamlDotNet.RepresentationModel;
+using System.Text.Json;
 
 namespace VHActorManager.Master
 {
     internal class ColorMaster: MasterBase
     {
+        private static ColorMaster? _instance;
+
         private const string DEFAULT_PATH = "color_master.yaml";
 
         private const string SPEC_NAME = "Name";
@@ -18,8 +16,17 @@ namespace VHActorManager.Master
         private const string SPEC_G = "G";
         private const string SPEC_B = "B";
 
-        private List<ColorSpec> specs;
+        private const string ID_PREFIX = "色ID";
+
+        private readonly List<ColorSpec> specs;
         private ColorSpec currentSpec;
+
+        public static ColorMaster Instance(string fileName = DEFAULT_PATH)
+        {
+            _instance ??= new ColorMaster(fileName);
+
+            return _instance;
+        }
 
         public ColorMaster(string fileName = DEFAULT_PATH) : base(fileName)
         {
@@ -27,6 +34,57 @@ namespace VHActorManager.Master
         }
 
         public List<ColorSpec> Specs { get { return specs; } }
+
+        public override string ToJson()
+        {
+            return JsonSerializer.Serialize(specs);
+        }
+
+        public override string ToJson(string indexParam)
+        {
+            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+
+            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+
+            return JsonSerializer.Serialize(specs[index]);
+        }
+
+        public override string FromJson(string json)
+        {
+            ColorSpec? spec = JsonSerializer.Deserialize<ColorSpec>(json);
+
+            if (spec == null) { return ResponseIllegalRequestDataError(); }
+
+            specs.Add((ColorSpec)spec);
+
+            return ResponseSucceed();
+        }
+
+        public override string FromJson(string indexParam, string json)
+        {
+            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+
+            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+
+            ColorSpec? spec = JsonSerializer.Deserialize<ColorSpec>(json);
+
+            if (spec == null) { return ResponseIllegalRequestDataError(); }
+
+            specs[index] = (ColorSpec)spec;
+
+            return ResponseSucceed();
+        }
+
+        public override string Delete(string indexParam)
+        {
+            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+
+            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+
+            specs.RemoveAt(index);
+
+            return ResponseSucceed();
+        }
 
         public new void Load(string? path = null)
         {
@@ -79,7 +137,7 @@ namespace VHActorManager.Master
                     currentSpec.Hex = GetString(node);
                     break;
                 case SPEC_TYPE:
-                    currentSpec.Hex = GetString(node);
+                    currentSpec.Type = GetInt(node);
                     break;
                 case SPEC_R:
                     currentSpec.R = GetByte(node);
@@ -110,7 +168,7 @@ namespace VHActorManager.Master
                 {
                     Name = "",
                     Hex = "#000000",
-                    Type = ColorType.RGB
+                    Type = (int)ColorType.RGB
                 };
             }
         }

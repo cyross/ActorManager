@@ -16,16 +16,16 @@ namespace VHActorManager
 
         public Form1()
         {
-            user = new();
+            user = User.Instance();
             user.Load();
 
-            actorMaster = new();
+            actorMaster = ActorMaster.Instance();
             actorMaster.Load();
 
-            colorMaster = new();
+            colorMaster = ColorMaster.Instance();
             colorMaster.Load();
 
-            voiceEngineMaster = new();
+            voiceEngineMaster = VoiceEngineMaster.Instance();
             voiceEngineMaster.Load();
 
             webServer = new WebServer(user);

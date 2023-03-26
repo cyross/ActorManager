@@ -13,4 +13,13 @@ namespace VHActorManager
         DialogColor = 2,
         RGB = 3
     }
+
+    public enum ResultStatus
+    {
+        NONE = -1,
+        OK = 0,
+        WARNING = 999,
+        ERROR = 1000,
+        FATAL = 9999
+    }
 }

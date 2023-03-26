@@ -1,9 +1,13 @@
 ﻿using YamlDotNet.RepresentationModel;
+using System.Text.Json;
+using System.ComponentModel;
 
 namespace VHActorManager.Master
 {
     public class ActorMaster : MasterBase
     {
+        private static ActorMaster? _instance;
+
         private const string DEFAULT_PATH = "actor_master.yaml";
 
         private const string SPEC_NAME = "Name";
@@ -17,14 +21,74 @@ namespace VHActorManager.Master
         private const string ATTR_OUTLINE_WIDTH = "OutlineWidth";
         private const string SPEC_EXT_DATA = "ExtData";
 
-        private List<ActorSpec> specs;
+        private const string ID_PREFIX = "声優ID";
+
+        private readonly List<ActorSpec> specs;
         private ActorSpec currentSpec;
+
+        public static ActorMaster Instance(string fileName = DEFAULT_PATH)
+        {
+            _instance ??= new ActorMaster(fileName);
+
+            return _instance;
+        }
 
         public ActorMaster(string fileName = DEFAULT_PATH): base(fileName){
             specs = new List<ActorSpec>();
         }
 
         public List<ActorSpec> Specs { get { return specs; } }
+
+        public override string ToJson()
+        {
+            return JsonSerializer.Serialize(specs);
+        }
+
+        public override string ToJson(string indexParam)
+        {
+            if(!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+
+            if(index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+
+            return JsonSerializer.Serialize(specs[index]);
+        }
+
+        public override string FromJson(string json)
+        {
+            ActorSpec? spec = JsonSerializer.Deserialize<ActorSpec>(json);
+
+            if(spec == null) { return ResponseIllegalRequestDataError(); }
+
+            specs.Add((ActorSpec)spec);
+
+            return ResponseSucceed();
+        }
+
+        public override string FromJson(string indexParam, string json)
+        {
+            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+
+            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+
+            ActorSpec? spec = JsonSerializer.Deserialize<ActorSpec>(json);
+
+            if (spec == null) { return ResponseIllegalRequestDataError(); }
+
+            specs[index] = (ActorSpec)spec;
+
+            return ResponseSucceed();
+        }
+
+        public override string Delete(string indexParam)
+        {
+            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+
+            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+
+            specs.RemoveAt(index);
+
+            return ResponseSucceed();
+        }
 
         public new void Load(string? path = null)
         {
