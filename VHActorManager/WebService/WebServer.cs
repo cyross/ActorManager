@@ -1,5 +1,7 @@
 ﻿using Grapevine;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Security.Policy;
 using VHActorManager.Master;
 
 namespace VHActorManager.WebService
@@ -42,7 +44,11 @@ namespace VHActorManager.WebService
 
                 Debug.WriteLine("Server Listening start");
 
-                await Task.Run(() => { while (isRunning) ; });
+                await Task.Run(() => {
+                    if (userMaster.Server.OpenBrowser) { OpenBrowser(); }
+
+                    while (isRunning);
+                });
 
                 Debug.WriteLine("Server Listening finished");
             }
@@ -51,6 +57,21 @@ namespace VHActorManager.WebService
         public void Stop() {
             baseUrl = "";
             isRunning = false;
+        }
+
+        public void OpenBrowser()
+        {
+            if(!isRunning) { return; }
+
+            try
+            {
+                Process.Start(baseUrl);
+            }
+            catch
+            {
+                string url = baseUrl.Replace("&", "^&");
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+            }
         }
     }
 }

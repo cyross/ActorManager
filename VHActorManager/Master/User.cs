@@ -7,6 +7,7 @@ namespace VHActorManager.Master
         private const string DEFAULT_FILE = "user.yaml";
         private const string SERVER_KEY = "Server";
         private const string SERVER_PORT = "Port";
+        private const string SERVER_OPEN_BROWSER = "OpenBrowser";
         private const string VSY_KEY = "VegasScriptYAML";
         private const string VSY_ENABLE = "Enable";
         private const string VSY_PATH = "Path";
@@ -20,7 +21,8 @@ namespace VHActorManager.Master
         {
             Server = new ServerSpec()
             {
-                Port = 3300
+                Port = 3300,
+                OpenBrowser = false
             };
             VHYaml = new VHYamlSpec()
             {
@@ -90,6 +92,9 @@ namespace VHActorManager.Master
             {
                 case SERVER_PORT:
                     Server.Port = GetInt(node);
+                    break;
+                case SERVER_OPEN_BROWSER:
+                    Server.OpenBrowser = GetBool(node);
                     break;
             }
         }

@@ -1,5 +1,6 @@
 Server:
   Port: 3300
+  OpenBrowser: false
 VegasScriptYAML:
   Enable: false
   Path: ""

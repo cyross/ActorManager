@@ -41,6 +41,7 @@
             SaveUserYAMLButton = new Button();
             ServerStatusBox = new TextBox();
             BaseUrlBox = new TextBox();
+            OpenBrowserOnStartCheck = new CheckBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -204,6 +205,16 @@
             BaseUrlBox.Size = new Size(374, 25);
             BaseUrlBox.TabIndex = 15;
             // 
+            // OpenBrowserOnStartCheck
+            // 
+            OpenBrowserOnStartCheck.AutoSize = true;
+            OpenBrowserOnStartCheck.Location = new Point(290, 8);
+            OpenBrowserOnStartCheck.Name = "OpenBrowserOnStartCheck";
+            OpenBrowserOnStartCheck.Size = new Size(207, 22);
+            OpenBrowserOnStartCheck.TabIndex = 16;
+            OpenBrowserOnStartCheck.Text = "サーバー開始時にブラウザを開く";
+            OpenBrowserOnStartCheck.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 18F);
@@ -211,6 +222,7 @@
             BackColor = Color.OldLace;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(797, 160);
+            Controls.Add(OpenBrowserOnStartCheck);
             Controls.Add(BaseUrlBox);
             Controls.Add(ServerStatusBox);
             Controls.Add(SaveUserYAMLButton);
@@ -246,5 +258,6 @@
         private Button SaveUserYAMLButton;
         private TextBox ServerStatusBox;
         private TextBox BaseUrlBox;
+        private CheckBox OpenBrowserOnStartCheck;
     }
 }

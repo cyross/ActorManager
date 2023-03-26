@@ -37,12 +37,47 @@ namespace VHActorManager
             ServerStatusBox.Text = SERVER_STOPPING;
 
             PortBox.Text = user.Server.Port.ToString();
+            OpenBrowserOnStartCheck.Checked = user.Server.OpenBrowser;
             VSYAMLEnableCheck.Checked = user.VHYaml.Enable;
             VSYAMLFilePathBox.Text = user.VHYaml.Path;
         }
 
+        private void StartServer()
+        {
+            if (webServer.IsRunning) { return; } // 二重起動を避ける
+
+            UpdateUserMaster();
+
+            webServer.Start();
+            ServerStartButton.Enabled = false;
+            ServerStopButton.Enabled = true;
+            ServerStatusBox.Text = SERVER_RUNNING;
+            BaseUrlBox.Text = webServer.BaseUrl;
+        }
+
+        private void StopServer()
+        {
+            if (!webServer.IsRunning) { return; } // 停止エラーを避ける
+
+            webServer.Stop();
+            ServerStartButton.Enabled = true;
+            ServerStopButton.Enabled = false;
+            ServerStatusBox.Text = SERVER_STOPPING;
+            BaseUrlBox.Text = "";
+        }
+
+        private void UpdateUserMaster()
+        {
+            user.Server.Port = int.Parse(PortBox.Text);
+            user.Server.OpenBrowser = OpenBrowserOnStartCheck.Checked;
+            user.VHYaml.Enable = VSYAMLEnableCheck.Checked;
+            user.VHYaml.Path = VSYAMLFilePathBox.Text;
+        }
+
         private void QuitButton_Click(object sender, EventArgs e)
         {
+            StopServer();
+
             Application.Exit();
         }
 
@@ -57,29 +92,19 @@ namespace VHActorManager
 
         private void SaveUserYAMLButton_Click(object sender, EventArgs e)
         {
-            user.Server.Port = int.Parse(PortBox.Text);
-            user.VHYaml.Enable = VSYAMLEnableCheck.Checked;
-            user.VHYaml.Path = VSYAMLFilePathBox.Text;
+            UpdateUserMaster();
 
             user.Save();
         }
 
         private void ServerStartButton_Click(object sender, EventArgs e)
         {
-            webServer.Start();
-            ServerStartButton.Enabled = false;
-            ServerStopButton.Enabled = true;
-            ServerStatusBox.Text = SERVER_RUNNING;
-            BaseUrlBox.Text = webServer.BaseUrl;
+            StartServer();
         }
 
         private void ServerStopButton_Click(object sender, EventArgs e)
         {
-            webServer.Stop();
-            ServerStartButton.Enabled = true;
-            ServerStopButton.Enabled = false;
-            ServerStatusBox.Text = SERVER_STOPPING;
-            BaseUrlBox.Text = "";
+            StopServer();
         }
     }
 }

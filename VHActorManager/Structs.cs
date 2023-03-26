@@ -5,6 +5,7 @@ namespace VHActorManager
     public struct ServerSpec
     {
         public int Port;
+        public bool OpenBrowser;
     }
 
     public struct VHYamlSpec
