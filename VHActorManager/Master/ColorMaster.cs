@@ -37,14 +37,15 @@ namespace VHActorManager.Master
 
         public override string NameListToJson()
         {
-            List<NameListElement> names = new List<NameListElement>();
+            List<ColorNameListElement> names = new List<ColorNameListElement>();
 
             for (int i = 0; i < specs.Count; i++)
             {
-                NameListElement nameElement = new NameListElement()
+                ColorNameListElement nameElement = new ColorNameListElement()
                 {
                     Id = i,
-                    Name = specs[i].Name
+                    Name = specs[i].Name,
+                    Hex = specs[i].Hex
                 };
                 names.Add(nameElement);
             }

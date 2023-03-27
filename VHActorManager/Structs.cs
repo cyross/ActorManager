@@ -16,7 +16,7 @@ namespace VHActorManager
         public string Path { get; set; }
     }
 
-        public struct VoiceEngineStruct
+    public struct VoiceEngineStruct
     {
         public string Name { get; set; }
         public string RealName { get; set; }
@@ -111,5 +111,12 @@ namespace VHActorManager
     {
         public int Id { get; set; }
         public string Name { get; set; }
+    }
+
+    public struct ColorNameListElement
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Hex { get; set; }
     }
 }

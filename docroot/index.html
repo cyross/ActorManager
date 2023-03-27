@@ -14,21 +14,101 @@
     <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
     <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
     <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-color@2.8.1/dist/vue-color.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
     <div id="app" class="container">
-        <b-icon-arrow-up></b-icon-arrow-up>
-        <b-icon-exclamation-triangle-fill></b-icon-exclamation-triangle-fill>
-        <b-btn variant="primary">テスト</b-btn>
-        {{ message }}
+        <b-tabs content-clas="mt-3" justified>
+            <b-tab title="声優マスター">
+                <b-row>
+                    <b-col cols="2" class="overflow-auto" style="height:90vh">
+                        <b-list-group>
+                            <b-list-group-item v-for="data in actorNames">
+                                <b-button v-on:click="showActorDetail(data.Id)" variant="outline-primary" block>{{data.Name}}</b-button>
+                            </b-list-group-item>
+                        </b-list-group>
+                    </b-col>
+                    <b-col>
+                        <div v-if="actorDetail == null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large; ">
+                            <p>選択がされていません</p>
+                        </div>
+                        <div v-if="actorDetail != null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
+                            <div>
+                                <ul>
+                                    <li>名前: {{actorDetail.Name}}</li>
+                                    <li>かな: {{actorDetail.Kana}}</li>
+                                </ul>
+                                <div>
+                                    対応音声合成エンジン:
+                                    <ul>
+                                        <li v-for="engine in actorDetail.Engines">{{engine}}</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    別名:<span v-if="actorDetail.AnotherNames.length==0">なし</span>
+                                    <ul>
+                                        <li v-for="alias in actorDetail.AnotherNames">{{alias}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </b-col>
+                </b-row>
+            </b-tab>
+            <b-tab title="音声合成エンジンマスター">
+                <b-row>
+                    <b-col cols="2"  class="overflow-auto" style="height:90vh">
+                        <b-list-group>
+                            <b-list-group-item v-for="data in veNames">
+                                <b-button v-on:click="showVEDetail(data.Id)" block variant="outline-primary">{{data.Name}}</b-button>
+                            </b-list-group-item>
+                        </b-list-group>
+                    </b-col>
+                    <b-col>
+                        <div v-if="veDetail == null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
+                            <p>選択がされていません</p>
+                        </div>
+                        <div v-if="veDetail != null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
+                            <div>
+                                <ul>
+                                    <li>名前: {{veDetail.Name}}</li>
+                                    <li>正式名: {{veDetail.RealName}}</li>
+                                    <li>区切り文字: {{veDetail.Separator}}</li>
+                                    <li>文字コード: {{veDetail.Encoding}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </b-col>
+                </b-row>
+            </b-tab>
+            <b-tab title="色マスター">
+                <b-row>
+                    <b-col cols="2"  class="overflow-auto" style="height:90vh">
+                        <b-list-group>
+                            <b-list-group-item v-for="data in colorNames">
+                                <span v-bind:style="{ color: data.Hex }" style="border: solid black;">■</span>&nbsp;
+                                <b-button v-on:click="showColorDetail(data.Id)" block variant="outline-primary">{{data.Name}}</b-button>
+                            </b-list-group-item>
+                        </b-list-group>
+                    </b-col>
+                    <b-col>
+                        <div v-if="colorDetail == null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
+                            <p>選択がされていません</p>
+                        </div>
+                        <div v-if="colorDetail != null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
+                            <div>
+                                <p><span v-bind:style="{ color: colorDetail.Hex }" style="border: solid black 1px; margin: 4px; background-color: white; font-size: 128pt;">■</span></p>
+                                <ul>
+                                    <li>名前: {{colorDetail.Name}}</li>
+                                    <li>{{colorDetail.Hex}} ({{colorDetail.R}}, {{colorDetail.G}}, {{colorDetail.B}})</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </b-col>
+                </b-row>
+            </b-tab>
+        </b-tabs>
     </div>
-
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: 'Hello Vue!'
-            }
-        })
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>

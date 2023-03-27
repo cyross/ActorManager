@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目
 		color_master.yaml = color_master.yaml
 		debug_deploy_html.bat = debug_deploy_html.bat
 		docroot\index.html = docroot\index.html
+		docroot\main.js = docroot\main.js
 		README.md = README.md
 		user.yaml = user.yaml
 		voice_engine_master.yaml = voice_engine_master.yaml
