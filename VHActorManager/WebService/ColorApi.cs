@@ -6,14 +6,6 @@ namespace VHActorManager.WebService
     [RestResource(BasePath = "api/v1")]
     internal class ColorApi
     {
-        [RestRoute("Get", "/SaveColor")]
-        public async Task Save(IHttpContext context)
-        {
-            ColorMaster.Instance().Save();
-
-            await ApiUtils.CreateAndSendResponse(context, new ResponseMessage().Succeed().ToJson());
-        }
-
         [RestRoute("Get", "/ColorSpec/Index")]
         public async Task GetNameList(IHttpContext context)
         {

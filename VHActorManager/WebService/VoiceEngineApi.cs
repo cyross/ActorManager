@@ -6,14 +6,6 @@ namespace VHActorManager.WebService
     [RestResource(BasePath = "api/v1")]
     internal class VoiceEngineApi
     {
-        [RestRoute("Get", "/SaveVoiceEngine")]
-        public async Task Save(IHttpContext context)
-        {
-            VoiceEngineMaster.Instance().Save();
-
-            await ApiUtils.CreateAndSendResponse(context, new ResponseMessage().Succeed().ToJson());
-        }
-
         [RestRoute("Get", "/VoiceEngineSpec/Index")]
         public async Task GetNameList(IHttpContext context)
         {
