@@ -17,7 +17,7 @@ namespace VHActorManager
         public string ExtPath { get; set; }
     }
 
-    public struct VoiceEngineStruct
+    public struct VoiceEngineSpec
     {
         public string Name { get; set; }
         public string RealName { get; set; }

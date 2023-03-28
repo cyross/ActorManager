@@ -23,12 +23,12 @@ namespace VHActorManager.Master
 
         private const string ID_PREFIX = "音声合成エンジンID";
 
-        private readonly List<VoiceEngineStruct> specs;
+        private readonly List<VoiceEngineSpec> specs;
         private readonly Dictionary<string, List<SanitizeRegexpStruct>> sanitizers;
         private readonly List<string> noneVoiceEngines;
         private readonly List<string> separateActorEngines;
 
-        private VoiceEngineStruct currentSpec;
+        private VoiceEngineSpec currentSpec;
         private SanitizeRegexpStruct currentSanitize;
 
         public static VoiceEngineMaster Instance(string fileName = YAML_FILENAME)
@@ -39,14 +39,14 @@ namespace VHActorManager.Master
         }
 
         public VoiceEngineMaster(string fileName = YAML_FILENAME) : base(fileName) {
-            specs = new List<VoiceEngineStruct>();
+            specs = new List<VoiceEngineSpec>();
             sanitizers = new Dictionary<string, List<SanitizeRegexpStruct>>();
             noneVoiceEngines = new List<string>();
             separateActorEngines = new List<string>();
             currentSanitize = new SanitizeRegexpStruct();
         }
 
-        public VoiceEngineStruct[] Specs { get { return specs.ToArray(); } }
+        public VoiceEngineSpec[] Specs { get { return specs.ToArray(); } }
         public Dictionary<string, List<SanitizeRegexpStruct>> SanitizeRegexp { get { return sanitizers; } }
         public List<string> NoneVoiceEngines { get { return noneVoiceEngines; } }
         public List<string> SeparateActorEngines { get { return separateActorEngines; } }
@@ -84,11 +84,11 @@ namespace VHActorManager.Master
 
         public override string SpecsFromJson(string json)
         {
-            VoiceEngineStruct? spec = JsonSerializer.Deserialize<VoiceEngineStruct>(json);
+            VoiceEngineSpec? spec = JsonSerializer.Deserialize<VoiceEngineSpec>(json);
 
             if (spec == null) { return ResponseIllegalRequestDataError(); }
 
-            specs.Add((VoiceEngineStruct)spec);
+            specs.Add((VoiceEngineSpec)spec);
 
             return ResponseSucceed();
         }
@@ -99,11 +99,11 @@ namespace VHActorManager.Master
 
             if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
 
-            VoiceEngineStruct? spec = JsonSerializer.Deserialize<VoiceEngineStruct>(json);
+            VoiceEngineSpec? spec = JsonSerializer.Deserialize<VoiceEngineSpec>(json);
 
             if (spec == null) { return ResponseIllegalRequestDataError(); }
 
-            specs[index] = (VoiceEngineStruct)spec;
+            specs[index] = (VoiceEngineSpec)spec;
 
             return ResponseSucceed();
         }
@@ -225,7 +225,7 @@ namespace VHActorManager.Master
         {
             if (YamlManager.MapDepth == 1 && CurrentKey == SPEC_KEY)
             {
-                currentSpec = new VoiceEngineStruct()
+                currentSpec = new VoiceEngineSpec()
                 {
                     ExtData = new Dictionary<string, string>()
                 };
