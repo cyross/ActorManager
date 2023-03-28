@@ -9,7 +9,8 @@ namespace VHActorManager.Master
 
         private static VoiceEngineMaster? _instance;
 
-        private const string SPEC_KEY = "Spec";
+        private const string SPEC_KEY = "Specs";
+        private const string SPEC_ID = "Id";
         private const string SPEC_NAME = "Name";
         private const string SPEC_REAL_NAME = "RealName";
         private const string SPEC_SEPARATOR = "Separator";
@@ -53,11 +54,11 @@ namespace VHActorManager.Master
 
         public override string NameListToJson()
         {
-            List<NameListElement> names = new List<NameListElement>();
+            List<NameListElement> names = new();
 
             for (int i = 0; i < specs.Count; i++)
             {
-                NameListElement nameElement = new NameListElement()
+                NameListElement nameElement = new()
                 {
                     Id = i,
                     Name = specs[i].Name
@@ -131,7 +132,17 @@ namespace VHActorManager.Master
             YamlManager.CallbackMappingInnerStart += CbMapIS;
             YamlManager.CallbackMappingInnerEnd += CbMapIE;
             YamlManager.CallbackMappingEnd += CbMapE;
+
             base.Load(path);
+
+            // IDカラムが存在していないときのために、ID振り直し
+            // IDカラムが存在していないときのために、ID振り直し
+            for (int i = 0; i < specs.Count; i++)
+            {
+                if (specs[i].Id != 0) { continue; }
+
+                specs[i] = specs[i].Duplicate(MaxSpecId++);
+            }
         }
 
         public void Save(string? path = null)
@@ -169,6 +180,10 @@ namespace VHActorManager.Master
 
             switch (CurrentKey)
             {
+                case SPEC_ID:
+                    currentSpec.Id = GetInt(node);
+                    if (currentSpec.Id > MaxSpecId) { MaxSpecId = currentSpec.Id; }
+                    break;
                 case SPEC_NAME:
                     currentSpec.Name = GetString(node);
                     return;
@@ -227,6 +242,7 @@ namespace VHActorManager.Master
             {
                 currentSpec = new VoiceEngineSpec()
                 {
+                    Id = 0,
                     ExtData = new Dictionary<string, string>()
                 };
             }

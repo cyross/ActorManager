@@ -18,13 +18,24 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
     <div id="app" class="container">
-        <b-tabs content-clas="mt-3" justified>
+        <b-tabs content-class="mt-3" justified>
             <b-tab title="声優マスター">
+                <b-row v-if="actorHasError">
+                    <b-col>{{ actorErrorMsg }}</b-col>
+                </b-row>
+                <b-row v-if="actorHasNotice">
+                    <b-col>{{ actorNoticeMsg }}</b-col>
+                </b-row>
                 <b-row>
-                    <b-col cols="2" class="overflow-auto" style="height:90vh">
+                    <b-col>
+                        <b-button v-on:click="showNewActor()" variant="outline-primary" style="width: 100%;">新規作成</b-button>
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col cols="4" class="overflow-auto" style="height:90vh">
                         <b-list-group>
-                            <b-list-group-item v-for="data in actorNames">
-                                <b-button v-on:click="showActorDetail(data.Id)" variant="outline-primary" block>{{data.Name}}</b-button>
+                            <b-list-group-item v-for="data in actorNames" v-bind:key="data.Id">
+                                <b-button v-on:click="showActorDetail(data.Id)" variant="outline-primary" style="width: 100%;">{{data.Name}}</b-button>
                             </b-list-group-item>
                         </b-list-group>
                     </b-col>
@@ -33,34 +44,83 @@
                             <p>選択がされていません</p>
                         </div>
                         <div v-if="actorDetail != null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
-                            <div>
-                                <ul>
-                                    <li>名前: {{actorDetail.Name}}</li>
-                                    <li>かな: {{actorDetail.Kana}}</li>
-                                </ul>
-                                <div>
-                                    対応音声合成エンジン:
-                                    <ul>
-                                        <li v-for="engine in actorDetail.Engines">{{engine}}</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    別名:<span v-if="actorDetail.AnotherNames.length==0">なし</span>
-                                    <ul>
-                                        <li v-for="alias in actorDetail.AnotherNames">{{alias}}</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <b-container>
+                                <b-row>
+                                    <b-col cols="6">名前</b-col><b-col>{{actorDetail.Name}}</b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">かな</b-col><b-col>{{actorDetail.Kana}}</b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">対応音声合成エンジン</b-col>
+                                    <b-col>
+                                        <ul>
+                                            <li v-for="engine in actorDetail.Engines">{{engine}}</li>
+                                        </ul>
+                                    </b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">別名</b-col>
+                                    <b-col>
+                                        <span v-if="actorDetail.AnotherNames.length==0">なし</span>
+                                        <ul>
+                                            <li v-for="alias in actorDetail.AnotherNames">{{alias}}</li>
+                                        </ul>
+                                    </b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">字幕文字色</b-col>
+                                    <b-col>
+                                        <span v-bind:style="{ color: strToColor(actorDetail.JimakuTextColor) }">■</span>{{actorDetail.JimakuTextColor}}
+                                    </b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">字幕枠色</b-col><b-col>
+                                        <span
+                                            v-bind:style="{ color: strToColor(actorDetail.JimakuOutlineColor) }">■</span>{{actorDetail.JimakuOutlineColor}}
+                                    </b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">字幕枠幅</b-col><b-col>{{actorDetail.JimakuOutlineWidth}}</b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">声優名文字色</b-col>
+                                    <b-col>
+                                        <span v-bind:style="{ color: strToColor(actorDetail.ActorTextColor) }">■</span>{{actorDetail.ActorTextColor}}
+                                    </b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">声優名枠色</b-col>
+                                    <b-col>
+                                        <span
+                                            v-bind:style="{ color: strToColor(actorDetail.ActorOutlineColor) }">■</span>{{actorDetail.ActorOutlineColor}}
+                                    </b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">声優名枠幅</b-col><b-col>{{actorDetail.ActorOutlineWidth}}</b-col>
+                                </b-row>
+                            </b-container>
                         </div>
                     </b-col>
                 </b-row>
             </b-tab>
             <b-tab title="音声合成エンジンマスター">
+                <b-row v-if="veHasError">
+                    <b-col>{{ veErrorMsg }}</b-col>
+                </b-row>
+                <b-row v-if="veHasNotice">
+                    <b-col>{{ veNoticeMsg }}</b-col>
+                </b-row>
                 <b-row>
-                    <b-col cols="2"  class="overflow-auto" style="height:90vh">
+                    <b-col>
+                        <b-button v-on:click="showNewVE()" variant="outline-primary" style="width: 100%;">新規作成</b-button>
+                    </b-col>
+                </b-row>
+                <b-row>
+                    <b-col cols="4"  class="overflow-auto" style="height:90vh">
                         <b-list-group>
-                            <b-list-group-item v-for="data in veNames">
-                                <b-button v-on:click="showVEDetail(data.Id)" block variant="outline-primary">{{data.Name}}</b-button>
+                            <b-list-group-item v-for="data in veNames" v-bind:key="data.Id">
+                                <b-button v-on:click="showVEDetail(data.Id)" variant="outline-primary" style="width: 100%;">{{data.Name}}</b-button>
                             </b-list-group-item>
                         </b-list-group>
                     </b-col>
@@ -69,40 +129,20 @@
                             <p>選択がされていません</p>
                         </div>
                         <div v-if="veDetail != null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
-                            <div>
-                                <ul>
-                                    <li>名前: {{veDetail.Name}}</li>
-                                    <li>正式名: {{veDetail.RealName}}</li>
-                                    <li>区切り文字: {{veDetail.Separator}}</li>
-                                    <li>文字コード: {{veDetail.Encoding}}</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </b-col>
-                </b-row>
-            </b-tab>
-            <b-tab title="色マスター">
-                <b-row>
-                    <b-col cols="2"  class="overflow-auto" style="height:90vh">
-                        <b-list-group>
-                            <b-list-group-item v-for="data in colorNames">
-                                <span v-bind:style="{ color: data.Hex }" style="border: solid black;">■</span>&nbsp;
-                                <b-button v-on:click="showColorDetail(data.Id)" block variant="outline-primary">{{data.Name}}</b-button>
-                            </b-list-group-item>
-                        </b-list-group>
-                    </b-col>
-                    <b-col>
-                        <div v-if="colorDetail == null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
-                            <p>選択がされていません</p>
-                        </div>
-                        <div v-if="colorDetail != null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
-                            <div>
-                                <p><span v-bind:style="{ color: colorDetail.Hex }" style="border: solid black 1px; margin: 4px; background-color: white; font-size: 128pt;">■</span></p>
-                                <ul>
-                                    <li>名前: {{colorDetail.Name}}</li>
-                                    <li>{{colorDetail.Hex}} ({{colorDetail.R}}, {{colorDetail.G}}, {{colorDetail.B}})</li>
-                                </ul>
-                            </div>
+                            <b-container>
+                                <b-row>
+                                    <b-col cols="6">名前</b-col><b-col>{{veDetail.Name}}</b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">正式名</b-col><b-col>{{veDetail.RealName}}</b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">区切り文字</b-col><b-col>{{veDetail.Separator}}</b-col>
+                                </b-row>
+                                <b-row>
+                                    <b-col cols="6">文字コード</b-col><b-col>{{veDetail.Encoding}}</b-col>
+                                </b-row>
+                            </b-container>
                         </div>
                     </b-col>
                 </b-row>

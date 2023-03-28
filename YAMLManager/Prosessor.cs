@@ -85,40 +85,42 @@ namespace VHYAML
 
         private void DeserializeSequence(YamlSequenceNode node)
         {
+            if (node.Children.Count == 0)
+            {
+                CallbackSequenceStart(node);
+                CallbackSequenceEnd(node);
+                return;
+            }
+
             seq_depth++;
-            //Debug.WriteLine(string.Format("[{0}]START SEQUENCE", seq_depth));
             CallbackSequenceStart(node);
-            int cnt = 1;
             foreach (var child in node.Children)
             {
-                //Debug.WriteLine(string.Format("[{0}][{1}]LOOP START", seq_depth, cnt));
                 CallbackSequenceLoopStart(node);
                 DeserializeDispatch(child);
                 CallbackSequenceLoopEnd(node);
-                //Debug.WriteLine(string.Format("[{0}][{1}]LOOP END", seq_depth, cnt));
-                cnt++;
             }
             CallbackSequenceEnd(node);
-            //Debug.WriteLine(string.Format("[{0}]FINISH SEQUENCE", seq_depth));
             seq_depth--;
         }
 
         private void DeserializeMapping(YamlMappingNode node)
         {
+            if (node.Children.Count == 0)
+            {
+                return;
+            }
+
             map_depth++;
-            //Debug.WriteLine(string.Format("[{0}]START MAPPING", map_depth));
             CallbackMappingStart(node);
             foreach (var child in node.Children)
             {
                 CallbackMappingInnerStart(node);
-                //Debug.WriteLine(string.Format("[{0}]KEY", map_depth));
                 DeserializeKey((YamlScalarNode)child.Key);
-                //Debug.WriteLine(string.Format("[{0}]VALUE", map_depth));
                 DeserializeDispatch(child.Value);
                 CallbackMappingInnerEnd(node);
             }
             CallbackMappingEnd(node);
-            //Debug.WriteLine(string.Format("[{0}]FINISH MAPPING", map_depth));
             map_depth--;
         }
     }

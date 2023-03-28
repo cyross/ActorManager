@@ -68,7 +68,6 @@ namespace VHActorManager.Master
 
         private void CbScl(YamlScalarNode node)
         {
-            Debug.WriteLine(string.Format("CbScl DEPTH: {0}", YamlManager.MapDepth));
             switch (YamlManager.MapDepth)
             {
                 case 2:
@@ -79,7 +78,6 @@ namespace VHActorManager.Master
 
         private void CbSclDepth2(YamlScalarNode node)
         {
-            Debug.WriteLine(string.Format("CbSclDepth2 PARENT: {0}", ParentKey));
             switch (ParentKey)
             {
                 case SERVER_KEY:
@@ -96,7 +94,6 @@ namespace VHActorManager.Master
 
         private void CbSclDepth2Server(YamlScalarNode node)
         {
-            Debug.WriteLine(string.Format("CbSclDepth2Server CURRENT: {0}", CurrentKey));
             switch (CurrentKey)
             {
                 case SERVER_PORT:
@@ -110,7 +107,6 @@ namespace VHActorManager.Master
 
         private void CbSclDepth2VSY(YamlScalarNode node)
         {
-            Debug.WriteLine(string.Format("CbSclDepth2VSY CURRENT: {0}", CurrentKey));
             switch (CurrentKey)
             {
                 case VSY_ENABLE:

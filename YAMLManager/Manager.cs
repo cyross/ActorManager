@@ -83,10 +83,9 @@ namespace VHYAML
         /// </summary>
         public bool Load(string? filePath = null)
         {
-            if (filePath == null) { filePath = path; }
-            if (!File.Exists(filePath)) { return false; }
+            filePath ??= path;
 
-            Debug.WriteLine(string.Format("LOAD YAML FILE: {0}", filePath));
+            if (!File.Exists(filePath)) { return false; }
 
             using (var yamlStream = new StreamReader(filePath))
             {
@@ -105,12 +104,9 @@ namespace VHYAML
         /// </summary>
         public void Save<T>(T obj, string? filePath = null)
         {
-            if (filePath == null) { filePath = path; }
+            filePath ??= path;
 
             var yaml = processor.Serialize(obj);
-
-            Debug.WriteLine(string.Format("SAVE YAML FILE: {0}", filePath));
-            Debug.WriteLine(string.Format("YAML: {0}", yaml));
 
             using (var f = new StreamWriter(filePath))
             {

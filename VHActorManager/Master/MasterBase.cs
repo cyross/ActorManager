@@ -12,6 +12,7 @@ namespace VHActorManager.Master
         protected Stack<string> KeyStack;
         protected string CurrentKey;
         protected string BaseKey;
+        protected int MaxSpecId;
 
         public MasterBase(
             string fileName
@@ -35,6 +36,7 @@ namespace VHActorManager.Master
 
             CurrentKey = "";
             BaseKey = "";
+            MaxSpecId = 0;
         }
 
         public static string ResponseNone() { return new ResponseMessage().None().ToJson(); }
@@ -161,14 +163,12 @@ namespace VHActorManager.Master
             if(CurrentKey != "")
             {
                 KeyStack.Push(CurrentKey);
-                //Debug.WriteLine(string.Format("[{0}]Pushed Key {1}", YamlManager.MapDepth, CurrentKey));
             }
             else if(KeyStack.Count == 0)
             {
                 BaseKey = key;
             }
             CurrentKey = key;
-            //Debug.WriteLine(string.Format("[{0}]Current Key is {1}", YamlManager.MapDepth, CurrentKey));
         }
 
         private void MBCbSeqS(YamlSequenceNode node)
@@ -205,7 +205,6 @@ namespace VHActorManager.Master
             if(KeyStack.Count > 0)
             {
                 CurrentKey = KeyStack.Pop();
-                //Debug.WriteLine(string.Format("[{0}]Poped Key {1}", YamlManager.MapDepth, CurrentKey));
             }
             else
             {

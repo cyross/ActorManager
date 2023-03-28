@@ -1,6 +1,7 @@
 ﻿using YamlDotNet.RepresentationModel;
 using System.Text.Json;
 using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace VHActorManager.Master
 {
@@ -10,12 +11,19 @@ namespace VHActorManager.Master
 
         private static ActorMaster? _instance;
 
+        private const string SPEC_ID = "Id";
         private const string SPEC_NAME = "Name";
         private const string SPEC_KANA = "Kana";
         private const string SPEC_ENGINES = "Engines";
         private const string SPEC_ANOTHER_NAMES = "AnotherNames";
         private const string SPEC_JIMAKU_ATTR = "JimakuAttr";
+        private const string SPEC_JIMAKU_TEXT_COLOR = "JimakuTextColor";
+        private const string SPEC_JIMAKU_OUTLINE_COLOR = "JimakuOutlineColor";
+        private const string SPEC_JIMAKU_OUTLINE_WIDTH = "JimakuOutlineWidth";
         private const string SPEC_ACTOR_ATTR = "ActorAttr";
+        private const string SPEC_ACTOR_TEXT_COLOR = "ActorTextColor";
+        private const string SPEC_ACTOR_OUTLINE_COLOR = "ActorOutlineColor";
+        private const string SPEC_ACTOR_OUTLINE_WIDTH = "ActorOutlineWidth";
         private const string ATTR_TEXT_COLOR = "TextColor";
         private const string ATTR_OUTLINE_COLOR = "OutlineColor";
         private const string ATTR_OUTLINE_WIDTH = "OutlineWidth";
@@ -40,11 +48,11 @@ namespace VHActorManager.Master
         public List<ActorSpec> Specs { get { return specs; } }
 
         public override string NameListToJson() {
-            List<NameListElement> names = new List<NameListElement>();
+            List<NameListElement> names = new();
 
             for (int i = 0; i< specs.Count; i++)
             {
-                NameListElement nameElement = new NameListElement()
+                NameListElement nameElement = new()
                 {
                     Id = i,
                     Name = specs[i].Name
@@ -119,6 +127,14 @@ namespace VHActorManager.Master
             YamlManager.CallbackMappingInnerEnd += CbMapIE;
             YamlManager.CallbackMappingEnd += CbMapE;
             base.Load(path);
+
+            // IDカラムが存在していないときのために、ID振り直し
+            for (int i = 0; i < specs.Count; i++)
+            {
+                if (specs[i].Id != 0) { continue; }
+
+                specs[i] = specs[i].Duplicate(MaxSpecId++);
+            }
         }
 
         public void Save(string? path = null)
@@ -156,44 +172,47 @@ namespace VHActorManager.Master
         {
             switch(CurrentKey)
             {
+                case SPEC_ID:
+                    currentSpec.Id = GetInt(node);
+                    if(currentSpec.Id > MaxSpecId) { MaxSpecId = currentSpec.Id; }
+                    break;
                 case SPEC_NAME:
                     currentSpec.Name = GetString(node);
                     break;
                 case SPEC_KANA:
                     currentSpec.Kana = GetString(node);
                     break;
-
+                case SPEC_JIMAKU_TEXT_COLOR:
+                    currentSpec.JimakuTextColor = GetString(node);
+                    break;
+                case SPEC_JIMAKU_OUTLINE_COLOR:
+                    currentSpec.JimakuOutlineColor = GetString(node);
+                    break;
+                case SPEC_JIMAKU_OUTLINE_WIDTH:
+                    currentSpec.JimakuOutlineWidth = GetDouble(node);
+                    break;
+                case SPEC_ACTOR_TEXT_COLOR:
+                    currentSpec.ActorTextColor = GetString(node);
+                    break;
+                case SPEC_ACTOR_OUTLINE_COLOR:
+                    currentSpec.ActorOutlineColor = GetString(node);
+                    break;
+                case SPEC_ACTOR_OUTLINE_WIDTH:
+                    currentSpec.ActorOutlineWidth = GetDouble(node);
+                    break;
             }
+        }
+        public string ToHex(Color color)
+        {
+            return string.Format("#{0:X2}{1:X2}{2:X2}", color.R, color.G, color.B);
         }
 
         private void CbSclSeqDepth1MapDepth2(YamlScalarNode node)
         {
             switch(ParentKey)
             {
-                case SPEC_JIMAKU_ATTR:
-                    CbSclSeqDepth1MapDepth2Attr(node, ref currentSpec.JimakuAttr);
-                    break;
-                case SPEC_ACTOR_ATTR:
-                    CbSclSeqDepth1MapDepth2Attr(node, ref currentSpec.ActorAttr);
-                    break;
                 case SPEC_EXT_DATA:
                     currentSpec.ExtData[CurrentKey] = GetString(node);
-                    break;
-            }
-        }
-
-        private void CbSclSeqDepth1MapDepth2Attr(YamlScalarNode node, ref TextAttr attr)
-        {
-            switch (CurrentKey)
-            {
-                case ATTR_TEXT_COLOR:
-                    attr.TextColor = GetColor(node);
-                    break;
-                case ATTR_OUTLINE_COLOR:
-                    attr.OutlineColor = GetColor(node);
-                    break;
-                case ATTR_OUTLINE_WIDTH:
-                    attr.OutlineWidth = GetDouble(node);
                     break;
             }
         }
@@ -237,8 +256,15 @@ namespace VHActorManager.Master
             {
                 currentSpec = new ActorSpec()
                 {
+                    Id = 0,
                     Engines = new List<string>(),
                     AnotherNames = new List<string>(),
+                    JimakuTextColor = "White",
+                    JimakuOutlineColor = "Black",
+                    JimakuOutlineWidth = 10,
+                    ActorTextColor = "White",
+                    ActorOutlineColor = "Black",
+                    ActorOutlineWidth = 10,
                     ExtData = new Dictionary<string, string>()
                 };
             }
@@ -258,25 +284,7 @@ namespace VHActorManager.Master
 
         private void CbMapS(YamlMappingNode node)
         {
-            if(YamlManager.MapDepth == 2)
-            {
-                CbMapSDepth2(node);
-            }
         }
-
-        private void CbMapSDepth2(YamlMappingNode node)
-        {
-            switch(CurrentKey)
-            {
-                case SPEC_JIMAKU_ATTR:
-                    currentSpec.JimakuAttr = new TextAttr();
-                    break;
-                case SPEC_ACTOR_ATTR:
-                    currentSpec.ActorAttr = new TextAttr();
-                    break;
-            }
-        }
-
 
         private void CbMapIS(YamlMappingNode node)
         {

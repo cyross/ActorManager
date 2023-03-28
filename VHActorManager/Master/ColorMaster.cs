@@ -9,6 +9,7 @@ namespace VHActorManager.Master
 
         private static ColorMaster? _instance;
 
+        private const string SPEC_ID = "Id";
         private const string SPEC_NAME = "Name";
         private const string SPEC_HEX = "Hex";
         private const string SPEC_TYPE = "Type";
@@ -37,11 +38,11 @@ namespace VHActorManager.Master
 
         public override string NameListToJson()
         {
-            List<ColorNameListElement> names = new List<ColorNameListElement>();
+            List<ColorNameListElement> names = new();
 
             for (int i = 0; i < specs.Count; i++)
             {
-                ColorNameListElement nameElement = new ColorNameListElement()
+                ColorNameListElement nameElement = new()
                 {
                     Id = i,
                     Name = specs[i].Name,
@@ -117,6 +118,14 @@ namespace VHActorManager.Master
             YamlManager.CallbackMappingInnerEnd += CbMapIE;
             YamlManager.CallbackMappingEnd += CbMapE;
             base.Load(path);
+
+            // IDカラムが存在していないときのために、ID振り直し
+            for (int i = 0; i < specs.Count; i++)
+            {
+                if (specs[i].Id != 0) { continue; }
+
+                specs[i] = specs[i].Duplicate(MaxSpecId++);
+            }
         }
 
         public void Save(string? path = null)
@@ -148,6 +157,10 @@ namespace VHActorManager.Master
         {
             switch (CurrentKey)
             {
+                case SPEC_ID:
+                    currentSpec.Id = GetInt(node);
+                    if (currentSpec.Id > MaxSpecId) { MaxSpecId = currentSpec.Id; }
+                    break;
                 case SPEC_NAME:
                     currentSpec.Name = GetString(node);
                     break;
@@ -166,7 +179,6 @@ namespace VHActorManager.Master
                 case SPEC_B:
                     currentSpec.B = GetByte(node);
                     break;
-
             }
         }
 
@@ -184,6 +196,7 @@ namespace VHActorManager.Master
             {
                 currentSpec = new ColorSpec()
                 {
+                    Id = 0,
                     Name = "",
                     Hex = "#000000",
                     Type = (int)ColorType.RGB

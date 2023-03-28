@@ -1,3083 +1,3084 @@
-- "Name": "青山龍星"
-  "Kana": "あおやまりゅうせい"
-  "Engines":
-  - "AIV"
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "彩澄しゅお"
-  "Kana": "あすみしゅお"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "彩澄りりせ"
-  "Kana": "あすみりりせ"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "足立レイ"
-  "Kana": "あだちれい"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "雨晴はう"
-  "Kana": "あめはれはう"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "IA"
-  "Kana": "いあ"
-  "Engines":
-  - "CA"
-  - "CC"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "伊織弓鶴"
-  "Kana": "いおりゆづる"
-  "Engines":
-  - "AIV"
-  - "VR"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "羽ノ華"
-  "Kana": "うのか"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "櫻歌ミコ"
-  "Kana": "おうかみこ"
-  "Engines":
-  - "VV"
-  "AnotherNames":
-  - "櫻歌ミコ(ノーマル)"
-  - "櫻歌ミコ(第二形態)"
-  - "櫻歌ミコ(ロリ)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "男の子"
-  "Kana": "おとこのこ"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ONE"
-  "Kana": "おね"
-  "Engines":
-  - "CA"
-  - "CC"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "女の子"
-  "Kana": "おんなのこ"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "風見壮一"
-  "Kana": "かざみそういち"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "春日部つむぎ"
-  "Kana": "かすかべつむぎ"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "麒ヶ島宗麟"
-  "Kana": "きがしまそうりん"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "紲星あかり"
-  "Kana": "きずなあかり"
-  "Engines":
-  - "AIV"
-  - "VR"
-  "AnotherNames":
-  - "紲星あかり(蕾)[AIV]"
-  - "紲星あかり(萌)[AIV]"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "九州そら"
-  "Kana": "きゅうしゅうそら"
-  "Engines":
-  - "VV"
-  "AnotherNames":
-  - "九州そら(ノーマル)"
-  - "九州そら(あまあま)"
-  - "九州そら(ツンツン)"
-  - "九州そら(セクシー)"
-  - "九州そら(ささやき)"
-  - "九州そら(ヒソヒソ)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "京町セイカ"
-  "Kana": "きょうまちせいか"
-  "Engines":
-  - "VR"
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "GUMI"
-  "Kana": "ぐみ"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "栗田まろん"
-  "Kana": "くりたまろん"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "玄野武宏"
-  "Kana": "くろのたけひろ"
-  "Engines":
-  - "VV"
-  "AnotherNames":
-  - "玄野武宏(ノーマル)"
-  - "玄野武宏(喜び)"
-  - "玄野武宏(ツンギレ)"
-  - "玄野武宏(悲しみ)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "剣崎雌雄"
-  "Kana": "けんざきめすお"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "後鬼"
-  "Kana": "ごき"
-  "Engines":
-  - "VV"
-  "AnotherNames":
-  - "後鬼(人間ver.)"
-  - "後鬼(ぬいぐるみver.)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "琴葉 葵"
-  "Kana": "ことはあおい"
-  "Engines":
-  - "VR"
-  - "AIV"
-  "AnotherNames":
-  - "琴葉 葵(v1)[VR]"
-  - "琴葉 葵(蕾)[AIV]"
-  - "Aoi[AIV]"
-  - "葵[AIV]"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "琴葉 茜"
-  "Kana": "ことはあかね"
-  "Engines":
-  - "VR"
-  - "AIV"
-  "AnotherNames":
-  - "琴葉 茜(v1)[VR]"
-  - "琴葉 茜(蕾)[AIV]"
-  - "Akane[AIV]"
-  - "茜[AIV]"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "小春六花"
-  "Kana": "こはるりっか"
-  "Engines":
-  - "CA"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "咲ちゃん"
-  "Kana": "さきちゃん"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "さとうささら"
-  "Kana": "さとうささら"
-  "Engines":
-  - "CA"
-  - "CC"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "小夜(SAYO)"
-  "Kana": "さよ"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "潮崎かずき"
-  "Kana": "しおざきかずき"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "式大元"
-  "Kana": "しきたいげん"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "式狼縁"
-  "Kana": "しきろうえん"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "四国めたん"
-  "Kana": "しこくめたん"
-  "Engines":
-  - "VV"
-  "AnotherNames":
-  - "四国めたん(ノーマル)"
-  - "四国めたん(あまあま)"
-  - "四国めたん(ツンツン)"
-  - "四国めたん(セクシー)"
-  - "四国めたん(ささやき)"
-  - "四国めたん(ヒソヒソ)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "邪神ちゃん"
-  "Kana": "じゃしんちゃん"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "女性1"
-  "Kana": "じょせい1"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "女性2"
-  "Kana": "じょせい2"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "女性3"
-  "Kana": "じょせい3"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "女性4"
-  "Kana": "じょせい4"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "白上虎太郎"
-  "Kana": "しらかみこたろう"
-  "Engines":
-  - "VV"
-  "AnotherNames":
-  - "白上虎太郎(ふつう)"
-  - "白上虎太郎(わーい)"
-  - "白上虎太郎(びくびく)"
-  - "白上虎太郎(おこ)"
-  - "白上虎太郎(ぴえーん)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "すずきつづみ"
-  "Kana": "すずきつづみ"
-  "Engines":
-  - "CA"
-  - "CC"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ずんだもん"
-  "Kana": "ずんだもん"
-  "Engines":
-  - "VP"
-  - "VV"
-  - "ずんだもん(ノーマル)[VV]"
-  - "ずんだもん(あまあま)[VV]"
-  - "ずんだもん(ツンツン)[VV]"
-  - "ずんだもん(セクシー)[VV]"
-  - "ずんだもん(ささやき)[VV]"
-  - "ずんだもん(ヒソヒソ)[VV]"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "鷹の爪吉田くん"
-  "Kana": "たかのつめよしだくん"
-  "Engines":
-  - "VR"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "タカハシ"
-  "Kana": "たかはし"
-  "Engines":
-  - "CC"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "民安ともえ"
-  "Kana": "たみやすともえ"
-  "Engines":
-  - "VR"
-  "AnotherNames":
-  - "民安ともえ(v1)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "タンゲコトエ"
-  "Kana": "たんげことえ"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "男性1"
-  "Kana": "だんせい1"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "男性2"
-  "Kana": "だんせい2"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "男性3"
-  "Kana": "だんせい3"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "男性4"
-  "Kana": "だんせい4"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ちび式じい"
-  "Kana": "ちびしきじい"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ついなちゃん"
-  "Kana": "ついなちゃん"
-  "Engines":
-  - "VR"
-  "AnotherNames":
-  - "ついなちゃん(標準語)"
-  - "ついなちゃん(関西弁)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "月読アイ"
-  "Kana": "つくよみあい"
-  "Engines":
-  - "VR"
-  "AnotherNames":
-  - "月読アイ(v1)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "月読ショウタ"
-  "Kana": "つくよみしょうた"
-  "Engines":
-  - "VR"
-  "AnotherNames":
-  - "月読ショウタ(v1)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "弦巻マキ"
-  "Kana": "つるまきまき"
-  "Engines":
-  - "CA"
-  "AnotherNames":
-  - "弦巻マキ English"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "東北イタコ"
-  "Kana": "とうほくいたこ"
-  "Engines":
-  - "VR"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "東北きりたん"
-  "Kana": "とうほくきりたん"
-  "Engines":
-  - "VR"
-  "AnotherNames":
-  - "東北きりたん(v1)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "東北ずん子"
-  "Kana": "とうほくずんこ"
-  "Engines":
-  - "VP"
-  - "VR"
-  "AnotherNames":
-  - "東北ずん子(v1)[VR]"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ナースロボ＿タイプＴ"
-  "Kana": "なーすろぼたいぷてぃー"
-  "Engines":
-  - "VV"
-  "AnotherNames":
-  - "ナースロボ＿タイプＴ(ノーマル)"
-  - "ナースロボ＿タイプＴ(楽々)"
-  - "ナースロボ＿タイプＴ(恐怖)"
-  - "ナースロボ＿タイプＴ(内緒話)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "夏色花梨"
-  "Kana": "なつきかりん"
-  "Engines":
-  - "CA"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "波音リツ"
-  "Kana": "なみねりつ"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "No.7"
-  "Kana": "なんばーせぶん"
-  "Engines":
-  - "VV"
-  "AnotherNames":
-  - "No.7(ノーマル)"
-  - "No.7(アナウンス)"
-  - "No.7(読み聞かせ)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "花隈千冬"
-  "Kana": "はなくまちふゆ"
-  "Engines":
-  - "CA"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "桜乃そら"
-  "Kana": "はるのそら"
-  "Engines":
-  - "VR"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "日ノ出賢"
-  "Kana": "ひのでけん"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "フリモメン"
-  "Kana": "ふりもめん"
-  "Engines":
-  - "VP"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "†聖騎士 紅桜†"
-  "Kana": "ほーりーないとべにざくら"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "WhiteCUL"
-  "Kana": "ほわいとかる"
-  "Engines":
-  - "VV"
-  "AnotherNames":
-  - "WhiteCUL(ノーマル)"
-  - "WhiteCUL(たのしい)"
-  - "WhiteCUL(かなしい)"
-  - "WhiteCUL(ぴえーん)"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "水無瀬コウ"
-  "Kana": "みなせこう"
-  "Engines":
-  - "VR;水無瀬コウ(v1)"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "冥鳴ひまり"
-  "Kana": "めいめいひまり"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "もち子さん"
-  "Kana": "もちこさん"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "結城 香"
-  "Kana": "ゆうきかおり"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "結月ゆかり"
-  "Kana": "ゆづきゆかり"
-  "Engines":
-  - "AIV"
-  - "VR"
-  "AnotherNames":
-  - "結月ゆかり(雫)[AIV]"
-  - "結月ゆかり(v1)[VR]"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "来果"
-  "Kana": "らいか"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ria"
-  "Kana": "りあ"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ロサ(ROSA)"
-  "Kana": "ろさ"
-  "Engines":
-  - "CA"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "雀松朱司"
-  "Kana": "わかまつあかし"
-  "Engines":
-  - "VV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "若穂みのり"
-  "Kana": "わこうみのり"
-  "Engines":
-  - "AIV"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "秋静葉"
-  "Kana": "あきしずは"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり静葉"
-  - "しずは"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "秋穣子"
-  "Kana": "あきみのりこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり穣子"
-  - "みのりこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "アリス・マーガトロイド"
-  "Kana": "ありすまーがとろいど"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりアリス"
-  - "ありす"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "飯綱丸龍"
-  "Kana": "いいずなまるめぐむ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり龍"
-  - "めぐむ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "十六夜咲夜"
-  "Kana": "いざよいさくや"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり咲夜"
-  - "さくや"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "因幡てゐ"
-  "Kana": "いなばてい"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりてゐ"
-  - "てゐ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "犬走椛"
-  "Kana": "いぬばしりもみじ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり椛"
-  - "もみじ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "茨木華扇"
-  "Kana": "いばらきかせん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり華扇"
-  - "かせん"
-  - "茨華仙"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "伊吹萃香"
-  "Kana": "いぶきすいか"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり萃香"
-  - "すいか"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "今泉影狼"
-  "Kana": "いまいずみかげろう"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり影狼"
-  - "かげろう"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "宇佐見蓮子"
-  "Kana": "うさみれんこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり蓮子"
-  - "れんこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "牛崎潤美"
-  "Kana": "うしざきうるみ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり潤美"
-  - "うるみ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "エタニティラルバ"
-  "Kana": "えたにてぃらるば"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりエタニティラルバ"
-  - "えたにてぃらるば"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "戎瓔花"
-  "Kana": "えびすえいか"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり瓔花"
-  - "えいか"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "奥野田美宵"
-  "Kana": "おくのだみよい"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり美宵"
-  - "みよい"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "小野塚小町"
-  "Kana": "おのづかこまち"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり小町"
-  - "こまち"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "火焔猫燐"
-  "Kana": "かえんびょうりん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりおりん"
-  - "おりん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "鍵山雛"
-  "Kana": "かぎやまひな"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり雛"
-  - "ひな"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "霍青娥"
-  "Kana": "かくせいが"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり青蛾"
-  - "せいが"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "風見幽香"
-  "Kana": "かざみゆうか"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり幽香"
-  - "ゆうか"
-  - "のうかりん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "幽谷響子"
-  "Kana": "かそだにきょうこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり響子"
-  - "きょうこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "上白沢慧音"
-  "Kana": "かみしらさわけいね"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり慧音"
-  - "けーね"
-  - "きもけーね"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "河城にとり"
-  "Kana": "かわしろにとり"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりにとり"
-  - "にとり"
-  - "メカにとり"
-  - "めかにとり"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "稀神サグメ"
-  "Kana": "きしんさぐめ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりサグメ"
-  - "さぐめ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "鬼人正邪"
-  "Kana": "きじんせいじゃ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり正邪"
-  - "せいじゃ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "キスメ"
-  "Kana": "きすめ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりキスメ"
-  - "きすめ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "吉弔八千慧"
-  "Kana": "きっちょうやちえ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり八千慧"
-  - "やちえ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "霧雨魔理沙"
-  "Kana": "きりさめまりさ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり魔理沙"
-  - "まりさ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "菅牧典"
-  "Kana": "くだまきつかさ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり典"
-  - "つかさ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "雲居一輪"
-  "Kana": "くもいいちりん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり一輪"
-  - "いちりん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "クラウンピース"
-  "Kana": "くらうんぴーす"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりクラウンピース"
-  - "くらうんぴーす"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "驪駒早鬼"
-  "Kana": "くろこまさき"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり早鬼"
-  - "さき"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "黒谷ヤマメ"
-  "Kana": "くろだにやまめ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりヤマメ"
-  - "やまめ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "小悪魔"
-  "Kana": "こあくま"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり小悪魔"
-  - "こあくま"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "豪徳寺ミケ"
-  "Kana": "ごうとくじみけ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりミケ"
-  - "みけ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "東風谷早苗"
-  "Kana": "こちやさなえ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり早苗"
-  - "さなえ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "駒草山如"
-  "Kana": "こまくにさんにょ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり山如"
-  - "さんにょ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "高麗野あうん"
-  "Kana": "こまのあうん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりあうん"
-  - "あうん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "古明地こいし"
-  "Kana": "こめいじこいし"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりこいし"
-  - "こいし"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "古明地さとり"
-  "Kana": "こめいじさとり"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりさとり"
-  - "さとり"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "魂魄妖夢"
-  "Kana": "こんばくようむ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり妖夢"
-  - "ようむ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "西行寺幽々子"
-  "Kana": "さいぎょうじゆゆこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり幽々子"
-  - "ゆゆこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "冴月麟"
-  "Kana": "さえつきりん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり冴月麟"
-  - "さえつきりん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "坂田ネムノ"
-  "Kana": "さかたねむの"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりネムノ"
-  - "ねむの"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "サニーミルク"
-  "Kana": "さにーみるく"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりサニーミルク"
-  - "さにーみるく"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "四季映姫・ヤマザナドゥ"
-  "Kana": "しきえいきやまざなどぅ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり映姫"
-  - "えいき"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "射命丸文"
-  "Kana": "しゃめいまるあや"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり文"
-  - "あや"
-  - "きめぇ丸"
-  - "きめぇまる"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "シュガーサテラ"
-  "Kana": "しゅがーさてら"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "シュガーサテラ"
-  - "しゅがーさてら"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "純狐"
-  "Kana": "じゅんこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり純狐"
-  - "じゅんこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "杖刀偶磨弓"
-  "Kana": "じょうとうぐうまゆみ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり磨弓"
-  - "まゆみ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "少名針妙丸"
-  "Kana": "すくなしんみょうまる"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり針妙丸"
-  - "しんみょうまる"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "スターサファイア"
-  "Kana": "すたーさふぁいあ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりスターサファイア"
-  - "すたーさふぁいあ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "清蘭"
-  "Kana": "せいらん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり清蘭"
-  - "せいらん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "赤蛮奇"
-  "Kana": "せきばんき"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり赤蛮奇"
-  - "せきばんき"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "蘇我屠自古"
-  "Kana": "そがのとじこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり屠自古"
-  - "とじこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "大妖精"
-  "Kana": "だいようせい"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり大妖精"
-  - "だいようせい"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "多々良小傘"
-  "Kana": "たたらこがさ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり小傘"
-  - "こがさ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "玉造魅須丸"
-  "Kana": "たまつくりみすまる"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり魅須丸"
-  - "みすまる"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "橙"
-  "Kana": "ちぇん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり橙"
-  - "ちぇん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "チルノ"
-  "Kana": "ちるの"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりチルノ"
-  - "ちるの"
-  - "⑨"
-  - "バカ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "九十九弁々"
-  "Kana": "つくもべんべん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり弁々"
-  - "べんべん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "九十九八橋"
-  "Kana": "つくもやつはし"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり八橋"
-  - "やつはし"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "罪袋"
-  "Kana": "つみぶくろ"
-  "Engines":
-  - "AQ"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "丁礼田舞"
-  "Kana": "ていれいだまい"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり舞"
-  - "まい"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "天弓千亦"
-  "Kana": "てんきゅうちまた"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり千亦"
-  - "ちまた"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "饕餮尤魔"
-  "Kana": "とうてつゆうま"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり尤魔"
-  - "ゆうま"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "朱鷺子"
-  "Kana": "ときこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり朱鷺子"
-  - "ときこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "豊聡耳神子"
-  "Kana": "とよさとみみのみこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり神子"
-  - "みこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "寅丸星"
-  "Kana": "とらまるしょう"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり星"
-  - "しょう"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ドレミー・スイート"
-  "Kana": "どれみーすいーと"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりドレミー"
-  - "どれみー"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "永江衣玖"
-  "Kana": "ながえいく"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり衣玖"
-  - "いく"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ナズーリン"
-  "Kana": "なずーりん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりナズーリン"
-  - "なずーりん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "爾子田里乃"
-  "Kana": "にしださとの"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり里乃"
-  - "さとの"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "庭渡久侘歌"
-  "Kana": "にわたりくたか"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり久侘歌"
-  - "くたか"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "博麗霊夢"
-  "Kana": "はくれいれいむ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり霊夢"
-  - "れいむ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "秦こころ"
-  "Kana": "はたのこころ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりこころ"
-  - "こころ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "パチュリー・ノーレッジ"
-  "Kana": "ぱちゅりーのーれっじ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりパチェリー"
-  - "ぱちぇりー"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "埴安神袿姫"
-  "Kana": "はにやすしんけいき"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり袿姫"
-  - "けいき"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "稗田阿求"
-  "Kana": "ひえだのあきゅう"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり阿求"
-  - "あきゅう"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "姫海棠はたて"
-  "Kana": "ひめかいどうはたて"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりはたて"
-  - "はたて"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "聖白蓮"
-  "Kana": "ひじりびゃくれん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり聖"
-  - "ひじり"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "比那名居天子"
-  "Kana": "ひなないてんし"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり天子"
-  - "てんこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "姫虫百々世"
-  "Kana": "ひめむしももよ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり百々世"
-  - "ももよ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "藤原妹紅"
-  "Kana": "ふじわらのもこう"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり妹紅"
-  - "もこう"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "二ツ岩マミゾウ"
-  "Kana": "ふたついわまみぞう"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりマミゾウ"
-  - "まみぞう"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "フランドール・スカーレット"
-  "Kana": "ふらんどーるすかーれっと"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりフラン"
-  - "ふらん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ヘカーティア・ラピスラズリ"
-  "Kana": "へかーてぃあらぴすらずり"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりヘカーティア"
-  - "へかーてぃあ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "封獣ぬえ"
-  "Kana": "ほうじゅうぬえ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりぬえ"
-  - "ぬえ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "蓬莱山輝夜"
-  "Kana": "ほうらいさんかぐや"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり輝夜"
-  - "かぐや"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "星熊勇儀"
-  "Kana": "ほしぐまゆうぎ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり勇儀"
-  - "ゆうぎ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "堀川雷鼓"
-  "Kana": "ほりかわらいこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり雷鼓"
-  - "らいこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "紅美鈴"
-  "Kana": "ほんめいりん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり美鈴"
-  - "めーりん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "マエリベリー・ハーン"
-  "Kana": "まえりべりーはーん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりメリー"
-  - "めりー"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "摩多羅隠岐奈"
-  "Kana": "またらおきな"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり隠岐奈"
-  - "おきな"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ミスティア・ローレライ"
-  "Kana": "みすてぃあろーれり"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりミスチー"
-  - "みすちー"
-  - "みすちー２"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "水橋パルスィ"
-  "Kana": "みずはしぱるすぃ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりパルスィ"
-  - "ぱるすぃ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "宮出口瑞霊"
-  "Kana": "みやでぐみずち"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり瑞霊"
-  - "みずち"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "宮古芳香"
-  "Kana": "みやこよしか"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり芳香"
-  - "よしか"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "村紗水蜜"
-  "Kana": "むらさみなみつ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり村紗"
-  - "むらさ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "メディスン・メランコリー"
-  "Kana": "めでぃすんめらんこりー"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりメディスン"
-  - "めでぃすん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "メルラン・プリズムリバー"
-  "Kana": "めるらんぷりずむりばー"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりメルラン"
-  - "めるらん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "本居小鈴"
-  "Kana": "もとおりこすず"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり小鈴"
-  - "こすず"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "物部布都"
-  "Kana": "もののべのふと"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり布都"
-  - "ふと"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "森近霖之助"
-  "Kana": "もりちかりんのすけ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり香霖"
-  - "こーりん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "洩矢諏訪子"
-  "Kana": "もりやすわこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり諏訪子"
-  - "すわこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "八雲紫"
-  "Kana": "やくもゆかり"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり紫"
-  - "ゆかり"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "八雲藍"
-  "Kana": "やくもらん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり藍"
-  - "らん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "八意永琳"
-  "Kana": "やごころえいりん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり永琳"
-  - "えーりん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "八坂神奈子"
-  "Kana": "やさかかなこ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり神奈子"
-  - "かなこ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "矢田寺成美"
-  "Kana": "やたでらなるみ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり成美"
-  - "なるみ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "山城たかね"
-  "Kana": "やましろたかね"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりたかね"
-  - "たかね"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "依神紫苑"
-  "Kana": "よりがみしおん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり紫苑"
-  - "しおん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "依神女苑"
-  "Kana": "よりがみじょおん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり女苑"
-  - "じょおん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "リグル・ナイトバグ"
-  "Kana": "りぐるないとばぐ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりリグル"
-  - "りぐる"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "リリーホワイト"
-  "Kana": "りりーほわいと"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりリリーホワイト"
-  - "りりーほわいと"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "リリーブラック"
-  "Kana": "りりーぶらっく"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりリリーブラック"
-  - "りりーぶらっく"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "リリカ・プリズムリバー"
-  "Kana": "りりかぷりずむりばー"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりリリカ"
-  - "りりか"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "鈴瑚"
-  "Kana": "りんご"
-  "Engines":
-  - "AQ"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ルーミア"
-  "Kana": "るーみあ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりルーミア"
-  - "るーみあ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ルナサ・プリズムリバー"
-  "Kana": "るなさぷりずむりばー"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりルナサ"
-  - "るなさ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ルナチャイルド"
-  "Kana": "るなちゃいるど"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりルナチャイルド"
-  - "るなちゃいるど"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "霊烏路空"
-  "Kana": "れいうじうつほ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりお空"
-  - "おくう"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "レイセン"
-  "Kana": "れいせん"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりレイセン"
-  - "れいせん"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "鈴仙・優曇華院・イナバ"
-  "Kana": "れいせんうどんげいんいなば"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり優曇華"
-  - "うどんげ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "レティ・ホワイトロック"
-  "Kana": "れてぃほわいとろっく"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりレティ"
-  - "れてぃ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "レミリア・スカーレット"
-  "Kana": "れみりあすかーれっと"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりレミリア"
-  - "れみりあ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "わかさぎ姫"
-  "Kana": "わかさぎひめ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくりわかさぎ姫"
-  - "わかさぎひめ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "綿月豊姫"
-  "Kana": "わたつきのとよひめ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり豊姫"
-  - "とよひめ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "綿月依姫"
-  "Kana": "わたつきのよりひめ"
-  "Engines":
-  - "AQ"
-  "AnotherNames":
-  - "ゆっくり依姫"
-  - "よりひめ"
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "ナレーター"
-  "Kana": "なれーたー"
-  "Engines":
-  - "OTHER"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "その他"
-  "Kana": "そのた"
-  "Engines":
-  - "OTHER"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "生声"
-  "Kana": "なまごえ"
-  "Engines":
-  - "OTHER"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "[状況説明]"
-  "Kana": "じょうきょうせつめい"
-  "Engines":
-  - "NONE"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-- "Name": "[なし]"
-  "Kana": "なし"
-  "Engines":
-  - "NONE"
-  "AnotherNames": []
-  "JimakuAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
-  "ActorAttr":
-    "TextColor": "White"
-    "OutlineColor": "Black"
-    "OutlineWidth": 10
+- Id: 210
+  Name: 青山龍星
+  Kana: あおやまりゅうせい
+  Engines:
+  - AIV
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 1
+  Name: 彩澄しゅお
+  Kana: あすみしゅお
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 2
+  Name: 彩澄りりせ
+  Kana: あすみりりせ
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 3
+  Name: 足立レイ
+  Kana: あだちれい
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 4
+  Name: 雨晴はう
+  Kana: あめはれはう
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 5
+  Name: IA
+  Kana: いあ
+  Engines:
+  - CA
+  - CC
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 6
+  Name: 伊織弓鶴
+  Kana: いおりゆづる
+  Engines:
+  - AIV
+  - VR
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 7
+  Name: 羽ノ華
+  Kana: うのか
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 8
+  Name: 櫻歌ミコ
+  Kana: おうかみこ
+  Engines:
+  - VV
+  AnotherNames:
+  - 櫻歌ミコ(ノーマル)
+  - 櫻歌ミコ(第二形態)
+  - 櫻歌ミコ(ロリ)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 9
+  Name: 男の子
+  Kana: おとこのこ
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 10
+  Name: ONE
+  Kana: おね
+  Engines:
+  - CA
+  - CC
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 11
+  Name: 女の子
+  Kana: おんなのこ
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 12
+  Name: 風見壮一
+  Kana: かざみそういち
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 13
+  Name: 春日部つむぎ
+  Kana: かすかべつむぎ
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 14
+  Name: 麒ヶ島宗麟
+  Kana: きがしまそうりん
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 15
+  Name: 紲星あかり
+  Kana: きずなあかり
+  Engines:
+  - AIV
+  - VR
+  AnotherNames:
+  - 紲星あかり(蕾)[AIV]
+  - 紲星あかり(萌)[AIV]
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 16
+  Name: 九州そら
+  Kana: きゅうしゅうそら
+  Engines:
+  - VV
+  AnotherNames:
+  - 九州そら(ノーマル)
+  - 九州そら(あまあま)
+  - 九州そら(ツンツン)
+  - 九州そら(セクシー)
+  - 九州そら(ささやき)
+  - 九州そら(ヒソヒソ)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 17
+  Name: 京町セイカ
+  Kana: きょうまちせいか
+  Engines:
+  - VR
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 18
+  Name: GUMI
+  Kana: ぐみ
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 19
+  Name: 栗田まろん
+  Kana: くりたまろん
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 20
+  Name: 玄野武宏
+  Kana: くろのたけひろ
+  Engines:
+  - VV
+  AnotherNames:
+  - 玄野武宏(ノーマル)
+  - 玄野武宏(喜び)
+  - 玄野武宏(ツンギレ)
+  - 玄野武宏(悲しみ)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 21
+  Name: 剣崎雌雄
+  Kana: けんざきめすお
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 22
+  Name: 後鬼
+  Kana: ごき
+  Engines:
+  - VV
+  AnotherNames:
+  - 後鬼(人間ver.)
+  - 後鬼(ぬいぐるみver.)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 23
+  Name: 琴葉 葵
+  Kana: ことはあおい
+  Engines:
+  - VR
+  - AIV
+  AnotherNames:
+  - 琴葉 葵(v1)[VR]
+  - 琴葉 葵(蕾)[AIV]
+  - Aoi[AIV]
+  - 葵[AIV]
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 24
+  Name: 琴葉 茜
+  Kana: ことはあかね
+  Engines:
+  - VR
+  - AIV
+  AnotherNames:
+  - 琴葉 茜(v1)[VR]
+  - 琴葉 茜(蕾)[AIV]
+  - Akane[AIV]
+  - 茜[AIV]
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 25
+  Name: 小春六花
+  Kana: こはるりっか
+  Engines:
+  - CA
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 26
+  Name: 咲ちゃん
+  Kana: さきちゃん
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 27
+  Name: さとうささら
+  Kana: さとうささら
+  Engines:
+  - CA
+  - CC
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 28
+  Name: 小夜(SAYO)
+  Kana: さよ
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 29
+  Name: 潮崎かずき
+  Kana: しおざきかずき
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 30
+  Name: 式大元
+  Kana: しきたいげん
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 31
+  Name: 式狼縁
+  Kana: しきろうえん
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 32
+  Name: 四国めたん
+  Kana: しこくめたん
+  Engines:
+  - VV
+  AnotherNames:
+  - 四国めたん(ノーマル)
+  - 四国めたん(あまあま)
+  - 四国めたん(ツンツン)
+  - 四国めたん(セクシー)
+  - 四国めたん(ささやき)
+  - 四国めたん(ヒソヒソ)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 33
+  Name: 邪神ちゃん
+  Kana: じゃしんちゃん
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 34
+  Name: 女性1
+  Kana: じょせい1
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 35
+  Name: 女性2
+  Kana: じょせい2
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 36
+  Name: 女性3
+  Kana: じょせい3
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 37
+  Name: 女性4
+  Kana: じょせい4
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 38
+  Name: 白上虎太郎
+  Kana: しらかみこたろう
+  Engines:
+  - VV
+  AnotherNames:
+  - 白上虎太郎(ふつう)
+  - 白上虎太郎(わーい)
+  - 白上虎太郎(びくびく)
+  - 白上虎太郎(おこ)
+  - 白上虎太郎(ぴえーん)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 39
+  Name: すずきつづみ
+  Kana: すずきつづみ
+  Engines:
+  - CA
+  - CC
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 40
+  Name: ずんだもん
+  Kana: ずんだもん
+  Engines:
+  - VP
+  - VV
+  - ずんだもん(ノーマル)[VV]
+  - ずんだもん(あまあま)[VV]
+  - ずんだもん(ツンツン)[VV]
+  - ずんだもん(セクシー)[VV]
+  - ずんだもん(ささやき)[VV]
+  - ずんだもん(ヒソヒソ)[VV]
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 41
+  Name: 鷹の爪吉田くん
+  Kana: たかのつめよしだくん
+  Engines:
+  - VR
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 42
+  Name: タカハシ
+  Kana: たかはし
+  Engines:
+  - CC
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 43
+  Name: 民安ともえ
+  Kana: たみやすともえ
+  Engines:
+  - VR
+  AnotherNames:
+  - 民安ともえ(v1)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 44
+  Name: タンゲコトエ
+  Kana: たんげことえ
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 45
+  Name: 男性1
+  Kana: だんせい1
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 46
+  Name: 男性2
+  Kana: だんせい2
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 47
+  Name: 男性3
+  Kana: だんせい3
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 48
+  Name: 男性4
+  Kana: だんせい4
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 49
+  Name: ちび式じい
+  Kana: ちびしきじい
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 50
+  Name: ついなちゃん
+  Kana: ついなちゃん
+  Engines:
+  - VR
+  AnotherNames:
+  - ついなちゃん(標準語)
+  - ついなちゃん(関西弁)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 51
+  Name: 月読アイ
+  Kana: つくよみあい
+  Engines:
+  - VR
+  AnotherNames:
+  - 月読アイ(v1)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 52
+  Name: 月読ショウタ
+  Kana: つくよみしょうた
+  Engines:
+  - VR
+  AnotherNames:
+  - 月読ショウタ(v1)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 53
+  Name: 弦巻マキ
+  Kana: つるまきまき
+  Engines:
+  - CA
+  AnotherNames:
+  - 弦巻マキ English
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 54
+  Name: 東北イタコ
+  Kana: とうほくいたこ
+  Engines:
+  - VR
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 55
+  Name: 東北きりたん
+  Kana: とうほくきりたん
+  Engines:
+  - VR
+  AnotherNames:
+  - 東北きりたん(v1)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 56
+  Name: 東北ずん子
+  Kana: とうほくずんこ
+  Engines:
+  - VP
+  - VR
+  AnotherNames:
+  - 東北ずん子(v1)[VR]
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 57
+  Name: ナースロボ＿タイプＴ
+  Kana: なーすろぼたいぷてぃー
+  Engines:
+  - VV
+  AnotherNames:
+  - ナースロボ＿タイプＴ(ノーマル)
+  - ナースロボ＿タイプＴ(楽々)
+  - ナースロボ＿タイプＴ(恐怖)
+  - ナースロボ＿タイプＴ(内緒話)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 58
+  Name: 夏色花梨
+  Kana: なつきかりん
+  Engines:
+  - CA
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 59
+  Name: 波音リツ
+  Kana: なみねりつ
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 60
+  Name: No.7
+  Kana: なんばーせぶん
+  Engines:
+  - VV
+  AnotherNames:
+  - No.7(ノーマル)
+  - No.7(アナウンス)
+  - No.7(読み聞かせ)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 61
+  Name: 花隈千冬
+  Kana: はなくまちふゆ
+  Engines:
+  - CA
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 62
+  Name: 桜乃そら
+  Kana: はるのそら
+  Engines:
+  - VR
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 63
+  Name: 日ノ出賢
+  Kana: ひのでけん
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 64
+  Name: フリモメン
+  Kana: ふりもめん
+  Engines:
+  - VP
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 65
+  Name: †聖騎士 紅桜†
+  Kana: ほーりーないとべにざくら
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 66
+  Name: WhiteCUL
+  Kana: ほわいとかる
+  Engines:
+  - VV
+  AnotherNames:
+  - WhiteCUL(ノーマル)
+  - WhiteCUL(たのしい)
+  - WhiteCUL(かなしい)
+  - WhiteCUL(ぴえーん)
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 67
+  Name: 水無瀬コウ
+  Kana: みなせこう
+  Engines:
+  - VR;水無瀬コウ(v1)
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 68
+  Name: 冥鳴ひまり
+  Kana: めいめいひまり
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 69
+  Name: もち子さん
+  Kana: もちこさん
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 70
+  Name: 結城 香
+  Kana: ゆうきかおり
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 71
+  Name: 結月ゆかり
+  Kana: ゆづきゆかり
+  Engines:
+  - AIV
+  - VR
+  AnotherNames:
+  - 結月ゆかり(雫)[AIV]
+  - 結月ゆかり(v1)[VR]
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 72
+  Name: 来果
+  Kana: らいか
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 73
+  Name: ria
+  Kana: りあ
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 74
+  Name: ロサ(ROSA)
+  Kana: ろさ
+  Engines:
+  - CA
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 75
+  Name: 雀松朱司
+  Kana: わかまつあかし
+  Engines:
+  - VV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 76
+  Name: 若穂みのり
+  Kana: わこうみのり
+  Engines:
+  - AIV
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 77
+  Name: 秋静葉
+  Kana: あきしずは
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり静葉
+  - しずは
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 78
+  Name: 秋穣子
+  Kana: あきみのりこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり穣子
+  - みのりこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 79
+  Name: アリス・マーガトロイド
+  Kana: ありすまーがとろいど
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりアリス
+  - ありす
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 80
+  Name: 飯綱丸龍
+  Kana: いいずなまるめぐむ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり龍
+  - めぐむ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 81
+  Name: 十六夜咲夜
+  Kana: いざよいさくや
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり咲夜
+  - さくや
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 82
+  Name: 因幡てゐ
+  Kana: いなばてい
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりてゐ
+  - てゐ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 83
+  Name: 犬走椛
+  Kana: いぬばしりもみじ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり椛
+  - もみじ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 84
+  Name: 茨木華扇
+  Kana: いばらきかせん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり華扇
+  - かせん
+  - 茨華仙
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 85
+  Name: 伊吹萃香
+  Kana: いぶきすいか
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり萃香
+  - すいか
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 86
+  Name: 今泉影狼
+  Kana: いまいずみかげろう
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり影狼
+  - かげろう
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 87
+  Name: 宇佐見蓮子
+  Kana: うさみれんこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり蓮子
+  - れんこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 88
+  Name: 牛崎潤美
+  Kana: うしざきうるみ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり潤美
+  - うるみ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 89
+  Name: エタニティラルバ
+  Kana: えたにてぃらるば
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりエタニティラルバ
+  - えたにてぃらるば
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 90
+  Name: 戎瓔花
+  Kana: えびすえいか
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり瓔花
+  - えいか
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 91
+  Name: 奥野田美宵
+  Kana: おくのだみよい
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり美宵
+  - みよい
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 92
+  Name: 小野塚小町
+  Kana: おのづかこまち
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり小町
+  - こまち
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 93
+  Name: 火焔猫燐
+  Kana: かえんびょうりん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりおりん
+  - おりん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 94
+  Name: 鍵山雛
+  Kana: かぎやまひな
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり雛
+  - ひな
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 95
+  Name: 霍青娥
+  Kana: かくせいが
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり青蛾
+  - せいが
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 96
+  Name: 風見幽香
+  Kana: かざみゆうか
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり幽香
+  - ゆうか
+  - のうかりん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 97
+  Name: 幽谷響子
+  Kana: かそだにきょうこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり響子
+  - きょうこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 98
+  Name: 上白沢慧音
+  Kana: かみしらさわけいね
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり慧音
+  - けーね
+  - きもけーね
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 99
+  Name: 河城にとり
+  Kana: かわしろにとり
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりにとり
+  - にとり
+  - メカにとり
+  - めかにとり
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 100
+  Name: 稀神サグメ
+  Kana: きしんさぐめ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりサグメ
+  - さぐめ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 101
+  Name: 鬼人正邪
+  Kana: きじんせいじゃ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり正邪
+  - せいじゃ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 102
+  Name: キスメ
+  Kana: きすめ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりキスメ
+  - きすめ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 103
+  Name: 吉弔八千慧
+  Kana: きっちょうやちえ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり八千慧
+  - やちえ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 104
+  Name: 霧雨魔理沙
+  Kana: きりさめまりさ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり魔理沙
+  - まりさ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 105
+  Name: 菅牧典
+  Kana: くだまきつかさ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり典
+  - つかさ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 106
+  Name: 雲居一輪
+  Kana: くもいいちりん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり一輪
+  - いちりん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 107
+  Name: クラウンピース
+  Kana: くらうんぴーす
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりクラウンピース
+  - くらうんぴーす
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 108
+  Name: 驪駒早鬼
+  Kana: くろこまさき
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり早鬼
+  - さき
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 109
+  Name: 黒谷ヤマメ
+  Kana: くろだにやまめ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりヤマメ
+  - やまめ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 110
+  Name: 小悪魔
+  Kana: こあくま
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり小悪魔
+  - こあくま
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 111
+  Name: 豪徳寺ミケ
+  Kana: ごうとくじみけ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりミケ
+  - みけ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 112
+  Name: 東風谷早苗
+  Kana: こちやさなえ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり早苗
+  - さなえ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 113
+  Name: 駒草山如
+  Kana: こまくにさんにょ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり山如
+  - さんにょ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 114
+  Name: 高麗野あうん
+  Kana: こまのあうん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりあうん
+  - あうん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 115
+  Name: 古明地こいし
+  Kana: こめいじこいし
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりこいし
+  - こいし
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 116
+  Name: 古明地さとり
+  Kana: こめいじさとり
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりさとり
+  - さとり
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 117
+  Name: 魂魄妖夢
+  Kana: こんばくようむ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり妖夢
+  - ようむ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 118
+  Name: 西行寺幽々子
+  Kana: さいぎょうじゆゆこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり幽々子
+  - ゆゆこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 119
+  Name: 冴月麟
+  Kana: さえつきりん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり冴月麟
+  - さえつきりん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 120
+  Name: 坂田ネムノ
+  Kana: さかたねむの
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりネムノ
+  - ねむの
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 121
+  Name: サニーミルク
+  Kana: さにーみるく
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりサニーミルク
+  - さにーみるく
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 122
+  Name: 四季映姫・ヤマザナドゥ
+  Kana: しきえいきやまざなどぅ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり映姫
+  - えいき
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 123
+  Name: 射命丸文
+  Kana: しゃめいまるあや
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり文
+  - あや
+  - きめぇ丸
+  - きめぇまる
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 124
+  Name: シュガーサテラ
+  Kana: しゅがーさてら
+  Engines:
+  - AQ
+  AnotherNames:
+  - シュガーサテラ
+  - しゅがーさてら
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 125
+  Name: 純狐
+  Kana: じゅんこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり純狐
+  - じゅんこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 126
+  Name: 杖刀偶磨弓
+  Kana: じょうとうぐうまゆみ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり磨弓
+  - まゆみ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 127
+  Name: 少名針妙丸
+  Kana: すくなしんみょうまる
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり針妙丸
+  - しんみょうまる
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 128
+  Name: スターサファイア
+  Kana: すたーさふぁいあ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりスターサファイア
+  - すたーさふぁいあ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 129
+  Name: 清蘭
+  Kana: せいらん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり清蘭
+  - せいらん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 130
+  Name: 赤蛮奇
+  Kana: せきばんき
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり赤蛮奇
+  - せきばんき
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 131
+  Name: 蘇我屠自古
+  Kana: そがのとじこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり屠自古
+  - とじこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 132
+  Name: 大妖精
+  Kana: だいようせい
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり大妖精
+  - だいようせい
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 133
+  Name: 多々良小傘
+  Kana: たたらこがさ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり小傘
+  - こがさ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 134
+  Name: 玉造魅須丸
+  Kana: たまつくりみすまる
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり魅須丸
+  - みすまる
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 135
+  Name: 橙
+  Kana: ちぇん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり橙
+  - ちぇん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 136
+  Name: チルノ
+  Kana: ちるの
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりチルノ
+  - ちるの
+  - ⑨
+  - バカ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 137
+  Name: 九十九弁々
+  Kana: つくもべんべん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり弁々
+  - べんべん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 138
+  Name: 九十九八橋
+  Kana: つくもやつはし
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり八橋
+  - やつはし
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 139
+  Name: 罪袋
+  Kana: つみぶくろ
+  Engines:
+  - AQ
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 140
+  Name: 丁礼田舞
+  Kana: ていれいだまい
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり舞
+  - まい
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 141
+  Name: 天弓千亦
+  Kana: てんきゅうちまた
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり千亦
+  - ちまた
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 142
+  Name: 饕餮尤魔
+  Kana: とうてつゆうま
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり尤魔
+  - ゆうま
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 143
+  Name: 朱鷺子
+  Kana: ときこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり朱鷺子
+  - ときこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 144
+  Name: 豊聡耳神子
+  Kana: とよさとみみのみこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり神子
+  - みこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 145
+  Name: 寅丸星
+  Kana: とらまるしょう
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり星
+  - しょう
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 146
+  Name: ドレミー・スイート
+  Kana: どれみーすいーと
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりドレミー
+  - どれみー
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 147
+  Name: 永江衣玖
+  Kana: ながえいく
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり衣玖
+  - いく
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 148
+  Name: ナズーリン
+  Kana: なずーりん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりナズーリン
+  - なずーりん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 149
+  Name: 爾子田里乃
+  Kana: にしださとの
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり里乃
+  - さとの
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 150
+  Name: 庭渡久侘歌
+  Kana: にわたりくたか
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり久侘歌
+  - くたか
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 151
+  Name: 博麗霊夢
+  Kana: はくれいれいむ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり霊夢
+  - れいむ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 152
+  Name: 秦こころ
+  Kana: はたのこころ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりこころ
+  - こころ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 153
+  Name: パチュリー・ノーレッジ
+  Kana: ぱちゅりーのーれっじ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりパチェリー
+  - ぱちぇりー
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 154
+  Name: 埴安神袿姫
+  Kana: はにやすしんけいき
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり袿姫
+  - けいき
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 155
+  Name: 稗田阿求
+  Kana: ひえだのあきゅう
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり阿求
+  - あきゅう
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 156
+  Name: 姫海棠はたて
+  Kana: ひめかいどうはたて
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりはたて
+  - はたて
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 157
+  Name: 聖白蓮
+  Kana: ひじりびゃくれん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり聖
+  - ひじり
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 158
+  Name: 比那名居天子
+  Kana: ひなないてんし
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり天子
+  - てんこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 159
+  Name: 姫虫百々世
+  Kana: ひめむしももよ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり百々世
+  - ももよ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 160
+  Name: 藤原妹紅
+  Kana: ふじわらのもこう
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり妹紅
+  - もこう
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 161
+  Name: 二ツ岩マミゾウ
+  Kana: ふたついわまみぞう
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりマミゾウ
+  - まみぞう
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 162
+  Name: フランドール・スカーレット
+  Kana: ふらんどーるすかーれっと
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりフラン
+  - ふらん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 163
+  Name: ヘカーティア・ラピスラズリ
+  Kana: へかーてぃあらぴすらずり
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりヘカーティア
+  - へかーてぃあ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 164
+  Name: 封獣ぬえ
+  Kana: ほうじゅうぬえ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりぬえ
+  - ぬえ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 165
+  Name: 蓬莱山輝夜
+  Kana: ほうらいさんかぐや
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり輝夜
+  - かぐや
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 166
+  Name: 星熊勇儀
+  Kana: ほしぐまゆうぎ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり勇儀
+  - ゆうぎ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 167
+  Name: 堀川雷鼓
+  Kana: ほりかわらいこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり雷鼓
+  - らいこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 168
+  Name: 紅美鈴
+  Kana: ほんめいりん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり美鈴
+  - めーりん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 169
+  Name: マエリベリー・ハーン
+  Kana: まえりべりーはーん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりメリー
+  - めりー
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 170
+  Name: 摩多羅隠岐奈
+  Kana: またらおきな
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり隠岐奈
+  - おきな
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 171
+  Name: ミスティア・ローレライ
+  Kana: みすてぃあろーれり
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりミスチー
+  - みすちー
+  - みすちー２
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 172
+  Name: 水橋パルスィ
+  Kana: みずはしぱるすぃ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりパルスィ
+  - ぱるすぃ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 173
+  Name: 宮出口瑞霊
+  Kana: みやでぐみずち
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり瑞霊
+  - みずち
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 174
+  Name: 宮古芳香
+  Kana: みやこよしか
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり芳香
+  - よしか
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 175
+  Name: 村紗水蜜
+  Kana: むらさみなみつ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり村紗
+  - むらさ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 176
+  Name: メディスン・メランコリー
+  Kana: めでぃすんめらんこりー
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりメディスン
+  - めでぃすん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 177
+  Name: メルラン・プリズムリバー
+  Kana: めるらんぷりずむりばー
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりメルラン
+  - めるらん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 178
+  Name: 本居小鈴
+  Kana: もとおりこすず
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり小鈴
+  - こすず
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 179
+  Name: 物部布都
+  Kana: もののべのふと
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり布都
+  - ふと
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 180
+  Name: 森近霖之助
+  Kana: もりちかりんのすけ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり香霖
+  - こーりん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 181
+  Name: 洩矢諏訪子
+  Kana: もりやすわこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり諏訪子
+  - すわこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 182
+  Name: 八雲紫
+  Kana: やくもゆかり
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり紫
+  - ゆかり
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 183
+  Name: 八雲藍
+  Kana: やくもらん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり藍
+  - らん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 184
+  Name: 八意永琳
+  Kana: やごころえいりん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり永琳
+  - えーりん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 185
+  Name: 八坂神奈子
+  Kana: やさかかなこ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり神奈子
+  - かなこ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 186
+  Name: 矢田寺成美
+  Kana: やたでらなるみ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり成美
+  - なるみ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 187
+  Name: 山城たかね
+  Kana: やましろたかね
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりたかね
+  - たかね
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 188
+  Name: 依神紫苑
+  Kana: よりがみしおん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり紫苑
+  - しおん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 189
+  Name: 依神女苑
+  Kana: よりがみじょおん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり女苑
+  - じょおん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 190
+  Name: リグル・ナイトバグ
+  Kana: りぐるないとばぐ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりリグル
+  - りぐる
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 191
+  Name: リリーホワイト
+  Kana: りりーほわいと
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりリリーホワイト
+  - りりーほわいと
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 192
+  Name: リリーブラック
+  Kana: りりーぶらっく
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりリリーブラック
+  - りりーぶらっく
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 193
+  Name: リリカ・プリズムリバー
+  Kana: りりかぷりずむりばー
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりリリカ
+  - りりか
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 194
+  Name: 鈴瑚
+  Kana: りんご
+  Engines:
+  - AQ
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 195
+  Name: ルーミア
+  Kana: るーみあ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりルーミア
+  - るーみあ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 196
+  Name: ルナサ・プリズムリバー
+  Kana: るなさぷりずむりばー
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりルナサ
+  - るなさ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 197
+  Name: ルナチャイルド
+  Kana: るなちゃいるど
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりルナチャイルド
+  - るなちゃいるど
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 198
+  Name: 霊烏路空
+  Kana: れいうじうつほ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりお空
+  - おくう
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 199
+  Name: レイセン
+  Kana: れいせん
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりレイセン
+  - れいせん
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 200
+  Name: 鈴仙・優曇華院・イナバ
+  Kana: れいせんうどんげいんいなば
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり優曇華
+  - うどんげ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 201
+  Name: レティ・ホワイトロック
+  Kana: れてぃほわいとろっく
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりレティ
+  - れてぃ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 202
+  Name: レミリア・スカーレット
+  Kana: れみりあすかーれっと
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりレミリア
+  - れみりあ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 203
+  Name: わかさぎ姫
+  Kana: わかさぎひめ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくりわかさぎ姫
+  - わかさぎひめ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 204
+  Name: 綿月豊姫
+  Kana: わたつきのとよひめ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり豊姫
+  - とよひめ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 205
+  Name: 綿月依姫
+  Kana: わたつきのよりひめ
+  Engines:
+  - AQ
+  AnotherNames:
+  - ゆっくり依姫
+  - よりひめ
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 206
+  Name: ナレーター
+  Kana: なれーたー
+  Engines:
+  - OTHER
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 207
+  Name: その他
+  Kana: そのた
+  Engines:
+  - OTHER
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 208
+  Name: 生声
+  Kana: なまごえ
+  Engines:
+  - OTHER
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 209
+  Name: '[状況説明]'
+  Kana: じょうきょうせつめい
+  Engines:
+  - NONE
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 210
+  Name: '[なし]'
+  Kana: なし
+  Engines:
+  - NONE
+  AnotherNames: []
+  JimakuTextColor: White
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+

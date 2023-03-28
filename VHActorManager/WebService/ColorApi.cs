@@ -14,6 +14,14 @@ namespace VHActorManager.WebService
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
+        [RestRoute("Get", "/ColorSpec/All")]
+        public async Task GetAll(IHttpContext context)
+        {
+            string json = ColorMaster.Instance().SpecsToJson();
+
+            await ApiUtils.CreateAndSendResponse(context, json);
+        }
+
         [RestRoute("Get", "/ColorSpec")]
         public async Task Get(IHttpContext context)
         {
