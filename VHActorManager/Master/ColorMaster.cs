@@ -5,9 +5,9 @@ namespace VHActorManager.Master
 {
     internal class ColorMaster: MasterBase
     {
-        private static ColorMaster? _instance;
+        public const string YAML_FILENAME = "color_master.yaml";
 
-        private const string DEFAULT_PATH = "color_master.yaml";
+        private static ColorMaster? _instance;
 
         private const string SPEC_NAME = "Name";
         private const string SPEC_HEX = "Hex";
@@ -21,14 +21,14 @@ namespace VHActorManager.Master
         private readonly List<ColorSpec> specs;
         private ColorSpec currentSpec;
 
-        public static ColorMaster Instance(string fileName = DEFAULT_PATH)
+        public static ColorMaster Instance(string fileName = YAML_FILENAME)
         {
             _instance ??= new ColorMaster(fileName);
 
             return _instance;
         }
 
-        public ColorMaster(string fileName = DEFAULT_PATH) : base(fileName)
+        public ColorMaster(string fileName = YAML_FILENAME) : base(fileName)
         {
             specs = new List<ColorSpec>();
         }

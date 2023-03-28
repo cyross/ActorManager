@@ -57,6 +57,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="VegasScriptFileDirButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAGBJREFUOE9j
+        oAbwBOLHQPwfCT8A4lYgZgJiggBdMzKeB8QEAUwxMrAC4s9AjGwYOgZZDHI9XAAdOADxXSBG1oSOQYbA
+        OaQCuL5RA4aFAfiSMiEMTkjYMhMxGJ6UKQAMDAAQ2GE3SpjtXwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="VegasExtFileDirButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAGBJREFUOE9j
+        oAbwBOLHQPwfCT8A4lYgZgJiggBdMzKeB8QEAUwxMrAC4s9AjGwYOgZZDHI9XAAdOADxXSBG1oSOQYbA
+        OaQCuL5RA4aFAfiSMiEMTkjYMhMxGJ6UKQAMDAAQ2GE3SpjtXwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="OpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

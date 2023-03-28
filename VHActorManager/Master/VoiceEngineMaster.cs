@@ -5,9 +5,9 @@ namespace VHActorManager.Master
 {
     public class VoiceEngineMaster: MasterBase
     {
-        private static VoiceEngineMaster? _instance;
+        public const string YAML_FILENAME = "voice_engine_master.yaml";
 
-        private const string DEFAULT_PATH = "voice_engine_master.yaml";
+        private static VoiceEngineMaster? _instance;
 
         private const string SPEC_KEY = "Spec";
         private const string SPEC_NAME = "Name";
@@ -31,14 +31,14 @@ namespace VHActorManager.Master
         private VoiceEngineStruct currentSpec;
         private SanitizeRegexpStruct currentSanitize;
 
-        public static VoiceEngineMaster Instance(string fileName = DEFAULT_PATH)
+        public static VoiceEngineMaster Instance(string fileName = YAML_FILENAME)
         {
             _instance ??= new VoiceEngineMaster(fileName);
 
             return _instance;
         }
 
-        public VoiceEngineMaster(string fileName = DEFAULT_PATH) : base(fileName) {
+        public VoiceEngineMaster(string fileName = YAML_FILENAME) : base(fileName) {
             specs = new List<VoiceEngineStruct>();
             sanitizers = new Dictionary<string, List<SanitizeRegexpStruct>>();
             noneVoiceEngines = new List<string>();

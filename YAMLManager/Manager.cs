@@ -1,4 +1,5 @@
-﻿using YamlDotNet.RepresentationModel;
+﻿using System.Diagnostics;
+using YamlDotNet.RepresentationModel;
 
 namespace VHYAML
 {
@@ -85,6 +86,8 @@ namespace VHYAML
             if (filePath == null) { filePath = path; }
             if (!File.Exists(filePath)) { return false; }
 
+            Debug.WriteLine(string.Format("LOAD YAML FILE: {0}", filePath));
+
             using (var yamlStream = new StreamReader(filePath))
             {
                 var stream = new YamlStream();
@@ -105,6 +108,9 @@ namespace VHYAML
             if (filePath == null) { filePath = path; }
 
             var yaml = processor.Serialize(obj);
+
+            Debug.WriteLine(string.Format("SAVE YAML FILE: {0}", filePath));
+            Debug.WriteLine(string.Format("YAML: {0}", yaml));
 
             using (var f = new StreamWriter(filePath))
             {

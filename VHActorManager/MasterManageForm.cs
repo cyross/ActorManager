@@ -1,12 +1,16 @@
+using System.Diagnostics;
+using System.IO;
 using VHActorManager.Master;
 using VHActorManager.WebService;
 
 namespace VHActorManager
 {
-    public partial class Form1 : Form
+    public partial class MasterManageForm : Form
     {
         private const string SERVER_RUNNING = "‹N“®’†";
         private const string SERVER_STOPPING = "’âŽ~’†";
+        private const string VEGAS_SCRIPT_DIRNAME = "Vegas Script Menu";
+        private const string VEGAS_EXT_DIRNAME = "Vegas Application Extensions";
 
         private readonly User user;
         private readonly ActorMaster actorMaster;
@@ -14,7 +18,7 @@ namespace VHActorManager
         private readonly VoiceEngineMaster voiceEngineMaster;
         private readonly WebServer webServer;
 
-        public Form1()
+        public MasterManageForm()
         {
             user = User.Instance();
             user.Load();
@@ -38,8 +42,16 @@ namespace VHActorManager
 
             PortBox.Text = user.Server.Port.ToString();
             OpenBrowserOnStartCheck.Checked = user.Server.OpenBrowser;
-            VSYAMLEnableCheck.Checked = user.VHYaml.Enable;
-            VSYAMLFilePathBox.Text = user.VHYaml.Path;
+            VSYAMLEnableCheck.Checked = user.VegasScriptYAML.Enable;
+            VegasScriptFileDirBox.Text = GetDir(user.VegasScriptYAML.ScriptPath, VEGAS_SCRIPT_DIRNAME);
+            VegasExtFileDirBox.Text = GetDir(user.VegasScriptYAML.ExtPath, VEGAS_EXT_DIRNAME);
+        }
+
+        private static string GetDir(string dir, string defaultDirName)
+        {
+            if (dir != "") { return dir; }
+
+            return Utility.CombineFilePath(Utility.GetDocumentFolderPath(), defaultDirName);
         }
 
         private void StartServer()
@@ -70,8 +82,9 @@ namespace VHActorManager
         {
             user.Server.Port = int.Parse(PortBox.Text);
             user.Server.OpenBrowser = OpenBrowserOnStartCheck.Checked;
-            user.VHYaml.Enable = VSYAMLEnableCheck.Checked;
-            user.VHYaml.Path = VSYAMLFilePathBox.Text;
+            user.VegasScriptYAML.Enable = VSYAMLEnableCheck.Checked;
+            user.VegasScriptYAML.ScriptPath = VegasScriptFileDirBox.Text;
+            user.VegasScriptYAML.ExtPath = VegasExtFileDirBox.Text;
         }
 
         private void QuitButton_Click(object sender, EventArgs e)
@@ -81,13 +94,24 @@ namespace VHActorManager
             Application.Exit();
         }
 
-        private void VSYAMLFilePathButton_Click(object sender, EventArgs e)
+        private void VegasScriptFileDirButton_Click(object sender, EventArgs e)
         {
-            OpenFileDialog.FileName = VSYAMLFilePathBox.Text;
+            OpenFileDialog.InitialDirectory = VegasScriptFileDirBox.Text;
+            OpenFileDialog.FileName = ActorMaster.YAML_FILENAME;
 
             if (OpenFileDialog.ShowDialog() == DialogResult.Cancel) { return; }
 
-            VSYAMLFilePathBox.Text = OpenFileDialog.FileName;
+            VegasScriptFileDirBox.Text = Utility.GetDirectory(OpenFileDialog.FileName);
+        }
+
+        private void VegasExtFileDirButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog.InitialDirectory = VegasExtFileDirBox.Text;
+            OpenFileDialog.FileName = ActorMaster.YAML_FILENAME;
+
+            if (OpenFileDialog.ShowDialog() == DialogResult.Cancel) { return; }
+
+            VegasExtFileDirBox.Text = Utility.GetDirectory(OpenFileDialog.FileName);
         }
 
         private void SaveUserYAMLButton_Click(object sender, EventArgs e)

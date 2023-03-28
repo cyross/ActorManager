@@ -1,4 +1,5 @@
-﻿using YamlDotNet.RepresentationModel;
+﻿using System.Diagnostics;
+using YamlDotNet.RepresentationModel;
 
 namespace VHActorManager.Master
 {
@@ -12,11 +13,12 @@ namespace VHActorManager.Master
         private const string SERVER_OPEN_BROWSER = "OpenBrowser";
         private const string VSY_KEY = "VegasScriptYAML";
         private const string VSY_ENABLE = "Enable";
-        private const string VSY_PATH = "Path";
-        private const string EXT_DATA = "ExtData";
+        private const string VSY_SCRIPT_PATH = "ScriptPath";
+        private const string VSY_EXT_PATH = "ExtPath";
+        private const string EXT_DATA = "ExtPath";
 
         public ServerSpec Server;
-        public VHYamlSpec VHYaml;
+        public VHYamlSpec VegasScriptYAML;
         public Dictionary<string, string> ExtData;
 
         public static User Instance(string fileName = DEFAULT_FILE)
@@ -33,10 +35,11 @@ namespace VHActorManager.Master
                 Port = 3300,
                 OpenBrowser = false
             };
-            VHYaml = new VHYamlSpec()
+            VegasScriptYAML = new VHYamlSpec()
             {
                 Enable = false,
-                Path = ""
+                ScriptPath = "",
+                ExtPath = ""
             };
             ExtData = new Dictionary<string, string>();
         }
@@ -54,6 +57,8 @@ namespace VHActorManager.Master
             YamlManager.CallbackMappingInnerEnd += CbMapIE;
             YamlManager.CallbackMappingEnd += CbMapE;
             base.Load(path);
+            Debug.WriteLine(VegasScriptYAML.ScriptPath);
+            Debug.WriteLine(VegasScriptYAML.ExtPath);
         }
 
         public void Save(string? path = null)
@@ -63,24 +68,18 @@ namespace VHActorManager.Master
 
         private void CbScl(YamlScalarNode node)
         {
+            Debug.WriteLine(string.Format("CbScl DEPTH: {0}", YamlManager.MapDepth));
             switch (YamlManager.MapDepth)
             {
-                case 1:
-                    CbSclDepth1(node);
-                    break;
                 case 2:
                     CbSclDepth2(node);
                     break;
             }
         }
 
-        private void CbSclDepth1(YamlScalarNode node)
-        {
-            // 昔は項目があったが現在は削除
-        }
-
         private void CbSclDepth2(YamlScalarNode node)
         {
+            Debug.WriteLine(string.Format("CbSclDepth2 PARENT: {0}", ParentKey));
             switch (ParentKey)
             {
                 case SERVER_KEY:
@@ -97,6 +96,7 @@ namespace VHActorManager.Master
 
         private void CbSclDepth2Server(YamlScalarNode node)
         {
+            Debug.WriteLine(string.Format("CbSclDepth2Server CURRENT: {0}", CurrentKey));
             switch (CurrentKey)
             {
                 case SERVER_PORT:
@@ -110,13 +110,20 @@ namespace VHActorManager.Master
 
         private void CbSclDepth2VSY(YamlScalarNode node)
         {
+            Debug.WriteLine(string.Format("CbSclDepth2VSY CURRENT: {0}", CurrentKey));
             switch (CurrentKey)
             {
                 case VSY_ENABLE:
-                    VHYaml.Enable = GetBool(node);
+                    VegasScriptYAML.Enable = GetBool(node);
+                    Debug.WriteLine(VegasScriptYAML.Enable);
                     break;
-                case VSY_PATH:
-                    VHYaml.Path = GetString(node);
+                case VSY_SCRIPT_PATH:
+                    VegasScriptYAML.ScriptPath = GetString(node);
+                    Debug.WriteLine(VegasScriptYAML.ScriptPath);
+                    break;
+                case VSY_EXT_PATH:
+                    VegasScriptYAML.ExtPath = GetString(node);
+                    Debug.WriteLine(VegasScriptYAML.ExtPath);
                     break;
             }
         }

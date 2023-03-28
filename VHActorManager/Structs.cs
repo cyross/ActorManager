@@ -13,7 +13,8 @@ namespace VHActorManager
     public struct VHYamlSpec
     {
         public bool Enable { get; set; }
-        public string Path { get; set; }
+        public string ScriptPath { get; set; }
+        public string ExtPath { get; set; }
     }
 
     public struct VoiceEngineStruct

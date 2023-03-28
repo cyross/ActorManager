@@ -6,9 +6,9 @@ namespace VHActorManager.Master
 {
     public class ActorMaster : MasterBase
     {
-        private static ActorMaster? _instance;
+        public const string YAML_FILENAME = "actor_master.yaml";
 
-        private const string DEFAULT_PATH = "actor_master.yaml";
+        private static ActorMaster? _instance;
 
         private const string SPEC_NAME = "Name";
         private const string SPEC_KANA = "Kana";
@@ -26,14 +26,14 @@ namespace VHActorManager.Master
         private readonly List<ActorSpec> specs;
         private ActorSpec currentSpec;
 
-        public static ActorMaster Instance(string fileName = DEFAULT_PATH)
+        public static ActorMaster Instance(string fileName = YAML_FILENAME)
         {
             _instance ??= new ActorMaster(fileName);
 
             return _instance;
         }
 
-        public ActorMaster(string fileName = DEFAULT_PATH): base(fileName){
+        public ActorMaster(string fileName = YAML_FILENAME) : base(fileName){
             specs = new List<ActorSpec>();
         }
 

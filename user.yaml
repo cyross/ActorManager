@@ -3,4 +3,5 @@ Server:
   OpenBrowser: false
 VegasScriptYAML:
   Enable: false
-  Path: ""
+  ScriptPath: ""
+  ExtPath: ""

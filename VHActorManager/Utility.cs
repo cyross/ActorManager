@@ -24,5 +24,20 @@ namespace VHActorManager
         {
             return Path.Combine(Directory.GetCurrentDirectory(), fileName);
         }
+
+        public static string GetDocumentFolderPath()
+        {
+            return System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        }
+
+        public static string CombineFilePath(string dirName, string fileName)
+        {
+            return Path.Combine(dirName, fileName);
+        }
+
+        public static string GetDirectory(string filePath)
+        {
+            return Path.GetDirectoryName(filePath) ?? "";
+        }
     }
 }
