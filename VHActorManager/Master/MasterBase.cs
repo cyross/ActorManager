@@ -2,6 +2,9 @@
 using VHYAML;
 using System.Text.Json;
 using System.Diagnostics;
+using VHActorManager.Specs;
+using VHActorManager.Interfaces;
+using VHActorManager.WebService;
 
 namespace VHActorManager.Master
 {
@@ -39,6 +42,16 @@ namespace VHActorManager.Master
             MaxSpecId = 0;
         }
 
+        protected string ParentKey
+        {
+            get
+            {
+                if (KeyStack.Count == 0) { return ""; }
+
+                return KeyStack.Peek();
+            }
+        }
+
         public static string ResponseNone() { return new ResponseMessage().None().ToJson(); }
 
         public static string ResponseSucceed() { return new ResponseMessage().Succeed().ToJson(); }
@@ -54,6 +67,22 @@ namespace VHActorManager.Master
         protected static string ResponseIllegalRequestDataError() { return JsonSerializer.Serialize(new ResponseMessage().Error("入力されたデータが不正です")); }
 
         protected static string ResponseIllegalParamaterError() { return JsonSerializer.Serialize(new ResponseMessage().Error("パラメータの書式が不正です")); }
+
+        internal static string FindIndexFromSpecs<T>(List<T> specs, string indexParam, string id_prefix, out int targetId) where T : class, SpecInterface
+        {
+            targetId = -1;
+
+            if (!int.TryParse(indexParam, out int id)) { return ResponseIllegalParamaterError(); }
+
+            IEnumerable<T> searchResult = specs.Where(e => e.Id == id);
+
+            if (!searchResult.Any()) { return ResponseOutOfIndexError(id_prefix); }
+
+            // リストのインデックスを求めたいので、結構遠回りなことをやっている
+            targetId = specs.IndexOf(searchResult.First());
+
+            return "";
+        }
 
         public virtual string NameListToJson() { return ResponseNone(); }
 
@@ -75,16 +104,6 @@ namespace VHActorManager.Master
         public void Save<T>(T obj, string? path = null)
         {
             YamlManager.Save<T>(obj, path);
-        }
-
-        protected string ParentKey
-        {
-            get
-            {
-                if (KeyStack.Count == 0) { return ""; }
-
-                return KeyStack.Peek();
-            }
         }
 
         protected static string GetString(YamlScalarNode node)

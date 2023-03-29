@@ -2,6 +2,7 @@
 using System.Text.Json;
 using System.ComponentModel;
 using System.Collections.Generic;
+using VHActorManager.Specs;
 
 namespace VHActorManager.Master
 {
@@ -32,30 +33,32 @@ namespace VHActorManager.Master
         private const string ID_PREFIX = "声優ID";
 
         private readonly List<ActorSpec> specs;
+
         private ActorSpec currentSpec;
 
-        public static ActorMaster Instance(string fileName = YAML_FILENAME)
+        internal static ActorMaster Instance(string fileName = YAML_FILENAME)
         {
             _instance ??= new ActorMaster(fileName);
 
             return _instance;
         }
 
-        public ActorMaster(string fileName = YAML_FILENAME) : base(fileName){
+        private ActorMaster(string fileName = YAML_FILENAME) : base(fileName){
             specs = new List<ActorSpec>();
+            currentSpec = new ActorSpec();
         }
 
-        public List<ActorSpec> Specs { get { return specs; } }
+        internal List<ActorSpec> Specs { get { return specs; } }
 
         public override string NameListToJson() {
             List<NameListElement> names = new();
 
-            for (int i = 0; i< specs.Count; i++)
+            foreach(var spec in specs)
             {
                 NameListElement nameElement = new()
                 {
-                    Id = i,
-                    Name = specs[i].Name
+                    Id = spec.Id,
+                    Name = spec.Name
                 };
                 names.Add(nameElement);
             }
@@ -70,11 +73,11 @@ namespace VHActorManager.Master
 
         public override string SpecToJson(string indexParam)
         {
-            if(!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+            string result = FindIndexFromSpecs(specs, indexParam, ID_PREFIX, out int targetIndex);
 
-            if(index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+            if (targetIndex == -1) { return result; }
 
-            return JsonSerializer.Serialize(specs[index]);
+            return JsonSerializer.Serialize(specs[targetIndex]);
         }
 
         public override string SpecsFromJson(string json)
@@ -90,26 +93,26 @@ namespace VHActorManager.Master
 
         public override string SpecFromJson(string indexParam, string json)
         {
-            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+            string result = FindIndexFromSpecs(specs, indexParam, ID_PREFIX, out int targetIndex);
 
-            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+            if (targetIndex == -1) { return result; }
 
             ActorSpec? spec = JsonSerializer.Deserialize<ActorSpec>(json);
 
             if (spec == null) { return ResponseIllegalRequestDataError(); }
 
-            specs[index] = (ActorSpec)spec;
+            specs[targetIndex] = (ActorSpec)spec;
 
             return ResponseSucceed();
         }
 
         public override string DeleteSpec(string indexParam)
         {
-            if (!int.TryParse(indexParam, out int index)) { return ResponseIllegalParamaterError(); }
+            string result = FindIndexFromSpecs(specs, indexParam, ID_PREFIX, out int targetIndex);
 
-            if (index < 0 || index >= specs.Count) { return ResponseOutOfIndexError(ID_PREFIX); }
+            if (targetIndex == -1) { return result; }
 
-            specs.RemoveAt(index);
+            specs.RemoveAt(targetIndex);
 
             return ResponseSucceed();
         }
@@ -131,7 +134,7 @@ namespace VHActorManager.Master
             // IDカラムが存在していないときのために、ID振り直し
             for (int i = 0; i < specs.Count; i++)
             {
-                if (specs[i].Id != 0) { continue; }
+                if (specs[i].Id != -1) { continue; }
 
                 specs[i] = specs[i].Duplicate(MaxSpecId++);
             }

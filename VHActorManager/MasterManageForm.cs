@@ -15,7 +15,7 @@ namespace VHActorManager
         private readonly User user;
         private readonly ActorMaster actorMaster;
         private readonly ColorMaster colorMaster;
-        private readonly VoiceEngineMaster voiceEngineMaster;
+        private readonly VEMaster veMaster;
         private readonly WebServer webServer;
 
         public MasterManageForm()
@@ -29,8 +29,8 @@ namespace VHActorManager
             colorMaster = ColorMaster.Instance();
             colorMaster.Load();
 
-            voiceEngineMaster = VoiceEngineMaster.Instance();
-            voiceEngineMaster.Load();
+            veMaster = VEMaster.Instance();
+            veMaster.Load();
 
             webServer = new WebServer(user);
 

@@ -10,7 +10,7 @@ namespace VHActorManager.WebService
         public async Task SaveAll(IHttpContext context)
         {
             ActorMaster.Instance().Save();
-            VoiceEngineMaster.Instance().Save();
+            VEMaster.Instance().Save();
             ColorMaster.Instance().Save();
 
             User user = User.Instance();
@@ -20,7 +20,7 @@ namespace VHActorManager.WebService
             if (user.VegasScriptYAML.Enable && Path.Exists(scriptPath))
             {
                 ActorMaster.Instance().Save(Utility.CombineFilePath(scriptPath, ActorMaster.YAML_FILENAME));
-                VoiceEngineMaster.Instance().Save(Utility.CombineFilePath(scriptPath, VoiceEngineMaster.YAML_FILENAME));
+                VEMaster.Instance().Save(Utility.CombineFilePath(scriptPath, VEMaster.YAML_FILENAME));
                 ColorMaster.Instance().Save(Utility.CombineFilePath(scriptPath, ColorMaster.YAML_FILENAME));
             }
 
@@ -29,7 +29,7 @@ namespace VHActorManager.WebService
             if (user.VegasScriptYAML.Enable && Path.Exists(extPath))
             {
                 ActorMaster.Instance().Save(Utility.CombineFilePath(extPath, ActorMaster.YAML_FILENAME));
-                VoiceEngineMaster.Instance().Save(Utility.CombineFilePath(extPath, VoiceEngineMaster.YAML_FILENAME));
+                VEMaster.Instance().Save(Utility.CombineFilePath(extPath, VEMaster.YAML_FILENAME));
                 ColorMaster.Instance().Save(Utility.CombineFilePath(extPath, ColorMaster.YAML_FILENAME));
             }
 

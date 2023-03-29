@@ -4,12 +4,12 @@ using VHActorManager.Master;
 namespace VHActorManager.WebService
 {
     [RestResource(BasePath = "api/v1")]
-    internal class VoiceEngineApi
+    internal class VEApi
     {
         [RestRoute("Get", "/VoiceEngineSpec/Index")]
         public async Task GetNameList(IHttpContext context)
         {
-            string json = VoiceEngineMaster.Instance().NameListToJson();
+            string json = VEMaster.Instance().NameListToJson();
 
             await ApiUtils.CreateAndSendResponse(context, json);
         }
@@ -17,7 +17,7 @@ namespace VHActorManager.WebService
         [RestRoute("Get", "/VoiceEngineSpec")]
         public async Task Get(IHttpContext context)
         {
-            string json = VoiceEngineMaster.Instance().SpecsToJson();
+            string json = VEMaster.Instance().SpecsToJson();
 
             IHttpResponse response = context.Response as IHttpResponse;
             response.ContentType = ContentType.Json;
@@ -30,7 +30,7 @@ namespace VHActorManager.WebService
         public async Task GetByIndex(IHttpContext context)
         {
             var paramIndex = context.Request.PathParameters["index"];
-            string json = VoiceEngineMaster.Instance().SpecToJson(paramIndex);
+            string json = VEMaster.Instance().SpecToJson(paramIndex);
 
             IHttpResponse response = context.Response as IHttpResponse;
             response.ContentType = ContentType.Json;
