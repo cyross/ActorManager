@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.css" />
+    <link type="text/css" rel="stylesheet" href="main.css"
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -18,136 +19,383 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
     <div id="app" class="container">
-        <b-tabs content-class="mt-3" justified>
-            <b-tab title="声優マスター">
-                <b-row v-if="actorHasError">
-                    <b-col>{{ actorErrorMsg }}</b-col>
-                </b-row>
-                <b-row v-if="actorHasNotice">
-                    <b-col>{{ actorNoticeMsg }}</b-col>
-                </b-row>
-                <b-row>
-                    <b-col>
-                        <b-button v-on:click="showNewActor()" variant="outline-primary" style="width: 100%;">新規作成</b-button>
-                    </b-col>
-                </b-row>
-                <b-row>
-                    <b-col cols="4" class="overflow-auto" style="height:90vh">
-                        <b-list-group>
-                            <b-list-group-item v-for="data in actorNames" v-bind:key="data.Id">
-                                <b-button v-on:click="showActorDetail(data.Id)" variant="outline-primary" style="width: 100%;">{{data.Name}}</b-button>
-                            </b-list-group-item>
-                        </b-list-group>
-                    </b-col>
-                    <b-col>
-                        <div v-if="actorDetail == null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large; ">
-                            <p>選択がされていません</p>
-                        </div>
-                        <div v-if="actorDetail != null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
+        <div v-if="!isLoadCompleted" id="loading" class="d-flex align-items-center">
+            <b-spinner variant="primary" label="Spinning"></b-spinner>
+        </div>
+        <div v-if="isLoadCompleted" id="main">
+            <b-tabs content-class="mt-3" justified>
+                <b-tab title="声優マスター">
+                    <b-row v-if="actor.error.has">
+                        <b-col><b-alert variant="danger" show>{{ actor.error.message }}</b-alert></b-col>
+                    </b-row>
+                    <b-row v-if="actor.notice.has">
+                        <b-col><b-alert variant="info" show>{{ actor.notice.message }}</b-alert></b-col>
+                    </b-row>
+                    <b-row v-if="!actor.edit.enable">
+                        <b-col>
+                            <b-button v-on:click="showNewActor()" variant="primary" class="full_fit">新規作成</b-button>
+                        </b-col>
+                    </b-row>
+                    <b-row v-if="!actor.edit.enable">
+                        <b-col>&nbsp;</b-col>
+                    </b-row>
+                    <b-row v-if="actor.edit.enable">
+                        <b-container>
+                            <b-row>
+                                <b-col cols="4">名前</b-col>
+                                <b-col>
+                                    <b-form-input v-model="actor.edit.name" placeholder="名前"></b-form-input>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">かな</b-col>
+                                <b-col>
+                                    <b-form-input v-model="actor.edit.kana" placeholder="かな"></b-form-input>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">対応音声合成エンジン</b-col>
+                                <b-col>
+                                    <b-form-group v-slot="ariaDescribedby">
+                                        <b-form-checkbox-group id="actorEditVEChecks" v-model="actor.edit.engines" :options="ve.options"
+                                            :aria-describedby="ariaDescribedby" name="engines">
+                                        </b-form-checkbox-group>
+                                    </b-form-group>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">別名</b-col>
+                                <b-col>
+                                    <b-form-textarea id="actorEditAliases"></b-form-textarea>
+                                    <p>注意1:空行・空白のみの行は無視</p>
+                                    <p>注意2:行の両端の空白は無視</p>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">字幕文字色</b-col>
+                                <b-col>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">字幕枠色</b-col><b-col>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">字幕枠幅</b-col>
+                                <b-col>
+                                    <b-form-input v-model="actor.edit.jimaku.Outline_width" placeholder="字幕枠幅"></b-form-input>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">声優名文字色</b-col>
+                                <b-col>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">声優名枠色</b-col>
+                                <b-col>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">声優名枠幅</b-col>
+                                <b-col>
+                                    <b-form-input v-model="actor.edit.actor.outline_width" placeholder="声優名枠幅"></b-form-input>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">拡張情報</b-col>
+                                <b-col>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col>&nbsp;</b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col>
+                                    <b-button v-if="isShowActorAddButton" v-on:click="addActor()" variant="danger" class="full_fit">登録</b-button>
+                                </b-col>
+                                <b-col>
+                                    <b-button v-if="isShowActorUpdateButton" v-on:click="updateActor()" variant="danger" class="full_fit">更新</b-button>
+                                </b-col>
+                                <b-col>
+                                    <b-button v-on:click="hideEditActor()" variant="secondary" class="full_fit">キャンセル</b-button>
+                                </b-col>
+                            </b-row>
+                        </b-container>
+                        <b-modal id="confirm-add-actor" @ok="addActorOK" title="声優情報追加の確認">
+                            <p>{{ actor.modal_info }} を追加します。よろしいですか？</p>
+                        </b-modal>
+                        <b-modal id="confirm-update-actor" @ok="updateActorOK" title="声優情報更新の確認">
+                            <p>{{ actor.modal_info }} を更新します。よろしいですか？</p>
+                        </b-modal>
+                    </b-row>
+                    <b-row>
+                        <b-col cols="4" class="overflow-auto full_height">
+                            <b-list-group>
+                                <b-list-group-item v-for="data in actor.names" v-bind:key="data.Id">
+                                    <b-button v-on:click="showActorDetail(data.Id)" variant="outline-primary" class="full_fit">{{data.Name}}</b-button>
+                                </b-list-group-item>
+                            </b-list-group>
+                        </b-col>
+                        <b-col>
+                            <div v-if="!hasActorDetail" class="d-flex align-items-center detail_box">
+                                <p>選択がされていません</p>
+                            </div>
+                            <div v-if="visibleActorDetail" class="d-flex align-items-center detail_box">
+                                <b-container>
+                                    <b-row>
+                                        <b-col cols="6">名前</b-col><b-col>{{actor.detail.body.Name}}</b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col cols="6">かな</b-col><b-col>{{actor.detail.body.Kana}}</b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col cols="6">対応音声合成エンジン</b-col>
+                                        <b-col>
+                                            <ul>
+                                                <li v-for="engine in actor.detail.body.Engines">{{engine}}</li>
+                                            </ul>
+                                        </b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col cols="6">別名</b-col>
+                                        <b-col>
+                                            <span v-if="hasAnotherNames">なし</span>
+                                            <ul>
+                                                <li v-for="alias in actor.detail.body.AnotherNames">{{alias}}</li>
+                                            </ul>
+                                        </b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col cols="6">字幕文字色</b-col>
+                                        <b-col>
+                                            <span
+                                                v-bind:style="{ color: strToColor(actor.detail.body.JimakuTextColor) }">■</span>{{actor.detail.body.JimakuTextColor}}
+                                        </b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col cols="6">字幕枠色</b-col><b-col>
+                                            <span
+                                                v-bind:style="{ color: strToColor(actor.detail.body.JimakuOutlineColor) }">■</span>{{actor.detail.body.JimakuOutlineColor}}
+                                        </b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col cols="6">字幕枠幅</b-col><b-col>{{actor.detail.body.JimakuOutlineWidth}}</b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col cols="6">声優名文字色</b-col>
+                                        <b-col>
+                                            <span
+                                                v-bind:style="{ color: strToColor(actor.detail.body.ActorTextColor) }">■</span>{{actor.detail.ActorTextColor}}
+                                        </b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col cols="6">声優名枠色</b-col>
+                                        <b-col>
+                                            <span
+                                                v-bind:style="{ color: strToColor(actor.detail.body.ActorOutlineColor) }">■</span>{{actor.detail.ActorOutlineColor}}
+                                        </b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col cols="6">声優名枠幅</b-col><b-col>{{actor.detail.body.ActorOutlineWidth}}</b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col>
+                                            <b-button v-on:click="showEditActor()" variant="primary" class="full_fit">編集</b-button>
+                                        </b-col>
+                                        <b-col>
+                                            <b-button v-on:click="deleteActor()" variant="danger" class="full_fit">削除</b-button>
+                                        </b-col>
+                                    </b-row>
+                                    <b-modal id="confirm-delete-actor" @ok="deleteActorOK" title="声優情報削除の確認">
+                                        <p>{{ actor.modal_info }} を削除します。よろしいですか？</p>
+                                    </b-modal>
+                                </b-container>
+                            </div>
+                        </b-col>
+                    </b-row>
+                </b-tab>
+                <b-tab title="音声合成エンジンマスター">
+                    <b-row v-if="ve.error.has">
+                        <b-col><b-alert variant="danger" show>{{ ve.error.message }}</b-alert></b-col>
+                    </b-row>
+                    <b-row v-if="ve.notice.has">
+                        <b-col><b-alert variant="info" show>{{ ve.notice.message }}</b-alert></b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col>
+                            <b-button v-on:click="showNewVE()" variant="primary" class="full_fit">新規作成</b-button>
+                        </b-col>
+                    </b-row>
+                    <b-row v-if="ve.edit.enable">
+                        <b-container>
+                            <b-row>
+                                <b-col cols="4">名前</b-col>
+                                <b-col>
+                                    <b-form-input v-model="ve.edit.name" placeholder="名前"></b-form-input>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">正式名称</b-col>
+                                <b-col>
+                                    <b-form-input v-model="ve.edit.real_name" placeholder="正式名称"></b-form-input>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">区切り文字</b-col>
+                                <b-col>
+                                    <b-form-input v-model="ve.edit.separator" placeholder="区切り文字"></b-form-input>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">エンコーディング</b-col>
+                                <b-col>
+                                    <b-form-input v-model="ve.edit.encoding" placeholder="エンコーディング"></b-form-input>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col cols="4">拡張情報</b-col>
+                                <b-col>
+                                </b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col>&nbsp;</b-col>
+                            </b-row>
+                            <b-row>
+                                <b-col>
+                                    <b-button v-if="isShowVEAddButton" v-on:click="addVE()" variant="danger" class="full_fit">登録</b-button>
+                                </b-col>
+                                <b-col>
+                                    <b-button v-if="isShowVEUpdateButton" v-on:click="updateVE()" variant="danger" class="full_fit">更新</b-button>
+                                </b-col>
+                                <b-col>
+                                    <b-button v-on:click="hideEditVE()" variant="secondary" class="full_fit">キャンセル</b-button>
+                                </b-col>
+                            </b-row>
+                        </b-container>
+                        <b-modal id="confirm-add-ve" @ok="addVEOK" title="エンジン情報追加の確認">
+                            <p>{{ ve.modal_info }} を追加します。よろしいですか？</p>
+                        </b-modal>
+                        <b-modal id="confirm-update-ve" @ok="updateVEOK" title="エンジン情報更新の確認">
+                            <p>{{ ve.modal_info }} を更新します。よろしいですか？</p>
+                        </b-modal>
+                    </b-row>
+                    <b-row>
+                        <b-col cols="4" class="full_height">
                             <b-container>
-                                <b-row>
-                                    <b-col cols="6">名前</b-col><b-col>{{actorDetail.Name}}</b-col>
-                                </b-row>
-                                <b-row>
-                                    <b-col cols="6">かな</b-col><b-col>{{actorDetail.Kana}}</b-col>
-                                </b-row>
-                                <b-row>
-                                    <b-col cols="6">対応音声合成エンジン</b-col>
+                                <b-row class="overflow-auto half_height">
                                     <b-col>
-                                        <ul>
-                                            <li v-for="engine in actorDetail.Engines">{{engine}}</li>
-                                        </ul>
+                                        <b-list-group>
+                                            <b-list-group-item v-for="data in ve.names" v-bind:key="data.Id">
+                                                <b-button v-on:click="showVEDetail(data.Id)" variant="outline-primary" class="full_fit">{{data.Name}}</b-button>
+                                            </b-list-group-item>
+                                        </b-list-group>
                                     </b-col>
                                 </b-row>
-                                <b-row>
-                                    <b-col cols="6">別名</b-col>
+                                <b-row class="mini_height">
                                     <b-col>
-                                        <span v-if="actorDetail.AnotherNames.length==0">なし</span>
-                                        <ul>
-                                            <li v-for="alias in actorDetail.AnotherNames">{{alias}}</li>
-                                        </ul>
+                                        <div class="d-flex align-items-center ">(ここにサニタイズ正規表現関係が入る)</div>
                                     </b-col>
                                 </b-row>
-                                <b-row>
-                                    <b-col cols="6">字幕文字色</b-col>
+                                <b-row class="mini_height">
                                     <b-col>
-                                        <span v-bind:style="{ color: strToColor(actorDetail.JimakuTextColor) }">■</span>{{actorDetail.JimakuTextColor}}
+                                        <div class="d-flex align-items-center ">(ここに音声不生成エンジン名リストが入る)</div>
                                     </b-col>
                                 </b-row>
-                                <b-row>
-                                    <b-col cols="6">字幕枠色</b-col><b-col>
-                                        <span
-                                            v-bind:style="{ color: strToColor(actorDetail.JimakuOutlineColor) }">■</span>{{actorDetail.JimakuOutlineColor}}
-                                    </b-col>
-                                </b-row>
-                                <b-row>
-                                    <b-col cols="6">字幕枠幅</b-col><b-col>{{actorDetail.JimakuOutlineWidth}}</b-col>
-                                </b-row>
-                                <b-row>
-                                    <b-col cols="6">声優名文字色</b-col>
+                                <b-row class="mini_height">
                                     <b-col>
-                                        <span v-bind:style="{ color: strToColor(actorDetail.ActorTextColor) }">■</span>{{actorDetail.ActorTextColor}}
+                                        <div class="d-flex align-items-center ">(ここに声優名振り分けエンジン名リストが入る)</div>
                                     </b-col>
-                                </b-row>
-                                <b-row>
-                                    <b-col cols="6">声優名枠色</b-col>
-                                    <b-col>
-                                        <span
-                                            v-bind:style="{ color: strToColor(actorDetail.ActorOutlineColor) }">■</span>{{actorDetail.ActorOutlineColor}}
-                                    </b-col>
-                                </b-row>
-                                <b-row>
-                                    <b-col cols="6">声優名枠幅</b-col><b-col>{{actorDetail.ActorOutlineWidth}}</b-col>
                                 </b-row>
                             </b-container>
-                        </div>
-                    </b-col>
-                </b-row>
-            </b-tab>
-            <b-tab title="音声合成エンジンマスター">
-                <b-row v-if="veHasError">
-                    <b-col>{{ veErrorMsg }}</b-col>
-                </b-row>
-                <b-row v-if="veHasNotice">
-                    <b-col>{{ veNoticeMsg }}</b-col>
-                </b-row>
-                <b-row>
-                    <b-col>
-                        <b-button v-on:click="showNewVE()" variant="outline-primary" style="width: 100%;">新規作成</b-button>
-                    </b-col>
-                </b-row>
-                <b-row>
-                    <b-col cols="4"  class="overflow-auto" style="height:90vh">
-                        <b-list-group>
-                            <b-list-group-item v-for="data in veNames" v-bind:key="data.Id">
-                                <b-button v-on:click="showVEDetail(data.Id)" variant="outline-primary" style="width: 100%;">{{data.Name}}</b-button>
-                            </b-list-group-item>
-                        </b-list-group>
-                    </b-col>
-                    <b-col>
-                        <div v-if="veDetail == null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
-                            <p>選択がされていません</p>
-                        </div>
-                        <div v-if="veDetail != null" class="d-flex align-items-center" style="height: 90vh; font-size: xx-large;">
+                        </b-col>
+                        <b-col>
                             <b-container>
-                                <b-row>
-                                    <b-col cols="6">名前</b-col><b-col>{{veDetail.Name}}</b-col>
+                                <b-row class="half_height">
+                                    <div v-if="!hasVEDetail" class="d-flex align-items-center detail_half_box">
+                                        <p>選択がされていません</p>
+                                    </div>
+                                    <div v-if="visibleVEDetail" class="d-flex align-items-center detail_half_box">
+                                        <b-container>
+                                            <b-row>
+                                                <b-col cols="6">名前</b-col><b-col>{{ve.detail.body.Name}}</b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="6">正式名</b-col><b-col>{{ve.detail.body.RealName}}</b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="6">区切り文字</b-col><b-col>{{ve.detail.body.Separator}}</b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="6">文字コード</b-col><b-col>{{ve.detail.body.Encoding}}</b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col>
+                                                    <b-button v-on:click="showEditVE()" variant="primary" class="full_fit">編集</b-button>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-button v-on:click="deleteVE()" variant="danger" class="full_fit">削除</b-button>
+                                                </b-col>
+                                            </b-row>
+                                            <b-modal id="confirm-delete-ve" @ok="deleteVEOK" title="エンジン情報削除の確認">
+                                                <p>{{ ve.modal_info }} を削除します。よろしいですか？</p>
+                                            </b-modal>
+                                        </b-container>
+                                    </div>
                                 </b-row>
-                                <b-row>
-                                    <b-col cols="6">正式名</b-col><b-col>{{veDetail.RealName}}</b-col>
+                                <b-row class="mini_height">
+                                    <b-col>
+                                        <div class="d-flex align-items-center ">(ここにサニタイズ編集が入る)</div>
+                                    </b-col>
                                 </b-row>
-                                <b-row>
-                                    <b-col cols="6">区切り文字</b-col><b-col>{{veDetail.Separator}}</b-col>
+                                <b-row class="mini_height">
+                                    <b-col>
+                                        <div class="d-flex align-items-center ">(ここに音声不生成エンジン名編集が入る)</div>
+                                    </b-col>
                                 </b-row>
-                                <b-row>
-                                    <b-col cols="6">文字コード</b-col><b-col>{{veDetail.Encoding}}</b-col>
+                                <b-row class="mini_height">
+                                    <b-col>
+                                        <div class="d-flex align-items-center ">(ここに声優名振り分けエンジン名編集が入る)</div>
+                                    </b-col>
                                 </b-row>
                             </b-container>
-                        </div>
-                    </b-col>
-                </b-row>
-            </b-tab>
-        </b-tabs>
+                        </b-col>
+                    </b-row>
+                </b-tab>
+                <b-tab title="色マスター">
+
+                </b-tab>
+                <b-tab title="管理">
+                    <b-row v-if="mng.error.has">
+                        <b-col><b-alert variant="danger" show>{{ mng.error.message }}</b-alert></b-col>
+                    </b-row>
+                    <b-row v-if="mng.notice.has">
+                        <b-col><b-alert variant="info" show>{{ mng.notice.message }}</b-alert></b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col>
+                            <b-button v-on:click="saveAll()" variant="success" class="full_fit">設定をYAMLに保存</b-button>
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col>
+                            &nbsp;
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col>
+                            <b-button v-on:click="revertAll()" variant="danger" class="full_fit">設定を初期状態に戻す</b-button>
+                        </b-col>
+                    </b-row>
+                    <b-modal id="confirm-save-all" @ok="saveAllOK" title="YAML保存の確認">
+                        <p>編集内容をYAMLとして保存・反映します。よろしいですか？</p>
+                    </b-modal>
+                    <b-modal id="confirm-revert-all" @ok="revertAllOK" title="設定初期化の確認">
+                        <p>YAMLファイルを初期状態に戻します。よろしいですか？</p>
+                    </b-modal>
+                </b-tab>
+            </b-tabs>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
