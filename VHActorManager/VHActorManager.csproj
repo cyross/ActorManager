@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(SolutionDir)\voice_engine_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\actor_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\color_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\user.yaml $(OutDir)&#xD;&#xA;xcopy /E /I /Y $(SolutionDir)\docroot $(OutDir)\docroot&#xD;&#xA;" />
+    <Exec Command="copy $(SolutionDir)\voice_engine_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\actor_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\color_master.yaml $(OutDir)&#xD;&#xA;copy $(SolutionDir)\user.yaml $(OutDir)&#xD;&#xA;xcopy /E /I /Y $(SolutionDir)\docroot $(OutDir)\docroot&#xD;&#xA;xcopy /E /I /Y $(SolutionDir)\org_masters $(OutDir)\org_masters&#xD;&#xA;" />
   </Target>
 
 </Project>

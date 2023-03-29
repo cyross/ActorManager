@@ -123,17 +123,33 @@ namespace VHActorManager.Master
             base.Load(path);
 
             // IDカラムが存在していないときのために、ID振り直し
+            attachSpecId();
+        }
+
+        public void Reload(string? path = null)
+        {
+            specs.Clear();
+            MaxSpecId = 0;
+
+            base.Load(path);
+
+            attachSpecId();
+        }
+
+        public void Save(string? path = null)
+        {
+            Save(specs, path);
+        }
+
+        private void attachSpecId()
+        {
+            // IDカラムが存在していないときのために、ID振り直し
             for (int i = 0; i < specs.Count; i++)
             {
                 if (specs[i].Id != -1) { continue; }
 
                 specs[i] = specs[i].Duplicate(MaxSpecId++);
             }
-        }
-
-        public void Save(string? path = null)
-        {
-            Save(specs, path);
         }
 
         private void CbScl(YamlScalarNode node)

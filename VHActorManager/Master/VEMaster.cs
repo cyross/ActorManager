@@ -142,29 +142,53 @@ namespace VHActorManager.Master
             base.Load(path);
 
             // IDカラムが存在していないときのために、ID振り直し
+            attachSpecId();
+            attachSanSpecId();
+        }
+
+        public void Reload(string? path = null)
+        {
+            specs.Clear();
+            sanitizers.Clear();
+            noneVoiceEngines.Clear();
+            separateActorEngines.Clear();
+            MaxSpecId = 0;
+
+            base.Load(path);
+
+            attachSpecId();
+            attachSanSpecId();
+        }
+
+        public void Save(string? path = null)
+        {
+            Save(this, path);
+        }
+
+        private void attachSpecId()
+        {
+            // IDカラムが存在していないときのために、ID振り直し
             for (int i = 0; i < specs.Count; i++)
             {
                 if (specs[i].Id != -1) { continue; }
 
                 specs[i] = specs[i].Duplicate(MaxSpecId++);
             }
+        }
 
-            foreach(var sanReKey in sanitizers.Keys)
+        private void attachSanSpecId()
+        {
+            foreach (var sanReKey in sanitizers.Keys)
             {
                 List<SanitizeRESpec> sanSpecs = sanitizers[sanReKey];
 
-                for(int i=0; i<sanSpecs.Count; i++)
+                for (int i = 0; i < sanSpecs.Count; i++)
                 {
                     if (sanSpecs[i].Id != -1) { continue; }
 
                     sanSpecs[i] = sanSpecs[i].Duplicate(maxSanId++);
                 }
             }
-        }
-
-        public void Save(string? path = null)
-        {
-            Save(this, path);
         }
 
         private void CbScl(YamlScalarNode node)

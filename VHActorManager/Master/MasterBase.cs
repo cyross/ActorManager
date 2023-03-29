@@ -10,6 +10,8 @@ namespace VHActorManager.Master
 {
     public class MasterBase
     {
+        public const string ORG_MASTER_FILE_DIR = "org_master";
+
         private readonly string filepath;
         protected readonly VYManager YamlManager;
         protected Stack<string> KeyStack;
