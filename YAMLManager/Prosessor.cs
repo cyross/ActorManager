@@ -48,6 +48,8 @@ namespace VHYAML
 
         public void Deserialize(YamlStream stream)
         {
+            seq_depth = 0;
+            map_depth = 0;
             foreach (var document in stream.Documents)
             {
                 DeserializeDispatch(document.RootNode);
