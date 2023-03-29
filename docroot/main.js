@@ -26,9 +26,10 @@ var app = new Vue({
             .then(function (response) {
                 this.color.specs = response.data
 
+                this.setColorNames()
                 this.setNameToColor()
 
-                console.log(this.color.dict)
+                // console.log(this.color.dict)
 
                 this.color.load_completed = true
             }.bind(this))
@@ -90,6 +91,15 @@ var app = new Vue({
                 this.ve.options.push({text: this.ve.names[idx].Name, value: this.ve.names[idx].Name})
             }
         },
+        setColorNames()
+        {
+            this.color.names = []
+            for(let i = 0; i < this.color.specs.length; i++)
+            {
+                var spec = this.color.specs[i]
+                this.color.names.push(spec.Name)
+            }
+        },
         setNameToColor()
         {
             this.color.dict = {}
@@ -104,7 +114,7 @@ var app = new Vue({
                 .then(function (response) {
                     this.actor.detail.index = index
                     this.actor.detail.body = response.data
-                    console.log(this.actor.detail.body)
+                    // console.log(this.actor.detail.body)
                 }.bind(this))
         },
         showVEDetail: function (index) {
@@ -112,7 +122,7 @@ var app = new Vue({
                 .then(function (response) {
                     this.ve.detail.index = index
                     this.ve.detail.body = response.data
-                    console.log(this.ve.detail.body)
+                    // console.log(this.ve.detail.body)
                 }.bind(this))
         },
         strToColor: function(str) {
@@ -122,18 +132,54 @@ var app = new Vue({
         },
         showNewActor: function () {
             this.actor.edit.id = -1
+            this.actor.edit.name = ""
+            this.actor.edit.kana = ""
+            this.actor.edit.engines = []
+            this.actor.edit.aliases = []
+            this.setupColor(this.actor.edit.jimaku.text_color, "Black")
+            this.setupColor(this.actor.edit.jimaku.outline_color, "White")
+            this.actor.edit.jimaku.outline_width = 0
+            this.setupColor(this.actor.edit.actor_name.text_color, "Black")
+            this.setupColor(this.actor.edit.actor_name.outline_color, "White")
+            this.actor.edit.actor_name.outline_width = 0
+            this.actor.edit.ext_data = {}
             this.actor.edit.enable = true
         },
         showNewVE: function () {
             this.ve.edit.id = -1
+            this.ve.edit.name = ""
+            this.ve.edit.real_name = ""
+            this.ve.edit.separator = ""
+            this.ve.edit.encoding = ""
+            this.ve.edit.ext_data = {}
             this.ve.edit.enable = true
         },
         showEditActor: function () {
             this.actor.edit.id = this.actor.detail.body.Id
+            this.actor.edit.name = this.actor.detail.body.Name
+            this.actor.edit.kana = this.actor.detail.body.Kana
+            this.actor.edit.engines = this.actor.detail.body.Engines
+            this.actor.edit.aliases = this.actor.detail.body.AnotherNames
+            this.actor.edit.alias_text = this.actor.edit.aliases.join('\n')
+            this.setupColor(this.actor.edit.jimaku.text_color, this.actor.detail.body.JimakuTextColor)
+            this.setupColor(this.actor.edit.jimaku.outline_color, this.actor.detail.body.JimakuOutlineColor)
+            this.actor.edit.jimaku.outline_width = this.actor.detail.body.JimakuOutlineWidth
+            this.setupColor(this.actor.edit.actor_name.text_color, this.actor.detail.body.ActorTextColor)
+            this.setupColor(this.actor.edit.actor_name.outline_color, this.actor.detail.body.ActorOutlineColor)
+            this.actor.edit.actor_name.outline_width = this.actor.detail.body.ActorOutlineWidth
+            this.actor.edit.ext_data = {}
+            Object.keys(this.actor.detail.body.ExtData).forEach(key => this.actor.edit.ext_data[key] = this.actor.detail.body.ExtData[key])
+            this.actor.edit.ext_data = this.actor.detail.body.ExtData
             this.actor.edit.enable = true
         },
         showEditVE: function () {
             this.ve.edit.id = this.ve.detail.body.Id
+            this.ve.edit.name = this.ve.detail.body.Name
+            this.ve.edit.real_name = this.ve.detail.body.RealName
+            this.ve.edit.separator = this.ve.detail.body.Separator
+            this.ve.edit.encoding = this.ve.detail.body.Encoding
+            this.ve.edit.ext_data = {}
+            Object.keys(this.ve.detail.body.ExtData).forEach(key => this.ve.edit.ext_data[key] = this.ve.detail.body.ExtData[key])
             this.ve.edit.enable = true
         },
         hideEditActor: function () {
@@ -142,7 +188,28 @@ var app = new Vue({
         hideEditVE: function () {
             this.ve.edit.enable = false
         },
+        addActorExt: function () {
+            this.$set(this.actor.edit.ext_data, this.actor.edit.ext_key, this.actor.edit.ext_value)
+            this.actor.edit.ext_key = ""
+            this.actor.edit.ext_value = ""
+        },
+        deleteActorExt: function (key) {
+            this.actor.edit.ext_data = this.filterExt(this.actor.edit.ext_data, key)
+        },
+        addVEExt: function () {
+            this.$set(this.ve.edit.ext_data, this.ve.edit.ext_key, this.ve.edit.ext_value)
+            this.ve.edit.ext_key = ""
+            this.ve.edit.ext_value = ""
+        },
+        deleteVEExt: function (key) {
+            this.ve.edit.ext_data = this.filterExt(this.ve.edit.ext_data, key)
+        },
         addActor: function () {
+            this.actor.edit.aliases = this.actor.edit.aliases.split('\n').map(alias => alias.trim()).filter(alias => alias.length != 0)
+            this.actor.modal_info = this.actor.edit.name
+            this.$bvModal.show('confirm-add-actor')
+        },
+        appendActor: function () {
             this.actor.modal_info = this.actor.edit.name
             this.$bvModal.show('confirm-add-actor')
         },
@@ -172,6 +239,10 @@ var app = new Vue({
             this.actor.detail.body = null
         },
         addVE: function () {
+            this.ve.modal_info = this.ve.edit.real_name  + '(' + this.ve.edit.name + ')'
+            this.$bvModal.show('confirm-add-ve')
+        },
+        appendVE: function () {
             this.ve.modal_info = this.ve.edit.real_name  + '(' + this.ve.edit.name + ')'
             this.$bvModal.show('confirm-add-ve')
         },
@@ -213,6 +284,36 @@ var app = new Vue({
             console.log('revert all ok')
             this.updateCompleted(false)
         },
+        getColorType: function (color) {
+            if(color[0] == '#'){ return 'rgb' }
+
+            return 'named'
+        },
+        getColorRGB: function (color) {
+            if(color[0] == '#'){ return color }
+
+            return this.color.dict[color].Hex
+        },
+        setupColor: function(info, color){
+            info.type = this.getColorType(color)
+            info.name = color
+            info.rgb = this.getColorRGB(color)
+        },
+        selectChangedColor: function (color_info) {
+            color_info.rgb = this.getColorRGB(color_info.name)
+        },
+        isColorIsNamed(color_info)
+        {
+            return color_info.type === 'named'
+        },
+        filterExt: function (ext_data, key) {
+            if(key.length === 0){ return ext_data }
+            if(key in ext_data === false){ return ext_data }
+
+            new_ext_data = {}
+            Object.keys(ext_data).forEach(k => { if( k !== key) { new_ext_data[k] = ext_data[k] }})
+            return new_ext_data
+        },
     },
     data: {
         actor: {
@@ -230,16 +331,35 @@ var app = new Vue({
                 engines: [],
                 aliases: [],
                 jimaku: {
-                    text_color: "",
-                    outline_color: "",
+                    text_color: {
+                        type: "",
+                        name: "",
+                        rgb: "",
+                    },
+                    outline_color: {
+                        type: "",
+                        name: "",
+                        rgb: "",
+                    },
                     outline_width: 0,
                 },
-                actor: {
-                    text_color: "",
-                    outline_color: "",
+                actor_name: {
+                    text_color: {
+                        type: "",
+                        name: "",
+                        rgb: "",
+                    },
+                    outline_color: {
+                        type: "",
+                        name: "",
+                        rgb: "",
+                    },
                     outline_width: 0,
                 },
                 ext_data: {},
+                alias_text: "",
+                ext_key: "",
+                ext_value: "",
             },
             modal_info: "",
             error: {
@@ -267,6 +387,8 @@ var app = new Vue({
                 separator: "",
                 encoding: "",
                 ext_data: {},
+                ext_key: "",
+                ext_value: "",
             },
             modal_info: "",
             error: {
@@ -277,6 +399,8 @@ var app = new Vue({
                 has: false,
                 message: "",
             },
+            encode_list: ['utf-8', 'shift_jis'],
+            sep_list: [',', '＞'],
         },
         ve_san: {
             load_completed: false,
@@ -285,6 +409,7 @@ var app = new Vue({
         color: {
             load_completed: false,
             specs: null,
+            names: [],
             dict: {},
         },
         mng: {

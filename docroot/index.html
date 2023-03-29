@@ -20,7 +20,7 @@
 
     <div id="app" class="container">
         <div v-if="!isLoadCompleted" id="loading" class="d-flex align-items-center">
-            <b-spinner variant="primary" label="Spinning"></b-spinner>
+            <b-spinner variant="primary"></b-spinner>
         </div>
         <div v-if="isLoadCompleted" id="main">
             <b-tabs content-class="mt-3" justified>
@@ -66,45 +66,163 @@
                             <b-row>
                                 <b-col cols="4">別名</b-col>
                                 <b-col>
-                                    <b-form-textarea id="actorEditAliases"></b-form-textarea>
-                                    <p>注意1:空行・空白のみの行は無視</p>
-                                    <p>注意2:行の両端の空白は無視</p>
+                                    <b-form-textarea id="actorEditAliases" v-model="actor.edit.alias_text"></b-form-textarea>
+                                    <ul>
+                                        <li>別名を1行ずつ記載</li>
+                                        <li>特定のエンジン名は後ろに"[エンジン名]"を入れる</li>
+                                        <li>空行・空白のみの行は無視</li>
+                                        <li>行の両端の空白は無視</li>
+                                    </ul>
                                 </b-col>
                             </b-row>
                             <b-row>
                                 <b-col cols="4">字幕文字色</b-col>
                                 <b-col>
+                                    <b-form-group v-slot="{ ariaDescribedBy }">
+                                        <b-container>
+                                            <b-row>
+                                                <b-col cols="2">
+                                                    <b-form-radio v-model="actor.edit.jimaku.text_color.type" :aria-described-by="ariaDescribedBy" name="jimaku-text-color-type"
+                                                        value="named">名前</b-form-radio>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-form-select v-on:change="selectChangedColor(actor.edit.jimaku.text_color)" v-model="actor.edit.jimaku.text_color.name" :options="color.names"></b-form-select>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="2">
+                                                    <b-form-radio v-model="actor.edit.jimaku.text_color.type" :aria-described-by="ariaDescribedBy"
+                                                        name="jimaku-text-color-type" value="rgb">RGB</b-form-radio>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-form-input type="color" v-model="actor.edit.jimaku.text_color.rgb"></b-form-input>
+                                                </b-col>
+                                            </b-row>
+                                        </b-container>
+                                    </b-form-group>
                                 </b-col>
                             </b-row>
                             <b-row>
-                                <b-col cols="4">字幕枠色</b-col><b-col>
+                                <b-col cols="4">字幕枠色</b-col>
+                                <b-col>
+                                    <b-form-group v-slot="{ ariaDescribedBy }">
+                                        <b-container>
+                                            <b-row>
+                                                <b-col cols="2">
+                                                    <b-form-radio v-model="actor.edit.jimaku.outline_color.type" :aria-described-by="ariaDescribedBy"
+                                                        name="jimaku-outline-color-type" value="named">名前</b-form-radio>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-form-select
+                                                        v-on:change="selectChangedColor(actor.edit.jimaku.outline_color)"
+                                                        v-model="actor.edit.jimaku.outline_color.name" :options="color.names"></b-form-select>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="2">
+                                                    <b-form-radio v-model="actor.edit.jimaku.outline_color.type" :aria-described-by="ariaDescribedBy"
+                                                        name="jimaku-outline-color-type" value="rgb">RGB</b-form-radio>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-form-input type="color" v-model="actor.edit.jimaku.outline_color.rgb"></b-form-input>
+                                                </b-col>
+                                            </b-row>
+                                        </b-container>
+                                    </b-form-group>
                                 </b-col>
                             </b-row>
                             <b-row>
                                 <b-col cols="4">字幕枠幅</b-col>
                                 <b-col>
-                                    <b-form-input v-model="actor.edit.jimaku.Outline_width" placeholder="字幕枠幅"></b-form-input>
+                                    <b-form-input type="number" v-model="actor.edit.jimaku.outline_width" placeholder="字幕枠幅"></b-form-input>
                                 </b-col>
                             </b-row>
                             <b-row>
                                 <b-col cols="4">声優名文字色</b-col>
                                 <b-col>
+                                    <b-form-group v-slot="{ ariaDescribedBy }">
+                                        <b-container>
+                                            <b-row>
+                                                <b-col cols="2">
+                                                    <b-form-radio v-model="actor.edit.actor_name.text_color.type" :aria-described-by="ariaDescribedBy"
+                                                        name="actor-name-text-color-type" value="named">名前</b-form-radio>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-form-select v-on:change="selectChangedColor(actor.edit.actor_name.text_color)"
+                                                        v-model="actor.edit.actor_name.text_color.name" :options="color.names"></b-form-select>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="2">
+                                                    <b-form-radio v-model="actor.edit.actor_name.text_color.type" :aria-described-by="ariaDescribedBy"
+                                                        name="actor-name-text-color-type" value="rgb">RGB</b-form-radio>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-form-input type="color" v-model="actor.edit.actor_name.text_color.rgb"></b-form-input>
+                                                </b-col>
+                                            </b-row>
+                                        </b-container>
+                                    </b-form-group>
                                 </b-col>
                             </b-row>
                             <b-row>
                                 <b-col cols="4">声優名枠色</b-col>
                                 <b-col>
+                                    <b-form-group v-slot="{ ariaDescribedBy }">
+                                        <b-container>
+                                            <b-row>
+                                                <b-col cols="2">
+                                                    <b-form-radio v-model="actor.edit.actor_name.outline_color.type" :aria-described-by="ariaDescribedBy"
+                                                        name="actor-name-outline-color-type" value="named">名前</b-form-radio>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-form-select
+                                                        v-on:change="selectChangedColor(actor.edit.actor_name.outline_color)"
+                                                        v-model="actor.edit.actor_name.outline_color.name" :options="color.names"></b-form-select>
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col cols="2">
+                                                    <b-form-radio v-model="actor.edit.actor_name.outline_color.type" :aria-described-by="ariaDescribedBy"
+                                                        name="actor-name-outline-color-type" value="rgb">RGB</b-form-radio>
+                                                </b-col>
+                                                <b-col>
+                                                    <b-form-input type="color" v-model="actor.edit.actor_name.outline_color.rgb"></b-form-input>
+                                                </b-col>
+                                            </b-row>
+                                        </b-container>
+                                    </b-form-group>
                                 </b-col>
                             </b-row>
                             <b-row>
                                 <b-col cols="4">声優名枠幅</b-col>
                                 <b-col>
-                                    <b-form-input v-model="actor.edit.actor.outline_width" placeholder="声優名枠幅"></b-form-input>
+                                    <b-form-input type="number" v-model="actor.edit.actor_name.outline_width" placeholder="声優名枠幅"></b-form-input>
                                 </b-col>
                             </b-row>
                             <b-row>
                                 <b-col cols="4">拡張情報</b-col>
                                 <b-col>
+                                    <b-container v-for="(value, key) in actor.edit.ext_data" v-bind:key="key">
+                                        <b-row>
+                                            <b-col>{{ key }}</b-col>
+                                            <b-col>{{ value }}</b-col>
+                                            <b-col><b-button v-on:click="deleteActorExt(key)" variant="warning" class="full_fit">削除</b-button></b-col>
+                                        </b-row>
+                                    </b-container>
+                                    <b-container>
+                                        <b-row>
+                                            <b-col>
+                                                <b-form-input type="text" v-model="actor.edit.ext_key" placeholder="key"></b-form-input>
+                                            </b-col>
+                                            <b-col>
+                                                <b-form-input type="text" v-model="actor.edit.ext_value" placeholder="value"></b-form-input>
+                                            </b-col>
+                                            <b-col>
+                                                <b-button v-on:click="addActorExt()" variant="primary" class="full_fit">追加</b-button>
+                                            </b-col>
+                                        </b-row>
+                                    </b-container>
                                 </b-col>
                             </b-row>
                             <b-row>
@@ -113,6 +231,9 @@
                             <b-row>
                                 <b-col>
                                     <b-button v-if="isShowActorAddButton" v-on:click="addActor()" variant="danger" class="full_fit">登録</b-button>
+                                </b-col>
+                                <b-col>
+                                    <b-button v-if="isShowActorUpdateButton" v-on:click="appendActor()" variant="warning" class="full_fit">追加</b-button>
                                 </b-col>
                                 <b-col>
                                     <b-button v-if="isShowActorUpdateButton" v-on:click="updateActor()" variant="danger" class="full_fit">更新</b-button>
@@ -129,7 +250,7 @@
                             <p>{{ actor.modal_info }} を更新します。よろしいですか？</p>
                         </b-modal>
                     </b-row>
-                    <b-row>
+                    <b-row v-if="!actor.edit.enable">
                         <b-col cols="4" class="overflow-auto full_height">
                             <b-list-group>
                                 <b-list-group-item v-for="data in actor.names" v-bind:key="data.Id">
@@ -256,6 +377,26 @@
                             <b-row>
                                 <b-col cols="4">拡張情報</b-col>
                                 <b-col>
+                                    <b-container v-for="(value, key) in ve.edit.ext_data" v-bind:key="key">
+                                        <b-row>
+                                            <b-col>{{ key }}</b-col>
+                                            <b-col>{{ value }}</b-col>
+                                            <b-col><b-button v-on:click="deleteVEExt(key)" variant="warning" class="full_fit">削除</b-button></b-col>
+                                        </b-row>
+                                    </b-container>
+                                    <b-container>
+                                        <b-row>
+                                            <b-col>
+                                                <b-form-input type="text" v-model="ve.edit.ext_key" placeholder="key"></b-form-input>
+                                            </b-col>
+                                            <b-col>
+                                                <b-form-input type="text" v-model="ve.edit.ext_value" placeholder="value"></b-form-input>
+                                            </b-col>
+                                            <b-col>
+                                                <b-button v-on:click="addVEExt()" variant="primary" class="full_fit">追加</b-button>
+                                            </b-col>
+                                        </b-row>
+                                    </b-container>
                                 </b-col>
                             </b-row>
                             <b-row>
@@ -264,6 +405,9 @@
                             <b-row>
                                 <b-col>
                                     <b-button v-if="isShowVEAddButton" v-on:click="addVE()" variant="danger" class="full_fit">登録</b-button>
+                                </b-col>
+                                <b-col>
+                                    <b-button v-if="isShowVEUpdateButton" v-on:click="appendVE()" variant="warning" class="full_fit">追加</b-button>
                                 </b-col>
                                 <b-col>
                                     <b-button v-if="isShowVEUpdateButton" v-on:click="updateVE()" variant="danger" class="full_fit">更新</b-button>
@@ -280,7 +424,7 @@
                             <p>{{ ve.modal_info }} を更新します。よろしいですか？</p>
                         </b-modal>
                     </b-row>
-                    <b-row>
+                    <b-row v-if="!ve.edit.enable">
                         <b-col cols="4" class="full_height">
                             <b-container>
                                 <b-row class="overflow-auto half_height">
