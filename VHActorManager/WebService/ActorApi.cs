@@ -32,21 +32,33 @@ namespace VHActorManager.WebService
         }
 
         [RestRoute("Post", "/ActorSpec/{id}")]
+        [Header("Content-Type", "application/json")]
         public async Task Post(IHttpContext context)
         {
-            await context.Response.SendResponseAsync("");
+            var paramId = context.Request.PathParameters["id"];
+            string body = ApiUtils.GetRequestBody(context);
+            string json = ActorMaster.Instance().SpecFromJson(paramId, body);
+
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Put", "/ActorSpec")]
+        [Header("Content-Type", "application/json")]
         public async Task Put(IHttpContext context)
         {
-            await context.Response.SendResponseAsync("");
+            string body = ApiUtils.GetRequestBody(context);
+            string json = ActorMaster.Instance().SpecFromJson(body);
+
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Delete", "/ActorSpec/{id}")]
         public async Task Delete(IHttpContext context)
         {
-            await context.Response.SendResponseAsync("");
+            var paramId = context.Request.PathParameters["id"];
+            string json = ActorMaster.Instance().DeleteSpec(paramId);
+
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
     }
 }

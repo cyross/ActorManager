@@ -377,24 +377,28 @@
                                     <b-form-input v-model="ve.edit.name" placeholder="名前"></b-form-input>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">正式名称</b-col>
                                 <b-col>
                                     <b-form-input v-model="ve.edit.real_name" placeholder="正式名称"></b-form-input>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">区切り文字</b-col>
                                 <b-col>
-                                    <b-form-input v-model="ve.edit.separator" placeholder="区切り文字"></b-form-input>
+                                    <b-form-select v-model="ve.edit.separator" :options="ve.sep_list"></b-form-select>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">エンコーディング</b-col>
                                 <b-col>
-                                    <b-form-input v-model="ve.edit.encoding" placeholder="エンコーディング"></b-form-input>
+                                    <b-form-select v-model="ve.edit.encoding" :options="ve.encode_list"></b-form-select>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">拡張情報</b-col>
                                 <b-col>
@@ -420,9 +424,7 @@
                                     </b-container>
                                 </b-col>
                             </b-row>
-                            <b-row>
-                                <b-col>&nbsp;</b-col>
-                            </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col>
                                     <b-button v-if="isShowVEAddButton" v-on:click="addVE()" variant="danger" class="full_fit">登録</b-button>

@@ -3,6 +3,7 @@ using VHYAML;
 using System.Text.Json;
 using VHActorManager.Interfaces;
 using VHActorManager.WebService;
+using System.Diagnostics;
 
 namespace VHActorManager.Master
 {
@@ -54,7 +55,7 @@ namespace VHActorManager.Master
 
         public static string ResponseNone() { return ResponseData.NoneResponse().ToJson(); }
 
-        public static string ResponseSucceed() { return new ResponseMessage().Succeed().ToJson(); }
+        public static string ResponseSucceed() { return ResponseData.SucceedResponse().ToJson(); }
 
         protected static string ResponseWarning(string msg) { return ResponseData.WarninigResponse(msg).ToJson(); }
 
@@ -159,7 +160,7 @@ namespace VHActorManager.Master
 
             if (spec == null) { return ResponseIllegalRequestDataError(); }
 
-            spec.Id = maxSpecId++;
+            spec.Id = ++maxSpecId;
 
             specs.Add((T)spec);
 

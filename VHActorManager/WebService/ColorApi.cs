@@ -40,21 +40,33 @@ namespace VHActorManager.WebService
         }
 
         [RestRoute("Post", "/ColorSpec/{id}")]
+        [Header("Content-Type", "application/json")]
         public async Task Post(IHttpContext context)
         {
-            await context.Response.SendResponseAsync("");
+            var paramId = context.Request.PathParameters["id"];
+            string body = ApiUtils.GetRequestBody(context);
+            string json = ColorMaster.Instance().SpecFromJson(paramId, body);
+
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Put", "/ColorSpec")]
+        [Header("Content-Type", "application/json")]
         public async Task Put(IHttpContext context)
         {
-            await context.Response.SendResponseAsync("");
+            string body = ApiUtils.GetRequestBody(context);
+            string json = ColorMaster.Instance().SpecFromJson(body);
+
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
 
         [RestRoute("Delete", "/ColorSpec/{id}")]
         public async Task Delete(IHttpContext context)
         {
-            await context.Response.SendResponseAsync("");
+            var paramId = context.Request.PathParameters["id"];
+            string json = ColorMaster.Instance().DeleteSpec(paramId);
+
+            await ApiUtils.CreateAndSendResponse(context, json);
         }
     }
 }

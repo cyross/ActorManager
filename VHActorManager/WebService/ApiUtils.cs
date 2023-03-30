@@ -1,4 +1,5 @@
 ﻿using Grapevine;
+using System.ComponentModel.Design;
 
 namespace VHActorManager.WebService
 {
@@ -12,5 +13,10 @@ namespace VHActorManager.WebService
             return response.SendResponseAsync(json);
         }
 
+        public static string GetRequestBody(IHttpContext context)
+        {
+            StreamReader reader = new StreamReader(context.Request.InputStream);
+            return reader.ReadToEnd();
+        }
     }
 }

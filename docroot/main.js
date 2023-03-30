@@ -6,32 +6,44 @@ var app = new Vue({
 
         axios.get('/api/v1/ActorSpec/Index/')
             .then(function (response) {
-                this.actor.names = response.data.Names
+                if(response.data.Message.Status == 0)
+                {
+                    this.actor.names = response.data.Names
 
-                // console.log(this.actor.names)
-
-                this.actor.load_completed = true
+                    this.actor.load_completed = true
+                }
+                else
+                {
+                }
             }.bind(this))
         axios.get('/api/v1/VoiceEngineSpec/Index/')
             .then(function (response) {
-                this.ve.names = response.data.Names
+                if(response.data.Message.Status == 0)
+                {
+                    this.ve.names = response.data.Names
 
-                // console.log(this.ve.names)
+                    this.setupVEOptions()
 
-                this.setupVEOptions()
-
-                this.ve.load_completed = true
+                    this.ve.load_completed = true
+                }
+                else
+                {
+                }
             }.bind(this))
         axios.get('/api/v1/ColorSpec/All/')
             .then(function (response) {
-                this.color.specs = response.data.Specs
+                if(response.data.Message.Status == 0)
+                {
+                    this.color.specs = response.data.Specs
 
-                this.setColorNames()
-                this.setNameToColor()
+                    this.setColorNames()
+                    this.setNameToColor()
 
-                // console.log(this.color.dict)
-
-                this.color.load_completed = true
+                    this.color.load_completed = true
+                }
+                else
+                {
+                }
             }.bind(this))
     },
     computed: {
@@ -112,17 +124,27 @@ var app = new Vue({
         showActorDetail: function (index) {
             axios.get(`/api/v1/ActorSpec/${index}/`)
                 .then(function (response) {
-                    this.actor.detail.index = index
-                    this.actor.detail.body = response.data.Spec
-                    // console.log(this.actor.detail.body)
+                    if(response.data.Message.Status == 0)
+                    {
+                        this.actor.detail.index = index
+                        this.actor.detail.body = response.data.Spec
+                    }
+                    else
+                    {
+                    }
                 }.bind(this))
         },
         showVEDetail: function (index) {
             axios.get(`/api/v1/VoiceEngineSpec/${index}/`)
                 .then(function (response) {
-                    this.ve.detail.index = index
-                    this.ve.detail.body = response.data.Spec
-                    // console.log(this.ve.detail.body)
+                    if(response.data.Message.Status == 0)
+                    {
+                        this.ve.detail.index = index
+                        this.ve.detail.body = response.data.Spec
+                    }
+                    else
+                    {
+                    }
                 }.bind(this))
         },
         strToColor: function(str) {
@@ -167,7 +189,7 @@ var app = new Vue({
             this.setupColor(this.actor.edit.actor_name.text_color, this.actor.detail.body.ActorTextColor)
             this.setupColor(this.actor.edit.actor_name.outline_color, this.actor.detail.body.ActorOutlineColor)
             this.actor.edit.actor_name.outline_width = this.actor.detail.body.ActorOutlineWidth
-            this.actor.edit.ext_data = this.copyExt(this.actor.detail.body.ExtData)
+            this.actor.edit.ext_data = this.copyObj(this.actor.detail.body.ExtData)
             this.actor.edit.enable = true
         },
         showEditVE: function () {
@@ -176,7 +198,7 @@ var app = new Vue({
             this.ve.edit.real_name = this.ve.detail.body.RealName
             this.ve.edit.separator = this.ve.detail.body.Separator
             this.ve.edit.encoding = this.ve.detail.body.Encoding
-            this.ve.edit.ext_data = this.copyExt(this.ve.detail.body.ExtData)
+            this.ve.edit.ext_data = this.copyObj(this.ve.detail.body.ExtData)
             this.ve.edit.enable = true
         },
         hideEditActor: function () {
@@ -191,7 +213,7 @@ var app = new Vue({
             this.actor.edit.ext_value = ""
         },
         deleteActorExt: function (key) {
-            this.actor.edit.ext_data = this.filterExt(this.actor.edit.ext_data, key)
+            this.actor.edit.ext_data = this.filterObj(this.actor.edit.ext_data, key)
         },
         addVEExt: function () {
             this.$set(this.ve.edit.ext_data, this.ve.edit.ext_key, this.ve.edit.ext_value)
@@ -199,7 +221,7 @@ var app = new Vue({
             this.ve.edit.ext_value = ""
         },
         deleteVEExt: function (key) {
-            this.ve.edit.ext_data = this.filterExt(this.ve.edit.ext_data, key)
+            this.ve.edit.ext_data = this.filterObj(this.ve.edit.ext_data, key)
         },
         applyActor: function() {
             this.actor.detail.body = {
@@ -210,11 +232,11 @@ var app = new Vue({
                 AnotherNames: this.actor.edit.alias_text.split('\n').map(alias => alias.trim()).filter(alias => alias.length != 0),
                 JimakuTextColor: this.getColorFromInfo(this.actor.edit.jimaku.text_color),
                 JimakuOutlineColor: this.getColorFromInfo(this.actor.edit.jimaku.outline_color),
-                JimakuOutlineWidth: this.actor.edit.jimaku.outline_width,
+                JimakuOutlineWidth: parseFloat(this.actor.edit.jimaku.outline_width),
                 ActorTextColor: this.getColorFromInfo(this.actor.edit.actor_name.text_color),
                 ActorOutlineColor: this.getColorFromInfo(this.actor.edit.actor_name.outline_color),
-                ActorOutlineWidth: this.actor.edit.actor_name.outline_width,
-                ExtData: this.copyExt(this.actor.edit.ext_data),
+                ActorOutlineWidth: parseFloat(this.actor.edit.actor_name.outline_width),
+                ExtData: this.copyObj(this.actor.edit.ext_data),
             }
         },
         addActor: function () {
@@ -251,7 +273,7 @@ var app = new Vue({
                 RealName: this.ve.edit.real_name,
                 Separator: this.ve.edit.separator,
                 Encoding: this.ve.edit.encoding,
-                ExtData: this.copyExt(this.ve.edit.ext_data),
+                ExtData: this.copyObj(this.ve.edit.ext_data),
             }
         },
         addVE: function () {
@@ -322,55 +344,74 @@ var app = new Vue({
         {
             return color_info.type === 'named'
         },
-        filterExt: function (ext_data, key) {
+        copyObj: function(org_obj) {
+            var new_obj = {}
+            Object.keys(org_obj).forEach(k => new_obj[k] = org_obj[k])
+            return new_obj
+        },
+        filterObj: function (ext_data, key) {
             if(key.length === 0){ return ext_data }
             if(key in ext_data === false){ return ext_data }
 
-            new_ext_data = {}
-            Object.keys(ext_data).forEach(k => { if( k !== key) { new_ext_data[k] = ext_data[k] }})
-            return new_ext_data
+            var new_obj = {}
+            var keys = Object.keys(ext_data)
+            Object.keys(ext_data).forEach(k => { if( k !== key) { new_obj[k] = ext_data[k] }})
+            return new_obj
         },
         callAddApi: function (spec_name, info) {
-            var id = info.detail.body.id
-            var name = info.detail.body.name
+            var id = info.detail.body.Id
+            var name = info.detail.body.Name
             axios.put(`/api/v1/${spec_name}/`, info.detail.body)
                 .then(function (response) {
-                    var new_id = response.data.NewId
-                    info.names.push({Id: response.data.NewId, Name: name})
-                    console.log(`add ${spec_name} ok`)
-                    info.edit.enable = false
-                    info.detail.id = -1
-                    info.detail.body = null
+                    if(response.data.Message.Status == 0)
+                    {
+                        var new_id = response.data.NewId
+                        info.names.push({Id: response.data.NewId, Name: name})
+                        console.log(`add ${spec_name} ok`)
+                        info.edit.enable = false
+                        info.detail.id = -1
+                        info.detail.body = null
+                    }
+                    else
+                    {
+                    }
                 }.bind(this))
         },
         callUpdateApi: function (spec_name, info) {
-            var id = info.detail.body.id
-            var name = info.detail.body.name
+            var id = info.detail.body.Id
+            var name = info.detail.body.Name
             axios.post(`/api/v1/${spec_name}/${id}/`, info.detail.body)
                 .then(function (response) {
-                    var index = names.findIndex(n => n.Id == id)
-                    this.$set(info.names, index, {Id: id, Name: name})
-                    console.log(`update ${spec_name} ok`)
-                    info.edit.enable = false
-                    info.detail.id = -1
-                    info.detail.body = null
+                    if(response.data.Message.Status == 0)
+                    {
+                        var index = info.names.findIndex(n => n.Id === id)
+                        this.$set(info.names, index, {Id: id, Name: name})
+                        console.log(`update ${spec_name} ok`)
+                        info.edit.enable = false
+                        info.detail.id = -1
+                        info.detail.body = null
+                    }
+                    else
+                    {
+                    }
                 }.bind(this))
         },
         callDeleteApi: function (spec_name, info) {
-            var id = info.detail.body.id
+            var id = info.detail.body.Id
             axios.delete(`/api/v1/${spec_name}/${id}/`)
                 .then(function (response) {
-                    var index = names.findIndex(n => n.Id == id)
-                    info.names.splice(index, 1)
-                    console.log(`delete ${spec_name} ok`)
-                    info.detail.id = -1
-                    info.detail.body = null
+                    if(response.data.Message.Status == 0)
+                    {
+                        var index = info.names.findIndex(n => n.Id === id)
+                        info.names.splice(index, 1)
+                        console.log(`delete ${spec_name} ok`)
+                        info.detail.id = -1
+                        info.detail.body = null
+                    }
+                    else
+                    {
+                    }
                 }.bind(this))
-        },
-        copyExt: function(org_ext_data) {
-            var new_ext_data = {}
-            Object.keys(org_ext_data).forEach(key => org_ext_data[key] = new_ext_data[key])
-            return new_ext_data
         },
     },
     data: {
