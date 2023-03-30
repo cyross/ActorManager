@@ -33,7 +33,7 @@ namespace VHActorManager.WebService
                 ColorMaster.Instance().Save(Utility.CombineFilePath(extPath, ColorMaster.YAML_FILENAME));
             }
 
-            await ApiUtils.CreateAndSendResponse(context, new ResponseMessage().Succeed().ToJson());
+            await ApiUtils.CreateAndSendResponse(context, ResponseData.SucceedResponse().ToJson());
         }
 
         [RestRoute("Get", "/ResetAll")]
@@ -67,7 +67,7 @@ namespace VHActorManager.WebService
                 ReplaceYAMLFile(extPath, ColorMaster.YAML_FILENAME);
             }
 
-            await ApiUtils.CreateAndSendResponse(context, new ResponseMessage().Succeed().ToJson());
+            await ApiUtils.CreateAndSendResponse(context, ResponseData.SucceedResponse().ToJson());
         }
 
         private string GetOrgMasterYAMLPath(string fileName)

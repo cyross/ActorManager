@@ -565,12 +565,6 @@
 
                 </b-tab>
                 <b-tab title="管理">
-                    <b-row v-if="mng.error.has">
-                        <b-col><b-alert variant="danger" show>{{ mng.error.message }}</b-alert></b-col>
-                    </b-row>
-                    <b-row v-if="mng.notice.has">
-                        <b-col><b-alert variant="info" show>{{ mng.notice.message }}</b-alert></b-col>
-                    </b-row>
                     <b-row>
                         <b-col>
                             <b-button v-on:click="saveAll()" variant="success" class="full_fit">設定をYAMLに保存</b-button>
