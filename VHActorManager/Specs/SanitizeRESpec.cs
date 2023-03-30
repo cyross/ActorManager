@@ -1,6 +1,6 @@
 ﻿namespace VHActorManager.Specs
 {
-    internal class SanitizeRESpec
+    public class SanitizeRESpec
     {
         public int Id { get; set; }
         public string Pattern { get; set; }

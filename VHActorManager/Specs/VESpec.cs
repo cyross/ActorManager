@@ -2,7 +2,7 @@
 
 namespace VHActorManager.Specs
 {
-    internal class VESpec: ISpecInterface
+    public class VESpec: ISpecInterface
     {
         public int Id { get; set; }
         public string Name { get; set; }

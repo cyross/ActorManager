@@ -51,8 +51,8 @@ namespace VHActorManager.Master
             maxSanId = 0;
         }
 
-        internal VESpec[] Specs { get { return specs.ToArray(); } }
-        internal Dictionary<string, List<SanitizeRESpec>> SanitizeRegexp { get { return sanitizers; } }
+        public List<VESpec> Specs { get { return specs; } }
+        public Dictionary<string, List<SanitizeRESpec>> SanitizeRegexp { get { return sanitizers; } }
         public List<string> NoneVoiceEngines { get { return noneVoiceEngines; } }
         public List<string> SeparateActorEngines { get { return separateActorEngines; } }
 
