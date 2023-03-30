@@ -120,6 +120,13 @@ namespace VHActorManager.Master
             foreach(var spec in specs)
             {
                 actorColors.SetColor(spec.Name, spec.JimakuTextColor);
+                if(spec.AnotherNames.Count > 0)
+                {
+                    foreach(var anotherName in spec.AnotherNames)
+                    {
+                        actorColors.SetColor(anotherName, spec.JimakuTextColor);
+                    }
+                }
             }
             Save(actorColors.ColorSpecs, path);
         }
@@ -130,6 +137,13 @@ namespace VHActorManager.Master
             foreach (var spec in specs)
             {
                 outlineColors.SetColor(spec.Name, spec.JimakuOutlineColor);
+                if (spec.AnotherNames.Count > 0)
+                {
+                    foreach (var anotherName in spec.AnotherNames)
+                    {
+                        outlineColors.SetColor(anotherName, spec.JimakuOutlineColor);
+                    }
+                }
             }
             Save(outlineColors.ColorSpecs, path);
         }
