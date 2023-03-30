@@ -1,5 +1,6 @@
 ﻿using Grapevine;
 using VHActorManager.Master;
+using VHActorManager.Specs;
 
 namespace VHActorManager.WebService
 {
@@ -19,18 +20,16 @@ namespace VHActorManager.WebService
 
             if (user.VegasScriptYAML.Enable && Path.Exists(scriptPath))
             {
-                ActorMaster.Instance().Save(Utility.CombineFilePath(scriptPath, ActorMaster.YAML_FILENAME));
-                VEMaster.Instance().Save(Utility.CombineFilePath(scriptPath, VEMaster.YAML_FILENAME));
-                ColorMaster.Instance().Save(Utility.CombineFilePath(scriptPath, ColorMaster.YAML_FILENAME));
-            }
+                ActorMaster.Instance().SaveToVHYAMLActorColor((Utility.CombineFilePath(scriptPath, VSHelperColorSpec.JIMAKU_COLORS_FILENAME)));
+                ActorMaster.Instance().SaveToVHYAMLOutlineColor((Utility.CombineFilePath(scriptPath, VSHelperColorSpec.OUTLINE_COLORS_FILENAME)));
+           }
 
             string extPath = user.VegasScriptYAML.ExtPath;
 
             if (user.VegasScriptYAML.Enable && Path.Exists(extPath))
             {
-                ActorMaster.Instance().Save(Utility.CombineFilePath(extPath, ActorMaster.YAML_FILENAME));
-                VEMaster.Instance().Save(Utility.CombineFilePath(extPath, VEMaster.YAML_FILENAME));
-                ColorMaster.Instance().Save(Utility.CombineFilePath(extPath, ColorMaster.YAML_FILENAME));
+                ActorMaster.Instance().SaveToVHYAMLActorColor((Utility.CombineFilePath(extPath, VSHelperColorSpec.JIMAKU_COLORS_FILENAME)));
+                ActorMaster.Instance().SaveToVHYAMLOutlineColor((Utility.CombineFilePath(extPath, VSHelperColorSpec.OUTLINE_COLORS_FILENAME)));
             }
 
             await ApiUtils.CreateAndSendResponse(context, ResponseData.SucceedResponse().ToJson());
@@ -53,18 +52,16 @@ namespace VHActorManager.WebService
 
             if (user.VegasScriptYAML.Enable && Path.Exists(scriptPath))
             {
-                ReplaceYAMLFile(scriptPath, ActorMaster.YAML_FILENAME);
-                ReplaceYAMLFile(scriptPath, VEMaster.YAML_FILENAME);
-                ReplaceYAMLFile(scriptPath, ColorMaster.YAML_FILENAME);
+                RevertVHYAMLFile(VSHelperColorSpec.JIMAKU_COLORS_FILENAME, scriptPath);
+                RevertVHYAMLFile(VSHelperColorSpec.OUTLINE_COLORS_FILENAME, scriptPath);
             }
 
             string extPath = user.VegasScriptYAML.ExtPath;
 
             if (user.VegasScriptYAML.Enable && Path.Exists(extPath))
             {
-                ReplaceYAMLFile(extPath, ActorMaster.YAML_FILENAME);
-                ReplaceYAMLFile(extPath, VEMaster.YAML_FILENAME);
-                ReplaceYAMLFile(extPath, ColorMaster.YAML_FILENAME);
+                RevertVHYAMLFile(VSHelperColorSpec.JIMAKU_COLORS_FILENAME, extPath);
+                RevertVHYAMLFile(VSHelperColorSpec.OUTLINE_COLORS_FILENAME, extPath);
             }
 
             await ApiUtils.CreateAndSendResponse(context, ResponseData.SucceedResponse().ToJson());
@@ -76,7 +73,7 @@ namespace VHActorManager.WebService
 
         }
 
-        private void ReplaceYAMLFile(string fileName, string dst_dir)
+        private void RevertVHYAMLFile(string fileName, string dst_dir)
         {
             string org_path = GetOrgMasterYAMLPath(fileName);
             string new_path = Utility.CombineFilePath(dst_dir, fileName);

@@ -114,6 +114,26 @@ namespace VHActorManager.Master
             }
         }
 
+        public void SaveToVHYAMLActorColor(string? path = null)
+        {
+            VSHelperColorSpec actorColors = new VSHelperColorSpec();
+            foreach(var spec in specs)
+            {
+                actorColors.SetColor(spec.Name, spec.JimakuTextColor);
+            }
+            Save(actorColors.ColorSpecs, path);
+        }
+
+        public void SaveToVHYAMLOutlineColor(string? path = null)
+        {
+            VSHelperColorSpec outlineColors = new VSHelperColorSpec();
+            foreach (var spec in specs)
+            {
+                outlineColors.SetColor(spec.Name, spec.JimakuOutlineColor);
+            }
+            Save(outlineColors.ColorSpecs, path);
+        }
+
         private void CbScl(YamlScalarNode node)
         {
             switch(YamlManager.SeqDepth)
