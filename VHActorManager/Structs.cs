@@ -8,7 +8,7 @@ namespace VHActorManager
         public bool OpenBrowser { get; set; }
     }
 
-    internal struct VHYamlSpec
+    public struct VHYamlSpec
     {
         public bool Enable { get; set; }
         public string ScriptPath { get; set; }

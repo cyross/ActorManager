@@ -17,7 +17,7 @@ namespace VHActorManager.Master
         private const string EXT_DATA = "ExtPath";
 
         public ServerSpec Server;
-        internal VHYamlSpec VegasScriptYAML;
+        public VHYamlSpec VegasScriptYAML;
         public Dictionary<string, string> ExtData;
 
         public static User Instance(string fileName = DEFAULT_FILE)
