@@ -19,18 +19,56 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
     <div id="app" class="container">
+        <b-row v-if="hasError">
+            <b-col>
+                <b-alert variant="danger" show>
+                    <b-container>
+                        <b-row>
+                            <b-col>
+                                {{ actor.error.message }}
+                                {{ ve.error.message }}
+                                {{ color.error.message }}
+                                {{ ve_san.error.message }}
+                                {{ ve_none.error.message }}
+                                {{ ve_sep.error.message }}
+                                {{ mng.error.message }}
+                        </b-col>
+                        <b-col cols="1">
+                            <b-button v-on:click="hideError()" variant="danger"><b-icon icon="x-square"></b-icon></b-button>
+                        </b-col>
+                        </b-row>
+                        </b-container>
+                </b-alert>
+            </b-col>
+        </b-row>
+        <b-row v-if="hasNotice">
+            <b-col>
+                <b-alert variant="info" show>
+                    <b-container>
+                        <b-row>
+                            <b-col>
+                                {{ actor.notice.message }}
+                                {{ ve.notice.message }}
+                                {{ color.notice.message }}
+                                {{ ve_san.notice.message }}
+                                {{ ve_none.notice.message }}
+                                {{ ve_sep.notice.message }}
+                                {{ mng.notice.message }}
+                            </b-col>
+                            <b-col cols="1">
+                                <b-button v-on:click="hideNotice()" variant="info"><b-icon icon="x-square"></b-icon></b-button>
+                            </b-col>
+                        </b-row>
+                    </b-container>
+                </b-alert>
+            </b-col>
+        </b-row>
         <div v-if="!isLoadCompleted" id="loading" class="d-flex align-items-center">
             <b-spinner variant="primary"></b-spinner>
         </div>
         <div v-if="isLoadCompleted" id="main">
             <b-tabs content-class="mt-3" justified>
                 <b-tab title="声優マスター">
-                    <b-row v-if="actor.error.has">
-                        <b-col><b-alert variant="danger" show>{{ actor.error.message }}</b-alert></b-col>
-                    </b-row>
-                    <b-row v-if="actor.notice.has">
-                        <b-col><b-alert variant="info" show>{{ actor.notice.message }}</b-alert></b-col>
-                    </b-row>
                     <b-row v-if="!actor.edit.enable">
                         <b-col>
                             <b-button v-on:click="showNewActor()" variant="primary" class="full_fit">新規作成</b-button>
@@ -358,12 +396,6 @@
                     </b-row>
                 </b-tab>
                 <b-tab title="音声合成エンジンマスター">
-                    <b-row v-if="ve.error.has">
-                        <b-col><b-alert variant="danger" show>{{ ve.error.message }}</b-alert></b-col>
-                    </b-row>
-                    <b-row v-if="ve.notice.has">
-                        <b-col><b-alert variant="info" show>{{ ve.notice.message }}</b-alert></b-col>
-                    </b-row>
                     <b-row>
                         <b-col>
                             <b-button v-on:click="showNewVE()" variant="primary" class="full_fit">新規作成</b-button>

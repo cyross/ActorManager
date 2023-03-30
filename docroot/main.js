@@ -9,11 +9,15 @@ var app = new Vue({
                 if(response.data.Message.Status == 0)
                 {
                     this.actor.names = response.data.Names
-
                     this.actor.load_completed = true
+
+                    this.clearNotice()
                 }
                 else
                 {
+                    this.clearError()
+                    this.actor.error.has = true
+                    this.actor.error.message = `声優一覧取得エラー: ${response.data.Message.Message}`
                 }
             }.bind(this))
         axios.get('/api/v1/VoiceEngineSpec/Index/')
@@ -28,6 +32,9 @@ var app = new Vue({
                 }
                 else
                 {
+                    this.clearError()
+                    this.ve.error.has = true
+                    this.ve.error.message = `音声合成エンジン一覧取得エラー: ${response.data.Message.Message}`
                 }
             }.bind(this))
         axios.get('/api/v1/ColorSpec/All/')
@@ -43,6 +50,9 @@ var app = new Vue({
                 }
                 else
                 {
+                    this.clearError()
+                    this.color.error.has = true
+                    this.color.error.message = `色情報取得エラー: ${response.data.Message.Message}`
                 }
             }.bind(this))
     },
@@ -87,6 +97,14 @@ var app = new Vue({
         {
             return this.ve.detail.body != null && !this.ve.edit.enable
         },
+        hasError()
+        {
+            return this.actor.error.has || this.ve.error.has || this.color.error.has || this.ve_san.error.has || this.ve_none.error.has || this.ve_sep.error.has || this.mng.error.has
+        },
+        hasNotice()
+        {
+            return this.actor.notice.has || this.ve.notice.has || this.color.notice.has || this.ve_san.notice.has || this.ve_none.notice.has || this.ve_sep.notice.has || this.mng.notice.has
+        },
     },
     methods: {
         updateCompleted(flag)
@@ -128,9 +146,14 @@ var app = new Vue({
                     {
                         this.actor.detail.index = index
                         this.actor.detail.body = response.data.Spec
+
+                        this.clearNotice()
                     }
                     else
                     {
+                        this.clearError()
+                        this.actor.error.has = true
+                        this.actor.error.message = `声優詳細取得エラー: ${response.data.Message.Message}`
                     }
                 }.bind(this))
         },
@@ -141,9 +164,14 @@ var app = new Vue({
                     {
                         this.ve.detail.index = index
                         this.ve.detail.body = response.data.Spec
+
+                        this.clearNotice()
                     }
                     else
                     {
+                        this.clearError()
+                        this.ve.error.has = true
+                        this.ve.error.message = `音声合成エンジン詳細取得エラー: ${response.data.Message.Message}`
                     }
                 }.bind(this))
         },
@@ -151,6 +179,44 @@ var app = new Vue({
             if (str[0] == "#"){ return str }
 
             return this.color.dict[str].Hex
+        },
+        clearError: function()
+        {
+            this.actor.error.message = ""
+            this.ve.error.message = ""
+            this.color.error.message = ""
+            this.ve_san.error.message = ""
+            this.ve_none.error.message = ""
+            this.ve_sep.error.message = ""
+            this.mng.error.message = ""
+        },
+        clearNotice: function()
+        {
+            this.actor.notice.message = ""
+            this.ve.notice.message = ""
+            this.color.notice.message = ""
+            this.ve_san.notice.message = ""
+            this.ve_none.notice.message = ""
+            this.ve_sep.notice.message = ""
+            this.mng.notice.message = ""
+        },
+        hideError: function() {
+            this.actor.error.has = false
+            this.ve.error.has = false
+            this.color.error.has = false
+            this.ve_san.error.has = false
+            this.ve_none.error.has = false
+            this.ve_sep.error.has = false
+            this.mng.error.has = false
+        },
+        hideNotice: function() {
+            this.actor.notice.has = false
+            this.ve.notice.has = false
+            this.color.notice.has = false
+            this.ve_san.notice.has = false
+            this.ve_none.notice.has = false
+            this.ve_sep.notice.has = false
+            this.mng.notice.has = false
         },
         showNewActor: function () {
             this.actor.edit.id = -1
@@ -249,7 +315,7 @@ var app = new Vue({
         },
         addActorOK: function () {
             this.applyActor()
-            this.callAddApi('ActorSpec', this.actor)
+            this.callAddApi('ActorSpec', this.actor, `「${this.actor.edit.name}」`)
         },
         updateActor: function () {
             this.actor.modal_info = this.actor.edit.name
@@ -257,14 +323,14 @@ var app = new Vue({
         },
         updateActorOK: function () {
             this.applyActor()
-            this.callUpdateApi('ActorSpec', this.actor)
+            this.callUpdateApi('ActorSpec', this.actor, `「${this.actor.edit.name}」`)
         },
         deleteActor: function () {
             this.actor.modal_info = this.actor.detail.body.Name
             this.$bvModal.show('confirm-delete-actor')
         },
         deleteActorOK: function () {
-            this.callDeleteApi('ActorSpec', this.actor)
+            this.callDeleteApi('ActorSpec', this.actor, `「${this.actor.detail.body.Name}」`)
         },
         applyVE: function() {
             this.ve.detail.body = {
@@ -286,7 +352,7 @@ var app = new Vue({
         },
         addVEOK: function () {
             this.applyVE()
-            this.callAddApi('VoiceEngineSpec', this.ve)
+            this.callAddApi('VoiceEngineSpec', this.ve, `「${this.ve.edit.name}」`)
         },
         updateVE: function () {
             this.ve.modal_info = this.ve.edit.real_name  + '(' + this.ve.edit.name + ')'
@@ -294,7 +360,7 @@ var app = new Vue({
         },
         updateVEOK: function () {
             this.applyVE()
-            this.callUpdateApi('VoiceEngineSpec', this.ve)
+            this.callUpdateApi('VoiceEngineSpec', this.ve, `「${this.ve.edit.name}」`)
         },
         deleteVE: function () {
             this.ve.modal_info = this.ve.detail.body.RealName + '(' + this.ve.detail.body.Name + ')'
@@ -302,7 +368,7 @@ var app = new Vue({
         },
         deleteVEOK: function () {
             console.log('delete ve ok')
-            this.callDeleteApi('VoiceEngineSpec', this.ve)
+            this.callDeleteApi('VoiceEngineSpec', this.ve, `「${this.ve.detail.body.Name}」`)
         },
         saveAll: function () {
             this.$bvModal.show('confirm-save-all')
@@ -358,7 +424,7 @@ var app = new Vue({
             Object.keys(ext_data).forEach(k => { if( k !== key) { new_obj[k] = ext_data[k] }})
             return new_obj
         },
-        callAddApi: function (spec_name, info) {
+        callAddApi: function (spec_name, info, title) {
             var id = info.detail.body.Id
             var name = info.detail.body.Name
             axios.put(`/api/v1/${spec_name}/`, info.detail.body)
@@ -367,17 +433,25 @@ var app = new Vue({
                     {
                         var new_id = response.data.NewId
                         info.names.push({Id: response.data.NewId, Name: name})
-                        console.log(`add ${spec_name} ok`)
+
                         info.edit.enable = false
                         info.detail.id = -1
                         info.detail.body = null
+
+                        this.clearNotice()
+                        info.notice.has = true
+                        info.notice.message = `${title}の追加に成功しました`
+
                     }
                     else
                     {
+                        this.clearError()
+                        info.error.has = true
+                        info.error.message = `${title}の追加エラー: ${response.data.Message.Message}`
                     }
                 }.bind(this))
         },
-        callUpdateApi: function (spec_name, info) {
+        callUpdateApi: function (spec_name, info, title) {
             var id = info.detail.body.Id
             var name = info.detail.body.Name
             axios.post(`/api/v1/${spec_name}/${id}/`, info.detail.body)
@@ -386,17 +460,25 @@ var app = new Vue({
                     {
                         var index = info.names.findIndex(n => n.Id === id)
                         this.$set(info.names, index, {Id: id, Name: name})
-                        console.log(`update ${spec_name} ok`)
+
                         info.edit.enable = false
                         info.detail.id = -1
                         info.detail.body = null
+
+                        this.clearNotice()
+                        info.notice.has = true
+                        info.notice.message = `${title}の更新に成功しました`
+
                     }
                     else
                     {
+                        this.clearError()
+                        info.error.has = true
+                        info.error.message = `${title}の更新エラー: ${response.data.Message.Message}`
                     }
                 }.bind(this))
         },
-        callDeleteApi: function (spec_name, info) {
+        callDeleteApi: function (spec_name, info, title) {
             var id = info.detail.body.Id
             axios.delete(`/api/v1/${spec_name}/${id}/`)
                 .then(function (response) {
@@ -404,12 +486,19 @@ var app = new Vue({
                     {
                         var index = info.names.findIndex(n => n.Id === id)
                         info.names.splice(index, 1)
-                        console.log(`delete ${spec_name} ok`)
+
                         info.detail.id = -1
                         info.detail.body = null
+
+                        this.clearNotice()
+                        info.notice.has = true
+                        info.notice.message = `${title}の削除に成功しました`
                     }
                     else
                     {
+                        this.clearError()
+                        info.error.has = true
+                        info.error.message = `${title}の削除エラー: ${response.data.Message.Message}`
                     }
                 }.bind(this))
         },
@@ -506,20 +595,52 @@ var app = new Vue({
         ve_san: {
             load_completed: false,
             edit: {},
+            error: {
+                has: false,
+                message: "",
+            },
+            notice: {
+                has: false,
+                message: "",
+            },
         },
         ve_none: {
             load_completed: false,
             edit: {},
+            error: {
+                has: false,
+                message: "",
+            },
+            notice: {
+                has: false,
+                message: "",
+            },
         },
         ve_sep: {
             load_completed: false,
             edit: {},
+            error: {
+                has: false,
+                message: "",
+            },
+            notice: {
+                has: false,
+                message: "",
+            },
         },
         color: {
             load_completed: false,
             specs: null,
             names: [],
             dict: {},
+            error: {
+                has: false,
+                message: "",
+            },
+            notice: {
+                has: false,
+                message: "",
+            },
         },
         mng: {
             error: {
