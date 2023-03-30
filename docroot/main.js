@@ -65,8 +65,6 @@ var app = new Vue({
                     {
                         this.actor.names = response.data.Names
                         this.actor.load_completed = true
-
-                        this.clearNotice()
                     }
                     else
                     {
@@ -403,9 +401,9 @@ var app = new Vue({
                     if(response.data.Message.Status == 0)
                     {
                         this.clearNotice()
+                        this.setUp()
                         this.mng.notice.has = true
                         this.mng.notice.message = 'データの巻き戻しに成功しました'
-                        this.setUp()
                     }
                     else
                     {
