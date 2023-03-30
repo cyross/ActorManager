@@ -584,11 +584,24 @@
                     </b-row>
                     <b-row>
                         <b-col>
+                            <b-button v-on:click="saveVH()" variant="success" class="full_fit">設定をVegasHelper用のYAMLとして保存</b-button>
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col>
+                            &nbsp;
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col>
                             <b-button v-on:click="revertAll()" variant="danger" class="full_fit">設定を初期状態に戻す</b-button>
                         </b-col>
                     </b-row>
                     <b-modal id="confirm-save-all" @ok="saveAllOK" title="YAML保存の確認">
                         <p>編集内容をYAMLとして保存・反映します。よろしいですか？</p>
+                    </b-modal>
+                    <b-modal id="confirm-save-vh" @ok="saveVHOK" title="VegasHelper YAML保存の確認">
+                        <p>編集内容をVegasHelper用のYAMLとして保存・反映します。よろしいですか？</p>
                     </b-modal>
                     <b-modal id="confirm-revert-all" @ok="revertAllOK" title="設定初期化の確認">
                         <p>YAMLファイルを初期状態に戻します。よろしいですか？</p>

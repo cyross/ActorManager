@@ -14,6 +14,21 @@ namespace VHActorManager.WebService
             VEMaster.Instance().Save();
             ColorMaster.Instance().Save();
 
+            SaveVHYAML();
+
+            await ApiUtils.CreateAndSendResponse(context, ResponseData.SucceedResponse().ToJson());
+        }
+
+        [RestRoute("Get", "/SaveVH")]
+        public async Task SaveVH(IHttpContext context)
+        {
+            SaveVHYAML();
+
+            await ApiUtils.CreateAndSendResponse(context, ResponseData.SucceedResponse().ToJson());
+        }
+
+        private void SaveVHYAML()
+        {
             User user = User.Instance();
 
             string scriptPath = user.VegasScriptYAML.ScriptPath;
@@ -22,7 +37,7 @@ namespace VHActorManager.WebService
             {
                 ActorMaster.Instance().SaveToVHYAMLActorColor((Utility.CombineFilePath(scriptPath, VSHelperColorSpec.JIMAKU_COLORS_FILENAME)));
                 ActorMaster.Instance().SaveToVHYAMLOutlineColor((Utility.CombineFilePath(scriptPath, VSHelperColorSpec.OUTLINE_COLORS_FILENAME)));
-           }
+            }
 
             string extPath = user.VegasScriptYAML.ExtPath;
 
@@ -31,8 +46,6 @@ namespace VHActorManager.WebService
                 ActorMaster.Instance().SaveToVHYAMLActorColor((Utility.CombineFilePath(extPath, VSHelperColorSpec.JIMAKU_COLORS_FILENAME)));
                 ActorMaster.Instance().SaveToVHYAMLOutlineColor((Utility.CombineFilePath(extPath, VSHelperColorSpec.OUTLINE_COLORS_FILENAME)));
             }
-
-            await ApiUtils.CreateAndSendResponse(context, ResponseData.SucceedResponse().ToJson());
         }
 
         [RestRoute("Get", "/ResetAll")]

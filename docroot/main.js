@@ -392,6 +392,26 @@ var app = new Vue({
                     }
                 }.bind(this))
         },
+        saveVH: function () {
+            this.$bvModal.show('confirm-save-vh')
+        },
+        saveVHOK: function () {
+            axios.get('/api/v1/SaveVH/')
+                .then(function (response) {
+                    if(response.data.Message.Status == 0)
+                    {
+                        this.clearNotice()
+                        this.mng.notice.has = true
+                        this.mng.notice.message = 'VegasHelper YAMLファイルの保存に成功しました'
+                    }
+                    else
+                    {
+                        this.clearError()
+                        this.mng.error.has = true
+                        this.mng.error.message = `VegasHelper YAMLファイル保存エラー: ${response.data.Message.Message}`
+                    }
+                }.bind(this))
+        },
         revertAll: function () {
             this.$bvModal.show('confirm-revert-all')
         },
