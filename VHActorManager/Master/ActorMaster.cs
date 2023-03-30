@@ -17,17 +17,12 @@ namespace VHActorManager.Master
         private const string SPEC_KANA = "Kana";
         private const string SPEC_ENGINES = "Engines";
         private const string SPEC_ANOTHER_NAMES = "AnotherNames";
-        private const string SPEC_JIMAKU_ATTR = "JimakuAttr";
         private const string SPEC_JIMAKU_TEXT_COLOR = "JimakuTextColor";
         private const string SPEC_JIMAKU_OUTLINE_COLOR = "JimakuOutlineColor";
         private const string SPEC_JIMAKU_OUTLINE_WIDTH = "JimakuOutlineWidth";
-        private const string SPEC_ACTOR_ATTR = "ActorAttr";
         private const string SPEC_ACTOR_TEXT_COLOR = "ActorTextColor";
         private const string SPEC_ACTOR_OUTLINE_COLOR = "ActorOutlineColor";
         private const string SPEC_ACTOR_OUTLINE_WIDTH = "ActorOutlineWidth";
-        private const string ATTR_TEXT_COLOR = "TextColor";
-        private const string ATTR_OUTLINE_COLOR = "OutlineColor";
-        private const string ATTR_OUTLINE_WIDTH = "OutlineWidth";
         private const string SPEC_EXT_DATA = "ExtData";
 
         private const string ID_PREFIX = "声優ID";
