@@ -124,7 +124,15 @@ namespace VHActorManager.Master
                 {
                     foreach(var anotherName in spec.AnotherNames)
                     {
-                        actorColors.SetColor(anotherName, spec.JimakuTextColor);
+                        int attrPos = anotherName.IndexOf("[");
+                        if (attrPos != -1)
+                        {
+                            actorColors.SetColor(anotherName.Substring(0, attrPos), spec.JimakuTextColor);
+                        }
+                        else
+                        {
+                            actorColors.SetColor(anotherName, spec.JimakuTextColor);
+                        }
                     }
                 }
             }
@@ -141,7 +149,15 @@ namespace VHActorManager.Master
                 {
                     foreach (var anotherName in spec.AnotherNames)
                     {
-                        outlineColors.SetColor(anotherName, spec.JimakuOutlineColor);
+                        int attrPos = anotherName.IndexOf("[");
+                        if (attrPos != -1)
+                        {
+                            outlineColors.SetColor(anotherName.Substring(0, attrPos), spec.JimakuOutlineColor);
+                        }
+                        else
+                        {
+                            outlineColors.SetColor(anotherName, spec.JimakuOutlineColor);
+                        }
                     }
                 }
             }
