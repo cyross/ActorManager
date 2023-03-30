@@ -68,11 +68,11 @@ namespace VHActorManager.Master
 
         protected static string ResponseIllegalParamaterError() { return ResponseError("パラメータの書式が不正です"); }
 
-        internal static string FindIndexFromSpecs<T>(List<T> specs, string indexParam, string id_prefix, out int targetId) where T : class, ISpecInterface
+        internal static string FindIndexFromSpecs<T>(List<T> specs, string paramId, string id_prefix, out int targetId) where T : class, ISpecInterface
         {
             targetId = -1;
 
-            if (!int.TryParse(indexParam, out int id)) { return ResponseIllegalParamaterError(); }
+            if (!int.TryParse(paramId, out int id)) { return ResponseIllegalParamaterError(); }
 
             IEnumerable<T> searchResult = specs.Where(e => e.Id == id);
 
@@ -139,9 +139,9 @@ namespace VHActorManager.Master
             return data.ToJson();
         }
 
-        internal static string SpecToJson<T>(string indexParam, List<T> specs, string idPrefix) where T: class, ISpecInterface, new()
+        internal static string SpecToJson<T>(string paramId, List<T> specs, string idPrefix) where T: class, ISpecInterface, new()
         {
-            string result = FindIndexFromSpecs(specs, indexParam, idPrefix, out int targetIndex);
+            string result = FindIndexFromSpecs(specs, paramId, idPrefix, out int targetIndex);
 
             if (targetIndex == -1) { return result; }
 
@@ -171,9 +171,9 @@ namespace VHActorManager.Master
             return data.ToJson();
         }
 
-        internal static string SpecFromJson<T>(string indexParam, string json, List<T> specs, string idPrefix) where T : class, ISpecInterface, new()
+        internal static string SpecFromJson<T>(string paramId, string json, List<T> specs, string idPrefix) where T : class, ISpecInterface, new()
         {
-            string result = FindIndexFromSpecs(specs, indexParam, idPrefix, out int targetIndex);
+            string result = FindIndexFromSpecs(specs, paramId, idPrefix, out int targetIndex);
 
             if (targetIndex == -1) { return result; }
 
@@ -186,9 +186,9 @@ namespace VHActorManager.Master
             return ResponseSucceed();
         }
 
-        internal static string DeleteSpec<T>(string indexParam, List<T> specs, string idPrefix) where T : class, ISpecInterface, new()
+        internal static string DeleteSpec<T>(string paramId, List<T> specs, string idPrefix) where T : class, ISpecInterface, new()
         {
-            string result = FindIndexFromSpecs(specs, indexParam, idPrefix, out int targetIndex);
+            string result = FindIndexFromSpecs(specs, paramId, idPrefix, out int targetIndex);
 
             if (targetIndex == -1) { return result; }
 

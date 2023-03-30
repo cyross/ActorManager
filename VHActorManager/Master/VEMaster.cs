@@ -66,9 +66,9 @@ namespace VHActorManager.Master
             return SpecsToJson<VESpec>(specs);
         }
 
-        public override string SpecToJson(string indexParam)
+        public override string SpecToJson(string paramId)
         {
-            return SpecToJson<VESpec>(indexParam, specs, ID_PREFIX);
+            return SpecToJson<VESpec>(paramId, specs, ID_PREFIX);
         }
 
         public override string SpecFromJson(string json)
@@ -76,14 +76,14 @@ namespace VHActorManager.Master
             return SpecFromJson<VESpec>(json, specs, ref MaxSpecId);
         }
 
-        public override string SpecFromJson(string indexParam, string json)
+        public override string SpecFromJson(string paramId, string json)
         {
-            return SpecFromJson<VESpec>(indexParam, json, specs, ID_PREFIX);
+            return SpecFromJson<VESpec>(paramId, json, specs, ID_PREFIX);
         }
 
-        public override string DeleteSpec(string indexParam)
+        public override string DeleteSpec(string paramId)
         {
-            return DeleteSpec<VESpec>(indexParam, specs, ID_PREFIX);
+            return DeleteSpec<VESpec>(paramId, specs, ID_PREFIX);
         }
 
         public new void Load(string? path = null)

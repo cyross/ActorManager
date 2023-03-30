@@ -48,9 +48,9 @@ namespace VHActorManager.Master
             return SpecsToJson<ColorSpec>(specs);
         }
 
-        public override string SpecToJson(string indexParam)
+        public override string SpecToJson(string paramId)
         {
-            return SpecToJson<ColorSpec>(indexParam, specs, ID_PREFIX);
+            return SpecToJson<ColorSpec>(paramId, specs, ID_PREFIX);
         }
 
         public override string SpecFromJson(string json)
@@ -58,14 +58,14 @@ namespace VHActorManager.Master
             return SpecFromJson<ColorSpec>(json, specs, ref MaxSpecId);
         }
 
-        public override string SpecFromJson(string indexParam, string json)
+        public override string SpecFromJson(string paramId, string json)
         {
-            return SpecFromJson<ColorSpec>(indexParam, json, specs, ID_PREFIX);
+            return SpecFromJson<ColorSpec>(paramId, json, specs, ID_PREFIX);
         }
 
-        public override string DeleteSpec(string indexParam)
+        public override string DeleteSpec(string paramId)
         {
-            return DeleteSpec<ColorSpec>(indexParam, specs, ID_PREFIX);
+            return DeleteSpec<ColorSpec>(paramId, specs, ID_PREFIX);
         }
 
         public new void Load(string? path = null)

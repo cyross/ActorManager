@@ -26,11 +26,11 @@ namespace VHActorManager.WebService
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
-        [RestRoute("Get", "/VoiceEngineSpec/{index}")]
+        [RestRoute("Get", "/VoiceEngineSpec/{id}")]
         public async Task GetByIndex(IHttpContext context)
         {
-            var paramIndex = context.Request.PathParameters["index"];
-            string json = VEMaster.Instance().SpecToJson(paramIndex);
+            var paramId = context.Request.PathParameters["id"];
+            string json = VEMaster.Instance().SpecToJson(paramId);
 
             IHttpResponse response = context.Response as IHttpResponse;
             response.ContentType = ContentType.Json;
@@ -39,7 +39,7 @@ namespace VHActorManager.WebService
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
-        [RestRoute("Post", "/VoiceEngineSpec/{index}")]
+        [RestRoute("Post", "/VoiceEngineSpec/{id}")]
         public async Task Post(IHttpContext context)
         {
             await context.Response.SendResponseAsync("");
@@ -51,7 +51,7 @@ namespace VHActorManager.WebService
             await context.Response.SendResponseAsync("");
         }
 
-        [RestRoute("Delete", "/VoiceEngineSpec")]
+        [RestRoute("Delete", "/VoiceEngineSpec/{id}")]
         public async Task Delete(IHttpContext context)
         {
             await context.Response.SendResponseAsync("");

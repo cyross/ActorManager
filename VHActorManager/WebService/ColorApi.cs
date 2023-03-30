@@ -30,16 +30,16 @@ namespace VHActorManager.WebService
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
-        [RestRoute("Get", "/ColorSpec/{index}")]
+        [RestRoute("Get", "/ColorSpec/{id}")]
         public async Task GetByIndex(IHttpContext context)
         {
-            var paramIndex = context.Request.PathParameters["index"];
-            string json = ColorMaster.Instance().SpecToJson(paramIndex);
+            var paramId = context.Request.PathParameters["id"];
+            string json = ColorMaster.Instance().SpecToJson(paramId);
 
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
-        [RestRoute("Post", "/ColorSpec/{index}")]
+        [RestRoute("Post", "/ColorSpec/{id}")]
         public async Task Post(IHttpContext context)
         {
             await context.Response.SendResponseAsync("");
@@ -51,7 +51,7 @@ namespace VHActorManager.WebService
             await context.Response.SendResponseAsync("");
         }
 
-        [RestRoute("Delete", "/ColorSpec")]
+        [RestRoute("Delete", "/ColorSpec/{id}")]
         public async Task Delete(IHttpContext context)
         {
             await context.Response.SendResponseAsync("");

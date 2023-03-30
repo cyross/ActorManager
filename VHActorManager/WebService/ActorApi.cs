@@ -22,16 +22,16 @@ namespace VHActorManager.WebService
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
-        [RestRoute("Get", "/ActorSpec/{index}")]
+        [RestRoute("Get", "/ActorSpec/{id}")]
         public async Task GetByIndex(IHttpContext context)
         {
-            var paramIndex = context.Request.PathParameters["index"];
-            string json = ActorMaster.Instance().SpecToJson(paramIndex);
+            var paramId = context.Request.PathParameters["id"];
+            string json = ActorMaster.Instance().SpecToJson(paramId);
 
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
-        [RestRoute("Post", "/ActorSpec/{index}")]
+        [RestRoute("Post", "/ActorSpec/{id}")]
         public async Task Post(IHttpContext context)
         {
             await context.Response.SendResponseAsync("");
@@ -43,7 +43,7 @@ namespace VHActorManager.WebService
             await context.Response.SendResponseAsync("");
         }
 
-        [RestRoute("Delete", "/ActorSpec")]
+        [RestRoute("Delete", "/ActorSpec/{id}")]
         public async Task Delete(IHttpContext context)
         {
             await context.Response.SendResponseAsync("");
