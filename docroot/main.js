@@ -167,9 +167,7 @@ var app = new Vue({
             this.setupColor(this.actor.edit.actor_name.text_color, this.actor.detail.body.ActorTextColor)
             this.setupColor(this.actor.edit.actor_name.outline_color, this.actor.detail.body.ActorOutlineColor)
             this.actor.edit.actor_name.outline_width = this.actor.detail.body.ActorOutlineWidth
-            this.actor.edit.ext_data = {}
-            Object.keys(this.actor.detail.body.ExtData).forEach(key => this.actor.edit.ext_data[key] = this.actor.detail.body.ExtData[key])
-            this.actor.edit.ext_data = this.actor.detail.body.ExtData
+            this.actor.edit.ext_data = this.copyExt(this.actor.detail.body.ExtData)
             this.actor.edit.enable = true
         },
         showEditVE: function () {
@@ -178,8 +176,7 @@ var app = new Vue({
             this.ve.edit.real_name = this.ve.detail.body.RealName
             this.ve.edit.separator = this.ve.detail.body.Separator
             this.ve.edit.encoding = this.ve.detail.body.Encoding
-            this.ve.edit.ext_data = {}
-            Object.keys(this.ve.detail.body.ExtData).forEach(key => this.ve.edit.ext_data[key] = this.ve.detail.body.ExtData[key])
+            this.ve.edit.ext_data = this.copyExt(this.ve.detail.body.ExtData)
             this.ve.edit.enable = true
         },
         hideEditActor: function () {
@@ -204,8 +201,23 @@ var app = new Vue({
         deleteVEExt: function (key) {
             this.ve.edit.ext_data = this.filterExt(this.ve.edit.ext_data, key)
         },
+        applyActor: function() {
+            this.actor.detail.body = {
+                Id: this.actor.edit.id,
+                Name: this.actor.edit.name,
+                Kana: this.actor.edit.kana,
+                Engines: this.actor.edit.engines,
+                AnotherNames: this.actor.edit.alias_text.split('\n').map(alias => alias.trim()).filter(alias => alias.length != 0),
+                JimakuTextColor: this.getColorFromInfo(this.actor.edit.jimaku.text_color),
+                JimakuOutlineColor: this.getColorFromInfo(this.actor.edit.jimaku.outline_color),
+                JimakuOutlineWidth: this.actor.edit.jimaku.outline_width,
+                ActorTextColor: this.getColorFromInfo(this.actor.edit.actor_name.text_color),
+                ActorOutlineColor: this.getColorFromInfo(this.actor.edit.actor_name.outline_color),
+                ActorOutlineWidth: this.actor.edit.actor_name.outline_width,
+                ExtData: this.copyExt(this.actor.edit.ext_data),
+            }
+        },
         addActor: function () {
-            this.actor.edit.aliases = this.actor.edit.aliases.split('\n').map(alias => alias.trim()).filter(alias => alias.length != 0)
             this.actor.modal_info = this.actor.edit.name
             this.$bvModal.show('confirm-add-actor')
         },
@@ -214,29 +226,33 @@ var app = new Vue({
             this.$bvModal.show('confirm-add-actor')
         },
         addActorOK: function () {
-            console.log('add actor ok')
-            this.actor.edit.enable = false
-            this.actor.detail.id = -1
-            this.actor.detail.body = null
+            this.applyActor()
+            this.callAddApi('ActorSpec', this.actor)
         },
         updateActor: function () {
             this.actor.modal_info = this.actor.edit.name
             this.$bvModal.show('confirm-update-actor')
         },
         updateActorOK: function () {
-            console.log('update actor ok')
-            this.actor.edit.enable = false
-            this.actor.detail.id = -1
-            this.actor.detail.body = null
+            this.applyActor()
+            this.callUpdateApi('ActorSpec', this.actor)
         },
         deleteActor: function () {
             this.actor.modal_info = this.actor.detail.body.Name
             this.$bvModal.show('confirm-delete-actor')
         },
         deleteActorOK: function () {
-            console.log('delete actor ok')
-            this.actor.detail.id = -1
-            this.actor.detail.body = null
+            this.callDeleteApi('ActorSpec', this.actor)
+        },
+        applyVE: function() {
+            this.ve.detail.body = {
+                Id: this.ve.edit.id,
+                Name: this.ve.edit.name,
+                RealName: this.ve.edit.real_name,
+                Separator: this.ve.edit.separator,
+                Encoding: this.ve.edit.encoding,
+                ExtData: this.copyExt(this.ve.edit.ext_data),
+            }
         },
         addVE: function () {
             this.ve.modal_info = this.ve.edit.real_name  + '(' + this.ve.edit.name + ')'
@@ -247,20 +263,16 @@ var app = new Vue({
             this.$bvModal.show('confirm-add-ve')
         },
         addVEOK: function () {
-            console.log('add ve ok')
-            this.ve.edit.enable = false
-            this.ve.detail.id = -1
-            this.ve.detail.body = null
+            this.applyVE()
+            this.callAddApi('VoiceEngineSpec', this.ve)
         },
         updateVE: function () {
             this.ve.modal_info = this.ve.edit.real_name  + '(' + this.ve.edit.name + ')'
             this.$bvModal.show('confirm-update-ve')
         },
         updateVEOK: function () {
-            console.log('update ve ok')
-            this.ve.edit.enable = false
-            this.ve.detail.id = -1
-            this.ve.detail.body = null
+            this.applyVE()
+            this.callUpdateApi('VoiceEngineSpec', this.ve)
         },
         deleteVE: function () {
             this.ve.modal_info = this.ve.detail.body.RealName + '(' + this.ve.detail.body.Name + ')'
@@ -268,8 +280,7 @@ var app = new Vue({
         },
         deleteVEOK: function () {
             console.log('delete ve ok')
-            this.ve.detail.id = -1
-            this.ve.detail.body = null
+            this.callDeleteApi('VoiceEngineSpec', this.ve)
         },
         saveAll: function () {
             this.$bvModal.show('confirm-save-all')
@@ -299,6 +310,11 @@ var app = new Vue({
             info.name = color
             info.rgb = this.getColorRGB(color)
         },
+        getColorFromInfo : function(info) {
+            if(info.type === "named"){ return info.name }
+
+            return info.rgb
+        },
         selectChangedColor: function (color_info) {
             color_info.rgb = this.getColorRGB(color_info.name)
         },
@@ -312,6 +328,48 @@ var app = new Vue({
 
             new_ext_data = {}
             Object.keys(ext_data).forEach(k => { if( k !== key) { new_ext_data[k] = ext_data[k] }})
+            return new_ext_data
+        },
+        callAddApi: function (spec_name, info) {
+            var id = info.detail.body.id
+            var name = info.detail.body.name
+            axios.put(`/api/v1/${spec_name}/`, info.detail.body)
+                .then(function (response) {
+                    var new_id = response.data.NewId
+                    info.names.push({Id: response.data.NewId, Name: name})
+                    console.log(`add ${spec_name} ok`)
+                    info.edit.enable = false
+                    info.detail.id = -1
+                    info.detail.body = null
+                }.bind(this))
+        },
+        callUpdateApi: function (spec_name, info) {
+            var id = info.detail.body.id
+            var name = info.detail.body.name
+            axios.post(`/api/v1/${spec_name}/${id}/`, info.detail.body)
+                .then(function (response) {
+                    var index = names.findIndex(n => n.Id == id)
+                    this.$set(info.names, index, {Id: id, Name: name})
+                    console.log(`update ${spec_name} ok`)
+                    info.edit.enable = false
+                    info.detail.id = -1
+                    info.detail.body = null
+                }.bind(this))
+        },
+        callDeleteApi: function (spec_name, info) {
+            var id = info.detail.body.id
+            axios.delete(`/api/v1/${spec_name}/${id}/`)
+                .then(function (response) {
+                    var index = names.findIndex(n => n.Id == id)
+                    info.names.splice(index, 1)
+                    console.log(`delete ${spec_name} ok`)
+                    info.detail.id = -1
+                    info.detail.body = null
+                }.bind(this))
+        },
+        copyExt: function(org_ext_data) {
+            var new_ext_data = {}
+            Object.keys(org_ext_data).forEach(key => org_ext_data[key] = new_ext_data[key])
             return new_ext_data
         },
     },
@@ -361,6 +419,7 @@ var app = new Vue({
                 ext_key: "",
                 ext_value: "",
             },
+            request_data: {},
             modal_info: "",
             error: {
                 has: false,
@@ -390,6 +449,7 @@ var app = new Vue({
                 ext_key: "",
                 ext_value: "",
             },
+            request_data: {},
             modal_info: "",
             error: {
                 has: false,
@@ -403,6 +463,14 @@ var app = new Vue({
             sep_list: [',', '＞'],
         },
         ve_san: {
+            load_completed: false,
+            edit: {},
+        },
+        ve_none: {
+            load_completed: false,
+            edit: {},
+        },
+        ve_sep: {
             load_completed: false,
             edit: {},
         },

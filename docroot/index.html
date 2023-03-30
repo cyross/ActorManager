@@ -47,12 +47,14 @@
                                     <b-form-input v-model="actor.edit.name" placeholder="名前"></b-form-input>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">かな</b-col>
                                 <b-col>
                                     <b-form-input v-model="actor.edit.kana" placeholder="かな"></b-form-input>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">対応音声合成エンジン</b-col>
                                 <b-col>
@@ -63,6 +65,7 @@
                                     </b-form-group>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">別名</b-col>
                                 <b-col>
@@ -75,6 +78,7 @@
                                     </ul>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">字幕文字色</b-col>
                                 <b-col>
@@ -102,6 +106,7 @@
                                     </b-form-group>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">字幕枠色</b-col>
                                 <b-col>
@@ -131,12 +136,14 @@
                                     </b-form-group>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">字幕枠幅</b-col>
                                 <b-col>
                                     <b-form-input type="number" v-model="actor.edit.jimaku.outline_width" placeholder="字幕枠幅"></b-form-input>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">声優名文字色</b-col>
                                 <b-col>
@@ -165,6 +172,7 @@
                                     </b-form-group>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">声優名枠色</b-col>
                                 <b-col>
@@ -194,12 +202,14 @@
                                     </b-form-group>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">声優名枠幅</b-col>
                                 <b-col>
                                     <b-form-input type="number" v-model="actor.edit.actor_name.outline_width" placeholder="声優名枠幅"></b-form-input>
                                 </b-col>
                             </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
                                 <b-col cols="4">拡張情報</b-col>
                                 <b-col>
@@ -211,6 +221,7 @@
                                         </b-row>
                                     </b-container>
                                     <b-container>
+                                        <b-row><b-col>&nbsp;</b-col></b-row>
                                         <b-row>
                                             <b-col>
                                                 <b-form-input type="text" v-model="actor.edit.ext_key" placeholder="key"></b-form-input>
@@ -267,9 +278,11 @@
                                     <b-row>
                                         <b-col cols="6">名前</b-col><b-col>{{actor.detail.body.Name}}</b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col cols="6">かな</b-col><b-col>{{actor.detail.body.Kana}}</b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col cols="6">対応音声合成エンジン</b-col>
                                         <b-col>
@@ -278,6 +291,7 @@
                                             </ul>
                                         </b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col cols="6">別名</b-col>
                                         <b-col>
@@ -287,6 +301,7 @@
                                             </ul>
                                         </b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col cols="6">字幕文字色</b-col>
                                         <b-col>
@@ -294,15 +309,18 @@
                                                 v-bind:style="{ color: strToColor(actor.detail.body.JimakuTextColor) }">■</span>{{actor.detail.body.JimakuTextColor}}
                                         </b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col cols="6">字幕枠色</b-col><b-col>
                                             <span
                                                 v-bind:style="{ color: strToColor(actor.detail.body.JimakuOutlineColor) }">■</span>{{actor.detail.body.JimakuOutlineColor}}
                                         </b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col cols="6">字幕枠幅</b-col><b-col>{{actor.detail.body.JimakuOutlineWidth}}</b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col cols="6">声優名文字色</b-col>
                                         <b-col>
@@ -310,6 +328,7 @@
                                                 v-bind:style="{ color: strToColor(actor.detail.body.ActorTextColor) }">■</span>{{actor.detail.ActorTextColor}}
                                         </b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col cols="6">声優名枠色</b-col>
                                         <b-col>
@@ -317,9 +336,11 @@
                                                 v-bind:style="{ color: strToColor(actor.detail.body.ActorOutlineColor) }">■</span>{{actor.detail.ActorOutlineColor}}
                                         </b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col cols="6">声優名枠幅</b-col><b-col>{{actor.detail.body.ActorOutlineWidth}}</b-col>
                                     </b-row>
+                                    <b-row><b-col>&nbsp;</b-col></b-row>
                                     <b-row>
                                         <b-col>
                                             <b-button v-on:click="showEditActor()" variant="primary" class="full_fit">編集</b-button>
