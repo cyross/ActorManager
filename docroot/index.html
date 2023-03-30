@@ -397,7 +397,7 @@
                 </b-tab>
                 <b-tab title="音声合成エンジンマスター">
                     <b-row>
-                        <b-col>
+                        <b-col v-if="!ve.edit.enable">
                             <b-button v-on:click="showNewVE()" variant="primary" class="full_fit">新規作成</b-button>
                         </b-col>
                     </b-row>
