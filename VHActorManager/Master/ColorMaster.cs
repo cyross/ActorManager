@@ -1,5 +1,4 @@
 ﻿using YamlDotNet.RepresentationModel;
-using System.Text.Json;
 using VHActorManager.Specs;
 
 namespace VHActorManager.Master
@@ -41,71 +40,32 @@ namespace VHActorManager.Master
 
         public override string NameListToJson()
         {
-            List<ColorNameListElement> names = new();
-
-            foreach (var spec in specs)
-            {
-                ColorNameListElement nameElement = new()
-                {
-                    Id = spec.Id,
-                    Name = spec.Name,
-                    Hex = spec.Hex
-                };
-                names.Add(nameElement);
-            }
-
-            return JsonSerializer.Serialize(names);
+            return ColorNameListToJson<ColorSpec, ColorNameListElement>(specs);
         }
 
         public override string SpecsToJson()
         {
-            return JsonSerializer.Serialize(specs);
+            return SpecsToJson<ColorSpec>(specs);
         }
 
         public override string SpecToJson(string indexParam)
         {
-            string result = FindIndexFromSpecs(specs, indexParam, ID_PREFIX, out int targetIndex);
-
-            if (targetIndex == -1) { return result; }
-
-            return JsonSerializer.Serialize(specs[targetIndex]);
+            return SpecToJson<ColorSpec>(indexParam, specs, ID_PREFIX);
         }
 
-        public override string SpecsFromJson(string json)
+        public override string SpecFromJson(string json)
         {
-            ColorSpec? spec = JsonSerializer.Deserialize<ColorSpec>(json);
-
-            if (spec == null) { return ResponseIllegalRequestDataError(); }
-
-            specs.Add((ColorSpec)spec);
-
-            return ResponseSucceed();
+            return SpecFromJson<ColorSpec>(json, specs, ref MaxSpecId);
         }
 
         public override string SpecFromJson(string indexParam, string json)
         {
-            string result = FindIndexFromSpecs(specs, indexParam, ID_PREFIX, out int targetIndex);
-
-            if (targetIndex == -1) { return result; }
-
-            ColorSpec? spec = JsonSerializer.Deserialize<ColorSpec>(json);
-
-            if (spec == null) { return ResponseIllegalRequestDataError(); }
-
-            specs[targetIndex] = (ColorSpec)spec;
-
-            return ResponseSucceed();
+            return SpecFromJson<ColorSpec>(indexParam, json, specs, ID_PREFIX);
         }
 
         public override string DeleteSpec(string indexParam)
         {
-            string result = FindIndexFromSpecs(specs, indexParam, ID_PREFIX, out int targetIndex);
-
-            if (targetIndex == -1) { return result; }
-
-            specs.RemoveAt(targetIndex);
-
-            return ResponseSucceed();
+            return DeleteSpec<ColorSpec>(indexParam, specs, ID_PREFIX);
         }
 
         public new void Load(string? path = null)
@@ -123,7 +83,7 @@ namespace VHActorManager.Master
             base.Load(path);
 
             // IDカラムが存在していないときのために、ID振り直し
-            attachSpecId();
+            AttachSpecId();
         }
 
         public void Reload(string? path = null)
@@ -133,7 +93,7 @@ namespace VHActorManager.Master
 
             base.Load(path);
 
-            attachSpecId();
+            AttachSpecId();
         }
 
         public void Save(string? path = null)
@@ -141,7 +101,7 @@ namespace VHActorManager.Master
             Save(specs, path);
         }
 
-        private void attachSpecId()
+        private void AttachSpecId()
         {
             // IDカラムが存在していないときのために、ID振り直し
             for (int i = 0; i < specs.Count; i++)
@@ -227,7 +187,6 @@ namespace VHActorManager.Master
         {
             if (YamlManager.SeqDepth == 1)
             {
-                currentSpec.Hex = currentSpec.ToHex();
                 specs.Add(currentSpec);
             }
         }

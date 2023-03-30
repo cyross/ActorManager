@@ -4,7 +4,7 @@ using VHActorManager.Interfaces;
 
 namespace VHActorManager.Specs
 {
-    internal class ColorSpec: SpecInterface
+    internal class ColorSpec: IColorSpecInterface
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -23,11 +23,6 @@ namespace VHActorManager.Specs
             R = 0;
             G = 0;
             B = 0;
-        }
-
-        public string ToHex()
-        {
-            return string.Format("#{0:X2}{1:X2}{2:X2}", R, G, B);
         }
 
         public ColorSpec Duplicate(

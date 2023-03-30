@@ -1,8 +1,6 @@
 ﻿using YamlDotNet.RepresentationModel;
 using VHYAML;
 using System.Text.Json;
-using System.Diagnostics;
-using VHActorManager.Specs;
 using VHActorManager.Interfaces;
 using VHActorManager.WebService;
 
@@ -54,23 +52,23 @@ namespace VHActorManager.Master
             }
         }
 
-        public static string ResponseNone() { return new ResponseMessage().None().ToJson(); }
+        public static string ResponseNone() { return ResponseData.NoneResponse().ToJson(); }
 
         public static string ResponseSucceed() { return new ResponseMessage().Succeed().ToJson(); }
 
-        protected static string ResponseWarning(string msg) { return JsonSerializer.Serialize(new ResponseMessage().Warning(msg)); }
+        protected static string ResponseWarning(string msg) { return ResponseData.WarninigResponse(msg).ToJson(); }
 
-        protected static string ResponseError(string msg) { return JsonSerializer.Serialize(new ResponseMessage().Error(msg)); }
+        protected static string ResponseError(string msg) { return ResponseData.ErrorResponse(msg).ToJson(); }
 
-        protected static string ResponseFatal(string msg) { return JsonSerializer.Serialize(new ResponseMessage().Fatal(msg)); }
+        protected static string ResponseFatal(string msg) { return ResponseData.FatalResponse(msg).ToJson(); }
 
-        protected static string ResponseOutOfIndexError(string prefix) { return JsonSerializer.Serialize(new ResponseMessage().Error($"{prefix}の値が範囲外です")); }
+        protected static string ResponseOutOfIndexError(string prefix) { return ResponseError($"{prefix}の値が範囲外です"); }
 
-        protected static string ResponseIllegalRequestDataError() { return JsonSerializer.Serialize(new ResponseMessage().Error("入力されたデータが不正です")); }
+        protected static string ResponseIllegalRequestDataError() { return ResponseError("入力されたデータが不正です"); }
 
-        protected static string ResponseIllegalParamaterError() { return JsonSerializer.Serialize(new ResponseMessage().Error("パラメータの書式が不正です")); }
+        protected static string ResponseIllegalParamaterError() { return ResponseError("パラメータの書式が不正です"); }
 
-        internal static string FindIndexFromSpecs<T>(List<T> specs, string indexParam, string id_prefix, out int targetId) where T : class, SpecInterface
+        internal static string FindIndexFromSpecs<T>(List<T> specs, string indexParam, string id_prefix, out int targetId) where T : class, ISpecInterface
         {
             targetId = -1;
 
@@ -86,6 +84,119 @@ namespace VHActorManager.Master
             return "";
         }
 
+        internal static string NameListToJson<T, E>(List<T> specs) where T : class, ISpecInterface, new() where E: struct, IElementInterface
+        {
+            List<E> names = new();
+
+            foreach (var spec in specs)
+            {
+                E element = new()
+                {
+                    Id = spec.Id,
+                    Name = spec.Name
+                };
+                names.Add(element);
+            }
+
+            NameListResponseData<E> data = new(names)
+            {
+                Message = new ResponseMessage().Succeed()
+            };
+
+            return data.ToJson();
+        }
+
+        internal static string ColorNameListToJson<T, E>(List<T> specs) where T : class, IColorSpecInterface, new() where E : struct, IColorElementInterface
+        {
+            List<E> names = new();
+
+            foreach (var spec in specs)
+            {
+                E element = new()
+                {
+                    Id = spec.Id,
+                    Name = spec.Name,
+                    Hex = spec.Hex
+                };
+                names.Add(element);
+            }
+
+            ColorNameListResponseData<E> data = new(names)
+            {
+                Message = new ResponseMessage().Succeed()
+            };
+
+            return data.ToJson();
+        }
+
+        internal static string SpecsToJson<T>(List<T> specs) where T : class, ISpecInterface, new()
+        {
+            SpecsResponseData<T> data = new(specs)
+            {
+                Message = new ResponseMessage().Succeed()
+            };
+
+            return data.ToJson();
+        }
+
+        internal static string SpecToJson<T>(string indexParam, List<T> specs, string idPrefix) where T: class, ISpecInterface, new()
+        {
+            string result = FindIndexFromSpecs(specs, indexParam, idPrefix, out int targetIndex);
+
+            if (targetIndex == -1) { return result; }
+
+            SpecResponseData<T> data = new(specs[targetIndex])
+            {
+                Message = new ResponseMessage().Succeed()
+            };
+
+            return data.ToJson();
+        }
+
+        internal static string SpecFromJson<T>(string json, List<T> specs, ref int maxSpecId) where T : class, ISpecInterface, new()
+        {
+            T? spec = JsonSerializer.Deserialize<T>(json);
+
+            if (spec == null) { return ResponseIllegalRequestDataError(); }
+
+            spec.Id = maxSpecId++;
+
+            specs.Add((T)spec);
+
+            NewIdResponseData data = new(spec.Id)
+            {
+                Message = new ResponseMessage().Succeed()
+            };
+
+            return data.ToJson();
+        }
+
+        internal static string SpecFromJson<T>(string indexParam, string json, List<T> specs, string idPrefix) where T : class, ISpecInterface, new()
+        {
+            string result = FindIndexFromSpecs(specs, indexParam, idPrefix, out int targetIndex);
+
+            if (targetIndex == -1) { return result; }
+
+            T? spec = JsonSerializer.Deserialize<T>(json);
+
+            if (spec == null) { return ResponseIllegalRequestDataError(); }
+
+            specs[targetIndex] = (T)spec;
+
+            return ResponseSucceed();
+        }
+
+        internal static string DeleteSpec<T>(string indexParam, List<T> specs, string idPrefix) where T : class, ISpecInterface, new()
+        {
+            string result = FindIndexFromSpecs(specs, indexParam, idPrefix, out int targetIndex);
+
+            if (targetIndex == -1) { return result; }
+
+            specs.RemoveAt(targetIndex);
+
+            return ResponseSucceed();
+        }
+
         public virtual string NameListToJson() { return ResponseNone(); }
 
         public virtual string SpecsToJson() { return ResponseNone(); }
@@ -93,6 +204,8 @@ namespace VHActorManager.Master
         public virtual string SpecToJson(string index) { return ResponseNone(); }
 
         public virtual string SpecsFromJson(string json){ return ResponseNone(); }
+
+        public virtual string SpecFromJson(string json) { return ResponseNone(); }
 
         public virtual string SpecFromJson(string index, string json) { return ResponseNone(); }
 

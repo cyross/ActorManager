@@ -4,7 +4,7 @@ using VHActorManager.Interfaces;
 
 namespace VHActorManager.Specs
 {
-    internal class VESpec: SpecInterface
+    internal class VESpec: ISpecInterface
     {
         public int Id { get; set; }
         public string Name { get; set; }

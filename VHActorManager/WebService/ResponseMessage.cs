@@ -30,14 +30,14 @@ namespace VHActorManager.WebService
             return this;
         }
 
-        public ResponseMessage None()
+        public ResponseMessage None(string? msg = null)
         {
-            return Set(ResultStatus.NONE, "None");
+            return Set(ResultStatus.NONE, msg ?? "None");
         }
 
-        public ResponseMessage Succeed()
+        public ResponseMessage Succeed(string? msg = null)
         {
-            return Set(ResultStatus.OK, "Succeed");
+            return Set(ResultStatus.OK, msg ?? "Succeed");
         }
 
         public ResponseMessage Warning(string msg)

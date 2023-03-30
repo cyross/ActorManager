@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using VHActorManager.Interfaces;
 
 namespace VHActorManager
 {
@@ -10,20 +11,20 @@ namespace VHActorManager
         public bool OpenBrowser { get; set; }
     }
 
-    public struct VHYamlSpec
+    internal struct VHYamlSpec
     {
         public bool Enable { get; set; }
         public string ScriptPath { get; set; }
         public string ExtPath { get; set; }
     }
 
-    public struct NameListElement
+    internal struct NameListElement: IElementInterface
     {
         public int Id { get; set; }
         public string Name { get; set; }
     }
 
-    public struct ColorNameListElement
+    internal struct ColorNameListElement: IColorElementInterface
     {
         public int Id { get; set; }
         public string Name { get; set; }

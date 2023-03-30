@@ -39,5 +39,15 @@ namespace VHActorManager
         {
             return Path.GetDirectoryName(filePath) ?? "";
         }
+
+        public static string ToHex(Color color)
+        {
+            return string.Format("#{0:X2}{1:X2}{2:X2}", color.R, color.G, color.B);
+        }
+
+        public static string ToHex(byte r, byte g, byte b)
+        {
+            return string.Format("#{0:X2}{1:X2}{2:X2}", r, g, b);
+        }
     }
 }

@@ -6,7 +6,7 @@ var app = new Vue({
 
         axios.get('/api/v1/ActorSpec/Index/')
             .then(function (response) {
-                this.actor.names = response.data
+                this.actor.names = response.data.Names
 
                 // console.log(this.actor.names)
 
@@ -14,7 +14,7 @@ var app = new Vue({
             }.bind(this))
         axios.get('/api/v1/VoiceEngineSpec/Index/')
             .then(function (response) {
-                this.ve.names = response.data
+                this.ve.names = response.data.Names
 
                 // console.log(this.ve.names)
 
@@ -24,7 +24,7 @@ var app = new Vue({
             }.bind(this))
         axios.get('/api/v1/ColorSpec/All/')
             .then(function (response) {
-                this.color.specs = response.data
+                this.color.specs = response.data.Specs
 
                 this.setColorNames()
                 this.setNameToColor()
@@ -113,7 +113,7 @@ var app = new Vue({
             axios.get(`/api/v1/ActorSpec/${index}/`)
                 .then(function (response) {
                     this.actor.detail.index = index
-                    this.actor.detail.body = response.data
+                    this.actor.detail.body = response.data.Spec
                     // console.log(this.actor.detail.body)
                 }.bind(this))
         },
@@ -121,7 +121,7 @@ var app = new Vue({
             axios.get(`/api/v1/VoiceEngineSpec/${index}/`)
                 .then(function (response) {
                     this.ve.detail.index = index
-                    this.ve.detail.body = response.data
+                    this.ve.detail.body = response.data.Spec
                     // console.log(this.ve.detail.body)
                 }.bind(this))
         },

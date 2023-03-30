@@ -1,12 +1,12 @@
 ﻿namespace VHActorManager.Interfaces
 {
-    internal interface ISpecInterface
+    internal interface IElementInterface
     {
-        int Id { get; set; } 
+        int Id { get; set; }
         string Name { get; set; }
     }
 
-    internal interface IColorSpecInterface: ISpecInterface
+    internal interface IColorElementInterface: IElementInterface
     {
         string Hex { get; set; }
     }

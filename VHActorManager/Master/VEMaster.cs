@@ -1,7 +1,5 @@
 ﻿using YamlDotNet.RepresentationModel;
-using System.Text.Json;
 using VHActorManager.Specs;
-using VHActorManager.Interfaces;
 
 namespace VHActorManager.Master
 {
@@ -60,70 +58,32 @@ namespace VHActorManager.Master
 
         public override string NameListToJson()
         {
-            List<NameListElement> names = new();
-
-            foreach (var spec in specs)
-            {
-                NameListElement nameElement = new()
-                {
-                    Id = spec.Id,
-                    Name = spec.Name
-                };
-                names.Add(nameElement);
-            }
-
-            return JsonSerializer.Serialize(names);
+            return NameListToJson<VESpec, NameListElement>(specs);
         }
 
         public override string SpecsToJson()
         {
-            return JsonSerializer.Serialize(specs);
+            return SpecsToJson<VESpec>(specs);
         }
 
         public override string SpecToJson(string indexParam)
         {
-            string result = FindIndexFromSpecs(specs, indexParam, ID_PREFIX, out int targetIndex);
-
-            if (targetIndex == -1) { return result; }
-
-            return JsonSerializer.Serialize(specs[targetIndex]);
+            return SpecToJson<VESpec>(indexParam, specs, ID_PREFIX);
         }
 
-        public override string SpecsFromJson(string json)
+        public override string SpecFromJson(string json)
         {
-            VESpec? spec = JsonSerializer.Deserialize<VESpec>(json);
-
-            if (spec == null) { return ResponseIllegalRequestDataError(); }
-
-            specs.Add((VESpec)spec);
-
-            return ResponseSucceed();
+            return SpecFromJson<VESpec>(json, specs, ref MaxSpecId);
         }
 
         public override string SpecFromJson(string indexParam, string json)
         {
-            string result = FindIndexFromSpecs(specs, indexParam, ID_PREFIX, out int targetIndex);
-
-            if (targetIndex == -1) { return result; }
-
-            VESpec? spec = JsonSerializer.Deserialize<VESpec>(json);
-
-            if (spec == null) { return ResponseIllegalRequestDataError(); }
-
-            specs[targetIndex] = (VESpec)spec;
-
-            return ResponseSucceed();
+            return SpecFromJson<VESpec>(indexParam, json, specs, ID_PREFIX);
         }
 
         public override string DeleteSpec(string indexParam)
         {
-            string result = FindIndexFromSpecs(specs, indexParam, ID_PREFIX, out int targetIndex);
-
-            if (targetIndex == -1) { return result; }
-
-            specs.RemoveAt(targetIndex);
-
-            return ResponseSucceed();
+            return DeleteSpec<VESpec>(indexParam, specs, ID_PREFIX);
         }
 
         public new void Load(string? path = null)
@@ -142,8 +102,8 @@ namespace VHActorManager.Master
             base.Load(path);
 
             // IDカラムが存在していないときのために、ID振り直し
-            attachSpecId();
-            attachSanSpecId();
+            AttachSpecId();
+            AttachSanSpecId();
         }
 
         public void Reload(string? path = null)
@@ -156,8 +116,8 @@ namespace VHActorManager.Master
 
             base.Load(path);
 
-            attachSpecId();
-            attachSanSpecId();
+            AttachSpecId();
+            AttachSanSpecId();
         }
 
         public void Save(string? path = null)
@@ -165,7 +125,7 @@ namespace VHActorManager.Master
             Save(this, path);
         }
 
-        private void attachSpecId()
+        private void AttachSpecId()
         {
             // IDカラムが存在していないときのために、ID振り直し
             for (int i = 0; i < specs.Count; i++)
@@ -176,7 +136,7 @@ namespace VHActorManager.Master
             }
         }
 
-        private void attachSanSpecId()
+        private void AttachSanSpecId()
         {
             foreach (var sanReKey in sanitizers.Keys)
             {
