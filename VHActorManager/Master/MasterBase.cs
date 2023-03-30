@@ -8,7 +8,7 @@ namespace VHActorManager.Master
 {
     public class MasterBase
     {
-        public const string ORG_MASTER_FILE_DIR = "org_master";
+        public const string ORG_MASTER_FILE_DIR = "org_masters";
 
         private readonly string filepath;
         protected readonly VYManager YamlManager;

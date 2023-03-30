@@ -78,12 +78,16 @@ namespace VHActorManager.WebService
 
         private void ReplaceYAMLFile(string fileName, string dst_dir)
         {
-            System.IO.File.Copy(GetOrgMasterYAMLPath(fileName), Utility.CombineFilePath(dst_dir, fileName));
+            string org_path = GetOrgMasterYAMLPath(fileName);
+            string new_path = Utility.CombineFilePath(dst_dir, fileName);
+            System.IO.File.Copy(org_path, new_path, true);
         }
 
         private void RevertYAMLFile(string fileName)
         {
-            System.IO.File.Copy(GetOrgMasterYAMLPath(fileName), Utility.ExecFilepath(fileName));
+            string org_path = GetOrgMasterYAMLPath(fileName);
+            string new_path = Utility.ExecFilepath(fileName);
+            System.IO.File.Copy(org_path, new_path, true);
         }
     }
 }
