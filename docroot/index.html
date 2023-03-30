@@ -183,6 +183,13 @@
                             </b-row>
                             <b-row><b-col>&nbsp;</b-col></b-row>
                             <b-row>
+                                <b-col cols="4">&nbsp;</b-col>
+                                <b-col><b-button v-on:click="copyEditTextInfo(actor.edit.jimaku, actor.edit.actor_name)" variant="info"><b-icon icon="arrow-down-circle"></b-icon></b-button></b-col>
+                                <b-col cols="2">&nbsp;</b-col>
+                                <b-col><b-button v-on:click="copyEditTextInfo(actor.edit.actor_name, actor.edit.jimaku)" variant="info"><b-icon icon="arrow-up-circle"></b-icon></b-button></b-col>
+                            </b-row>
+                            <b-row><b-col>&nbsp;</b-col></b-row>
+                            <b-row>
                                 <b-col cols="4">声優名文字色</b-col>
                                 <b-col>
                                     <b-form-group v-slot="{ ariaDescribedBy }">

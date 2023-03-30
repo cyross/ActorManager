@@ -454,6 +454,15 @@ var app = new Vue({
             Object.keys(ext_data).forEach(k => { if( k !== key) { new_obj[k] = ext_data[k] }})
             return new_obj
         },
+        copyEditTextInfo: function (from, to) {
+            to.text_color.type = from.text_color.type
+            to.text_color.name = from.text_color.name
+            to.text_color.rgb = from.text_color.rgb
+            to.outline_color.type = from.outline_color.type
+            to.outline_color.name = from.outline_color.name
+            to.outline_color.rgb = from.outline_color.rgb
+            to.outline_width = from.outline_width
+        },
         callAddApi: function (spec_name, info, title) {
             var id = info.detail.body.Id
             var name = info.detail.body.Name
