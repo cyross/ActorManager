@@ -291,6 +291,7 @@
             Controls.Add(QuitButton);
             DoubleBuffered = true;
             Font = new Font("メイリオ", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "MasterManageForm";
             Text = "マスタ管理システム";
