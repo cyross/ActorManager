@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using YamlDotNet.RepresentationModel;
+﻿using YamlDotNet.RepresentationModel;
 
 namespace VHActorManager.Master
 {
@@ -57,8 +56,6 @@ namespace VHActorManager.Master
             YamlManager.CallbackMappingInnerEnd += CbMapIE;
             YamlManager.CallbackMappingEnd += CbMapE;
             base.Load(path);
-            Debug.WriteLine(VegasScriptYAML.ScriptPath);
-            Debug.WriteLine(VegasScriptYAML.ExtPath);
         }
 
         public void Save(string? path = null)
@@ -111,15 +108,12 @@ namespace VHActorManager.Master
             {
                 case VSY_ENABLE:
                     VegasScriptYAML.Enable = GetBool(node);
-                    Debug.WriteLine(VegasScriptYAML.Enable);
                     break;
                 case VSY_SCRIPT_PATH:
                     VegasScriptYAML.ScriptPath = GetString(node);
-                    Debug.WriteLine(VegasScriptYAML.ScriptPath);
                     break;
                 case VSY_EXT_PATH:
                     VegasScriptYAML.ExtPath = GetString(node);
-                    Debug.WriteLine(VegasScriptYAML.ExtPath);
                     break;
             }
         }

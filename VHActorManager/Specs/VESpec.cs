@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using VHActorManager.Interfaces;
+﻿using VHActorManager.Interfaces;
 
 namespace VHActorManager.Specs
 {
