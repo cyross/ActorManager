@@ -363,7 +363,7 @@
                                         <b-col cols="6">声優名文字色</b-col>
                                         <b-col>
                                             <span
-                                                v-bind:style="{ color: strToColor(actor.detail.body.ActorTextColor) }">■</span>{{actor.detail.ActorTextColor}}
+                                                v-bind:style="{ color: strToColor(actor.detail.body.ActorTextColor) }">■</span>{{actor.detail.body.ActorTextColor}}
                                         </b-col>
                                     </b-row>
                                     <b-row><b-col>&nbsp;</b-col></b-row>
@@ -371,7 +371,7 @@
                                         <b-col cols="6">声優名枠色</b-col>
                                         <b-col>
                                             <span
-                                                v-bind:style="{ color: strToColor(actor.detail.body.ActorOutlineColor) }">■</span>{{actor.detail.ActorOutlineColor}}
+                                                v-bind:style="{ color: strToColor(actor.detail.body.ActorOutlineColor) }">■</span>{{actor.detail.body.ActorOutlineColor}}
                                         </b-col>
                                     </b-row>
                                     <b-row><b-col>&nbsp;</b-col></b-row>
