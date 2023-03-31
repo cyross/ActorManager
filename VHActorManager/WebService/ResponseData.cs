@@ -1,23 +1,24 @@
 ﻿using System.Text.Json;
 using VHActorManager.Interfaces;
+using VHActorManager.Specs;
 
 namespace VHActorManager.WebService
 {
     internal class ResponseData
     {
         public ResponseMessage Message { get; set; }
-        public Dictionary<string, string> Dict { get; set; }
+        public Dictionary<string, string> CommodityData { get; set; }
 
         public ResponseData()
         {
             this.Message = new ResponseMessage();
-            this.Dict = new Dictionary<string, string>();
+            this.CommodityData = new Dictionary<string, string>();
         }
 
         public ResponseData(ResponseMessage message)
         {
             this.Message = message;
-            this.Dict = new Dictionary<string, string>();
+            this.CommodityData = new Dictionary<string, string>();
         }
 
         public static ResponseData NoneResponse(string? msg = null)
@@ -150,4 +151,64 @@ namespace VHActorManager.WebService
             return JsonSerializer.Serialize(this);
         }
     }
+
+    internal class ListResponseData<T, E> : ResponseData where T : class, IList<E>, new()
+    {
+        public T List { get; set; }
+
+        public ListResponseData() : base()
+        {
+            List = new T();
+        }
+
+        public ListResponseData(T list) : base()
+        {
+            List = list;
+        }
+
+        public new string ToJson()
+        {
+            return JsonSerializer.Serialize(this);
+        }
+    }
+
+    internal class DictResponseData<T, E> : ResponseData where T : class, IDictionary<string, E>, new()
+    {
+        public T Dict { get; set; }
+
+        public DictResponseData() : base()
+        {
+            Dict = new T();
+        }
+
+        public DictResponseData(T dict) : base()
+        {
+            Dict = dict;
+        }
+
+        public new string ToJson()
+        {
+            return JsonSerializer.Serialize(this);
+        }
+    }
+    internal class NewKeyResponseData : ResponseData
+    {
+        public string NewKey { get; set; }
+
+        public NewKeyResponseData() : base()
+        {
+            NewKey = "";
+        }
+
+        public NewKeyResponseData(string newKey) : base()
+        {
+            NewKey = newKey;
+        }
+
+        public new string ToJson()
+        {
+            return JsonSerializer.Serialize(this);
+        }
+    }
+
 }

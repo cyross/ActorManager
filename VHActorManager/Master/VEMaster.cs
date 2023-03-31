@@ -1,8 +1,33 @@
 ﻿using YamlDotNet.RepresentationModel;
 using VHActorManager.Specs;
+using VHActorManager.Interfaces;
+using VHActorManager.WebService;
+using System.Windows.Forms;
+using System.Text.Json;
+using System.Collections.Generic;
 
 namespace VHActorManager.Master
 {
+    internal class SanitizeRESpecResponseData : ResponseData
+    {
+        public List<SanitizeRESpec> Specs { get; set; }
+
+        public SanitizeRESpecResponseData() : base()
+        {
+            Specs = new List<SanitizeRESpec>();
+        }
+
+        public SanitizeRESpecResponseData(List<SanitizeRESpec> specs) : base()
+        {
+            Specs = specs;
+        }
+
+        public new string ToJson()
+        {
+            return JsonSerializer.Serialize(this);
+        }
+    }
+
     public class VEMaster: MasterBase
     {
         public const string YAML_FILENAME = "voice_engine_master.yaml";
@@ -23,6 +48,7 @@ namespace VHActorManager.Master
         private const string SEPS_KEY = "SeparateActorEngines";
 
         private const string ID_PREFIX = "音声合成エンジンID";
+        private const string SANITIZE_RE_ID_PREFIX = "サニタイズ正規表現ID";
 
         private readonly List<VESpec> specs;
         private readonly Dictionary<string, List<SanitizeRESpec>> sanitizers;
@@ -84,6 +110,80 @@ namespace VHActorManager.Master
         public override string DeleteSpec(string paramId)
         {
             return DeleteSpec<VESpec>(paramId, specs, ID_PREFIX);
+        }
+
+        public string KeyListToJson()
+        {
+            var keys = sanitizers.Keys.ToList();
+
+            ListResponseData<List<string>, string> data = new(keys)
+            {
+                Message = new ResponseMessage().Succeed()
+            };
+
+            return data.ToJson();
+        }
+
+        public string SanitaizeRegsToJson()
+        {
+            DictResponseData<Dictionary<string, List<SanitizeRESpec>>, List<SanitizeRESpec>> data = new(sanitizers)
+            {
+                Message = new ResponseMessage().Succeed()
+            };
+
+            return data.ToJson();
+        }
+
+        public string SanitaizeRegListToJson(string paramKey)
+        {
+            if (!sanitizers.ContainsKey(paramKey)) { return ResponseNotFoundKeyError(SANITIZE_RE_ID_PREFIX, paramKey); }
+
+            SanitizeRESpecResponseData data = new(sanitizers[paramKey])
+            {
+                Message = new ResponseMessage().Succeed()
+            };
+
+            return data.ToJson();
+        }
+
+        public string NewSanitaizeRegListFromJson(string paramKey, string json)
+        {
+            if (sanitizers.ContainsKey(paramKey)) { return ResponseAlreadyExistKeyError(SANITIZE_RE_ID_PREFIX, paramKey); }
+
+            List<SanitizeRESpec>? list = JsonSerializer.Deserialize<List<SanitizeRESpec>>(json);
+
+            if (list == null) { return ResponseIllegalRequestDataError(); }
+
+            sanitizers[paramKey] = list ?? new List<SanitizeRESpec>();
+
+            NewKeyResponseData data = new(paramKey)
+            {
+                Message = new ResponseMessage().Succeed()
+            };
+
+            return data.ToJson();
+        }
+
+        public string SanitaizeRegListFromJson(string paramKey, string json)
+        {
+            if (!sanitizers.ContainsKey(paramKey)) { return ResponseNotFoundKeyError(SANITIZE_RE_ID_PREFIX, paramKey); }
+
+            List<SanitizeRESpec>? list = JsonSerializer.Deserialize<List<SanitizeRESpec>>(json);
+
+            if (list == null) { return ResponseIllegalRequestDataError(); }
+
+            sanitizers[paramKey] = list ?? new List<SanitizeRESpec>();
+
+            return ResponseSucceed();
+        }
+
+        public string DeleteSanitaizeRegList(string paramKey)
+        {
+            if (!sanitizers.ContainsKey(paramKey)) { return ResponseNotFoundKeyError(SANITIZE_RE_ID_PREFIX, paramKey); }
+
+            sanitizers.Remove(paramKey);
+
+            return ResponseSucceed();
         }
 
         public new void Load(string? path = null)

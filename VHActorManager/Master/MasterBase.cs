@@ -68,6 +68,10 @@ namespace VHActorManager.Master
 
         protected static string ResponseIllegalParamaterError() { return ResponseError("パラメータの書式が不正です"); }
 
+        protected static string ResponseNotFoundKeyError(string prefix, string key) { return ResponseError($"${prefix}のキーが見つかりません: {key}"); }
+
+        protected static string ResponseAlreadyExistKeyError(string prefix, string key) { return ResponseError($"${prefix}のキーは既に存在しています: {key}"); }
+
         internal static string FindIndexFromSpecs<T>(List<T> specs, string paramId, string id_prefix, out int targetId) where T : class, ISpecInterface
         {
             targetId = -1;
