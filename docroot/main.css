@@ -22,3 +22,16 @@ div.detail_half_box {
 button.full_fit {
     width: 100%;
 }
+button.color-button {
+    color: black;
+    background-color: #e0e0e0;
+    width: 100%;
+}
+span.preview_color_box {
+    font-size: larger;
+}
+span.detail_color_box {
+    border: solid black 1px;
+    background-color: white;
+    font-size: 128pt;
+}

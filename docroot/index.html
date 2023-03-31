@@ -69,6 +69,12 @@
         <div v-if="isLoadCompleted" id="main">
             <b-tabs content-class="mt-3" justified>
                 <b-tab title="声優マスター">
+                    <b-row>
+                        <b-col>
+                            <b-button v-on:click="showColorPage()" variant="info" class="full_fit">色マスタ表示</b-button>
+                        </b-col>
+                    </b-row>
+                    <b-row v-if="!actor.edit.enable"><b-col>&nbsp;</b-col></b-row>
                     <b-row v-if="!actor.edit.enable">
                         <b-col>
                             <b-button v-on:click="showNewActor()" variant="primary" class="full_fit">新規作成</b-button>
@@ -569,7 +575,33 @@
                     </b-row>
                 </b-tab>
                 <b-tab title="色マスター">
-
+                    <b-row>
+                        <b-col cols="4" class="overflow-auto" class="full_height">
+                            <b-list-group>
+                                <b-list-group-item v-for="data in color.specs" v-bind:key="data.Id">
+                                    <b-button v-on:click="showColorDetail(data.Id)" block class="color-button">
+                                        <span v-bind:style="{ color: data.Hex }" class="preview_color_box">■</span>&nbsp;
+                                        {{data.Name}}
+                                    </b-button>
+                                </b-list-group-item>
+                            </b-list-group>
+                        </b-col>
+                        <b-col>
+                            <div v-if="color.detail.body == null" class="d-flex align-items-center  detail_box">
+                                <p>選択がされていません</p>
+                            </div>
+                            <div v-if="color.detail.body != null" class="d-flex align-items-center  detail_box">
+                                <div>
+                                    <p><span v-bind:style="{ color: color.detail.body.Hex }" class="detail_color_box">■</span>
+                                    </p>
+                                    <ul>
+                                        <li>名前: {{color.detail.body.Name}}</li>
+                                        <li>{{color.detail.body.Hex}} ({{color.detail.body.R}}, {{color.detail.body.G}}, {{color.detail.body.B}})</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </b-col>
+                    </b-row>
                 </b-tab>
                 <b-tab title="管理">
                     <b-row>

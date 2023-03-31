@@ -177,6 +177,10 @@ var app = new Vue({
                         }
                     }.bind(this))
         },
+        showColorDetail: function (id) {
+            this.color.detail.id = id
+            this.color.detail.body = this.color.specs.find(spec => spec.Id === id)
+        },
         strToColor: function(str) {
             if (str[0] == "#"){ return str }
 
@@ -561,6 +565,9 @@ var app = new Vue({
                     }
                 }.bind(this))
         },
+        showColorPage: function() {
+            window.open('/colors.html')
+        }
     },
     data: {
         actor: {
@@ -692,6 +699,10 @@ var app = new Vue({
             specs: null,
             names: [],
             dict: {},
+            detail: {
+                id: 0,
+                body: null,
+            },
             error: {
                 has: false,
                 message: "",
