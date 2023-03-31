@@ -42,12 +42,12 @@ namespace VHActorManager
 
         public static string ToHex(Color color)
         {
-            return string.Format("#{0:X2}{1:X2}{2:X2}", color.R, color.G, color.B);
+            return $"{color.R:X2}{color.G:X2}{color.B:X2}";
         }
 
         public static string ToHex(byte r, byte g, byte b)
         {
-            return string.Format("#{0:X2}{1:X2}{2:X2}", r, g, b);
+            return $"#{r:X2}{g:X2}{b:X2}";
         }
     }
 }
