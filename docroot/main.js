@@ -108,74 +108,74 @@ var app = new Vue({
                         this.color.error.message = `色情報取得エラー: ${response.data.Message.Message}`
                     }
                 }.bind(this))
-            },
-            updateCompleted(flag)
+        },
+        updateCompleted(flag)
+        {
+            this.actor.load_completed = flag;
+            this.ve.load_completed = flag;
+            this.color.load_completed = flag;
+        },
+        setupVEOptions()
+        {
+            this.veOptions = []
+            for(idx in this.ve.names)
             {
-                this.actor.load_completed = flag;
-                this.ve.load_completed = flag;
-                this.color.load_completed = flag;
-            },
-            setupVEOptions()
+                this.ve.options.push({text: this.ve.names[idx].Name, value: this.ve.names[idx].Name})
+            }
+        },
+        setColorNames()
+        {
+            this.color.names = []
+            for(let i = 0; i < this.color.specs.length; i++)
             {
-                this.veOptions = []
-                for(idx in this.ve.names)
-                {
-                    this.ve.options.push({text: this.ve.names[idx].Name, value: this.ve.names[idx].Name})
-                }
-            },
-            setColorNames()
+                var spec = this.color.specs[i]
+                this.color.names.push(spec.Name)
+            }
+        },
+        setNameToColor()
+        {
+            this.color.dict = {}
+            for(let i = 0; i < this.color.specs.length; i++)
             {
-                this.color.names = []
-                for(let i = 0; i < this.color.specs.length; i++)
-                {
-                    var spec = this.color.specs[i]
-                    this.color.names.push(spec.Name)
-                }
-            },
-            setNameToColor()
-            {
-                this.color.dict = {}
-                for(let i = 0; i < this.color.specs.length; i++)
-                {
-                    var spec = this.color.specs[i]
-                    this.color.dict[spec.Name] = spec
-                }
-            },
-            showActorDetail: function (index) {
-                axios.get(`/api/v1/ActorSpec/${index}/`)
-                    .then(function (response) {
-                        if(response.data.Message.Status == 0)
-                        {
-                            this.actor.detail.index = index
-                            this.actor.detail.body = response.data.Spec
+                var spec = this.color.specs[i]
+                this.color.dict[spec.Name] = spec
+            }
+        },
+        showActorDetail: function (index) {
+            axios.get(`/api/v1/ActorSpec/${index}/`)
+                .then(function (response) {
+                    if(response.data.Message.Status == 0)
+                    {
+                        this.actor.detail.index = index
+                        this.actor.detail.body = response.data.Spec
 
-                            this.clearNotice()
-                        }
-                        else
-                        {
-                            this.clearError()
-                            this.actor.error.has = true
-                            this.actor.error.message = `声優詳細取得エラー: ${response.data.Message.Message}`
-                        }
-                    }.bind(this))
-            },
-            showVEDetail: function (index) {
-                axios.get(`/api/v1/VoiceEngineSpec/${index}/`)
-                    .then(function (response) {
-                        if(response.data.Message.Status == 0)
-                        {
-                            this.ve.detail.index = index
-                            this.ve.detail.body = response.data.Spec
+                        this.clearNotice()
+                    }
+                    else
+                    {
+                        this.clearError()
+                        this.actor.error.has = true
+                        this.actor.error.message = `声優詳細取得エラー: ${response.data.Message.Message}`
+                    }
+                }.bind(this))
+        },
+        showVEDetail: function (index) {
+            axios.get(`/api/v1/VoiceEngineSpec/${index}/`)
+                .then(function (response) {
+                    if(response.data.Message.Status == 0)
+                    {
+                        this.ve.detail.index = index
+                        this.ve.detail.body = response.data.Spec
 
-                            this.clearNotice()
-                        }
-                        else
-                        {
-                            this.clearError()
-                            this.ve.error.has = true
-                            this.ve.error.message = `音声合成エンジン詳細取得エラー: ${response.data.Message.Message}`
-                        }
-                    }.bind(this))
+                        this.clearNotice()
+                    }
+                    else
+                    {
+                        this.clearError()
+                        this.ve.error.has = true
+                        this.ve.error.message = `音声合成エンジン詳細取得エラー: ${response.data.Message.Message}`
+                    }
+                }.bind(this))
         },
         showColorDetail: function (id) {
             this.color.detail.id = id
