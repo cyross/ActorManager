@@ -22,7 +22,6 @@ namespace VHActorManager.WebService
             IHttpResponse response = context.Response as IHttpResponse;
             response.ContentType = ContentType.Json;
 
-            await response.SendResponseAsync(json);
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
@@ -35,7 +34,6 @@ namespace VHActorManager.WebService
             IHttpResponse response = context.Response as IHttpResponse;
             response.ContentType = ContentType.Json;
 
-            await response.SendResponseAsync(json);
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
