@@ -71,5 +71,31 @@ namespace VHActorManager.WebService
 
             await ApiUtils.CreateAndSendResponse(context, json);
         }
+
+        [RestRoute("Options", "/SanitizeRe/")]
+        public async Task Options(IHttpContext context)
+        {
+            await ApiUtils.CreateOptionsAndSendResponse(context);
+        }
+
+        [RestRoute("Options", "/SanitizeRe/{key}")]
+        public async Task OptionsWithKey(IHttpContext context)
+        {
+            var paramId = context.Request.PathParameters["id"];
+
+            await ApiUtils.CreateOptionsAndSendResponse(context);
+        }
+
+        [RestRoute("Options", "/SanitizeRe/Index")]
+        public async Task OptionsWithIndex(IHttpContext context)
+        {
+            await ApiUtils.CreateOptionsAndSendResponse(context);
+        }
+
+        [RestRoute("Options", "/SanitizeRe/All")]
+        public async Task OptionsAll(IHttpContext context)
+        {
+            await ApiUtils.CreateOptionsAndSendResponse(context);
+        }
     }
 }

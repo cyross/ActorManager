@@ -19,9 +19,6 @@ namespace VHActorManager.WebService
         {
             string json = VEMaster.Instance().SpecsToJson();
 
-            IHttpResponse response = context.Response as IHttpResponse;
-            response.ContentType = ContentType.Json;
-
             await ApiUtils.CreateAndSendResponse(context, json);
         }
 
@@ -30,9 +27,6 @@ namespace VHActorManager.WebService
         {
             var paramId = context.Request.PathParameters["id"];
             string json = VEMaster.Instance().SpecToJson(paramId);
-
-            IHttpResponse response = context.Response as IHttpResponse;
-            response.ContentType = ContentType.Json;
 
             await ApiUtils.CreateAndSendResponse(context, json);
         }
@@ -65,6 +59,24 @@ namespace VHActorManager.WebService
             string json = VEMaster.Instance().DeleteSpec(paramId);
 
             await ApiUtils.CreateAndSendResponse(context, json);
+        }
+
+        [RestRoute("Options", "/VoiceEngineSpec/")]
+        public async Task Options(IHttpContext context)
+        {
+            await ApiUtils.CreateOptionsAndSendResponse(context);
+        }
+
+        [RestRoute("Options", "/VoiceEngineSpec/{id}")]
+        public async Task OptionsWithId(IHttpContext context)
+        {
+            await ApiUtils.CreateOptionsAndSendResponse(context);
+        }
+
+        [RestRoute("Options", "/VoiceEngineSpec/Index")]
+        public async Task OptionsWithIndex(IHttpContext context)
+        {
+            await ApiUtils.CreateOptionsAndSendResponse(context);
         }
     }
 }

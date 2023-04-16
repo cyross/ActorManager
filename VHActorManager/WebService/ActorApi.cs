@@ -60,5 +60,25 @@ namespace VHActorManager.WebService
 
             await ApiUtils.CreateAndSendResponse(context, json);
         }
+
+        [RestRoute("Options", "/ActorSpec/")]
+        public async Task Options(IHttpContext context)
+        {
+            await ApiUtils.CreateOptionsAndSendResponse(context);
+        }
+
+        [RestRoute("Options", "/ActorSpec/{id}")]
+        public async Task OptionsWithId(IHttpContext context)
+        {
+            var paramId = context.Request.PathParameters["id"];
+
+            await ApiUtils.CreateOptionsAndSendResponse(context);
+        }
+
+        [RestRoute("Options", "/ActorSpec/Index")]
+        public async Task OptionsWithIndex(IHttpContext context)
+        {
+            await ApiUtils.CreateOptionsAndSendResponse(context);
+        }
     }
 }
