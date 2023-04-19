@@ -20,11 +20,13 @@ namespace VHActorManager.WebService
             userMaster = user;
             baseUrl = "";
             isRunning = false;
+
+            ContentType.Append("js", ContentType.JavaScript);
         }
 
         public async void Start()
         {
-            using(var server = RestServerBuilder.UseDefaults().Build())
+            using (var server = RestServerBuilder.UseDefaults().Build())
             {
                 string contentPath = Utility.ExecFilepath(DOCUMENT_ROOT);
                 server.ContentFolders.Add(contentPath);

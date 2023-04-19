@@ -1,0 +1,84 @@
+@import './base.css';
+
+body {
+  place-items: center;
+}
+
+#app {
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+header {
+  height: 5vh;
+}
+
+footer {
+  height: 5vh;
+}
+
+div#loading {
+  height: 90vh;
+}
+
+div.main_view {
+  height: 90vh;
+}
+
+div.full_height {
+  height: 90vh;
+}
+
+div.half_height {
+  height: 45vh;
+}
+
+div.mini_height {
+  height: 15vh;
+}
+
+div.detail_box {
+  height: 90vh;
+  font-size: xx-large;
+}
+
+div.detail_half_box {
+  height: 45vh;
+  font-size: xx-large;
+}
+
+button.full_fit {
+  width: 100%;
+}
+
+button.color-button {
+  color: black;
+  background-color: #e0e0e0;
+  width: 100%;
+}
+
+span.preview_color_box {
+  font-size: larger;
+}
+
+span.detail_color_box {
+  border: solid black 1px;
+  background-color: white;
+  font-size: 128pt;
+}
+
+div.menu_title {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+}

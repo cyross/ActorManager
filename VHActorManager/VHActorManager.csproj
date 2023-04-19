@@ -15,12 +15,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grapevine" Version="5.0.0-rc.10" />
-    <PackageReference Include="YamlDotNet" Version="13.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
+    <PackageReference Include="YamlDotNet" Version="13.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\YAMLManager\VHYAML.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Grapeseed">
+      <HintPath>..\..\grapevine\src\Grapeseed\bin\Debug\net7.0-windows10.0.22621.0\Grapeseed.dll</HintPath>
+    </Reference>
+    <Reference Include="Grapevine">
+      <HintPath>..\..\grapevine\src\Grapevine\bin\Debug\net7.0-windows10.0.22621.0\Grapevine.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
