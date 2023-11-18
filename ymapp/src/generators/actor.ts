@@ -1,56 +1,64 @@
-import type { ActorSpec, EditActorInfo, ActorDetail, ActorTextAttr, ActorColorInfo } from "../types/actor";
+import type {
+  ActorSpec,
+  EditActorInfo,
+  ActorDetail,
+  ActorTextAttr,
+  ActorColorInfo
+} from '../types/actor'
 
 export const EmptyActorTextAttr = (): ActorTextAttr => {
   return {
     TextColor: EmptyActorColorInfo(),
     OutlineColor: EmptyActorColorInfo(),
-    OutlineWidth: 0,
-  };
+    OutlineWidth: 0
+  }
 }
 
 export const EmptyActorColorInfo = (): ActorColorInfo => {
   return {
-    Type: "named",
-    Name: "Black",
-    Rgb: "#000000",
-  };
-};
+    Type: 'named',
+    Name: 'Black',
+    Rgb: '#000000'
+  }
+}
 
 export const EmptyEditActorInfo = (): EditActorInfo => {
   return {
     Enable: false,
     Id: -1,
-    Name: "",
-    Kana: "",
+    Name: '',
+    Kana: '',
     Engines: [],
+    PrimaryEngine: 'AIV',
     Aliases: [],
-    AliasText: "",
+    AliasText: '',
     JimakuAttr: EmptyActorTextAttr(),
     ActorNameAttr: EmptyActorTextAttr(),
-    ExtData: {},
-  };
-};
+    ExtData: {}
+  }
+}
 
 export const EmptyActorSpec = (): ActorSpec => {
   return {
     Id: -1,
-    Name: "",
-    Kana: "",
+    Name: '',
+    Kana: '',
     Engines: [],
+    PrimaryEngine: 'AIV',
     AnotherNames: [],
-    JimakuTextColor: "",
-    JimakuOutlineColor: "",
+    JimakuTextColor: '',
+    JimakuOutlineColor: '',
     JimakuOutlineWidth: 0,
-    ActorTextColor: "",
-    ActorOutlineColor: "",
+    ActorTextColor: '',
+    ActorOutlineColor: '',
     ActorOutlineWidth: 0,
-    ExtData: {},
-  };
-};
+    ExtData: {}
+  }
+}
 
 export const EmptyActorDetail = (): ActorDetail => {
   return {
     Index: -1,
-    Body: EmptyActorSpec(),
-  };
-};
+    Body: EmptyActorSpec()
+  }
+}

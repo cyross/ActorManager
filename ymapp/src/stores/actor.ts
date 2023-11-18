@@ -82,6 +82,7 @@ export const useActorStore = defineStore('actor', () => {
       Name: edit.value.Name,
       Kana: edit.value.Kana,
       Engines: edit.value.Engines,
+      PrimaryEngine: edit.value.PrimaryEngine,
       AnotherNames: convertAliasTextToAnotherNames(),
       JimakuTextColor: getColorFromInfo(edit.value.JimakuAttr.TextColor),
       JimakuOutlineColor: getColorFromInfo(edit.value.JimakuAttr.OutlineColor),
@@ -115,6 +116,7 @@ export const useActorStore = defineStore('actor', () => {
     edit.value.Name = detail.value.Body.Name
     edit.value.Kana = detail.value.Body.Kana
     edit.value.Engines = detail.value.Body.Engines
+    edit.value.PrimaryEngine = detail.value.Body.PrimaryEngine
     edit.value.Aliases = detail.value.Body.AnotherNames
     edit.value.AliasText = edit.value.Aliases.join('\n')
     setupColor(edit.value.JimakuAttr.TextColor, detail.value.Body.JimakuTextColor)
