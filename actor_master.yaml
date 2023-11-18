@@ -2,39 +2,42 @@
   Name: 青山龍星
   Kana: あおやまりゅうせい
   Engines:
-  - AIV
-  - VV
+    - AIV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: SteelBlue
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: SteelBlue
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 1
   Name: 彩澄しゅお
   Kana: あすみしゅお
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: HotPink
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: HotPink
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 2
   Name: 彩澄りりせ
   Kana: あすみりりせ
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: DodgerBlue
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: DodgerBlue
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -42,7 +45,8 @@
   Name: 足立レイ
   Kana: あだちれい
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -55,12 +59,13 @@
   Name: 雨晴はう
   Kana: あめはれはう
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: Aqua
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: Aqua
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -68,22 +73,24 @@
   Name: IA
   Kana: いあ
   Engines:
-  - CA
-  - CC
+    - CA
+    - CC
+  PrimaryEngine: CA
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: Pink
+  JimakuOutlineColor: Cornsilk
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: Pink
+  ActorOutlineColor: Cornsilk
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 6
   Name: 伊織弓鶴
   Kana: いおりゆづる
   Engines:
-  - AIV
-  - VR
+    - AIV
+    - VR
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -96,7 +103,8 @@
   Name: 羽ノ華
   Kana: うのか
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -109,15 +117,16 @@
   Name: 櫻歌ミコ
   Kana: おうかみこ
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames:
-  - 櫻歌ミコ(ノーマル)
-  - 櫻歌ミコ(第二形態)
-  - 櫻歌ミコ(ロリ)
-  JimakuTextColor: White
+    - 櫻歌ミコ(ノーマル)
+    - 櫻歌ミコ(第二形態)
+    - 櫻歌ミコ(ロリ)
+  JimakuTextColor: LightPink
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: LightPink
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -125,12 +134,13 @@
   Name: 男の子
   Kana: おとこのこ
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: CornflowerBlue
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: CornflowerBlue
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -138,21 +148,23 @@
   Name: ONE
   Kana: おね
   Engines:
-  - CA
-  - CC
+    - CA
+    - CC
+  PrimaryEngine: CA
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: Orange
+  JimakuOutlineColor: Cornsilk
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: Orange
+  ActorOutlineColor: Cornsilk
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 11
   Name: 女の子
   Kana: おんなのこ
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -165,7 +177,8 @@
   Name: 風見壮一
   Kana: かざみそういち
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -178,12 +191,13 @@
   Name: 春日部つむぎ
   Kana: かすかべつむぎ
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: PaleGoldenrod
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: PaleGoldenrod
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -191,28 +205,30 @@
   Name: 麒ヶ島宗麟
   Kana: きがしまそうりん
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: DimGray
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: DimGray
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 15
   Name: 紲星あかり
   Kana: きずなあかり
   Engines:
-  - AIV
-  - VR
+    - AIV
+    - VR
+  PrimaryEngine: VR
   AnotherNames:
-  - 紲星あかり(蕾)[AIV]
-  - 紲星あかり(萌)[AIV]
-  JimakuTextColor: White
+    - 紲星あかり(蕾)[AIV]
+    - 紲星あかり(萌)[AIV]
+  JimakuTextColor: Gainsboro
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: Gainsboro
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -220,32 +236,34 @@
   Name: 九州そら
   Kana: きゅうしゅうそら
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames:
-  - 九州そら(ノーマル)
-  - 九州そら(あまあま)
-  - 九州そら(ツンツン)
-  - 九州そら(セクシー)
-  - 九州そら(ささやき)
-  - 九州そら(ヒソヒソ)
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+    - 九州そら(ノーマル)
+    - 九州そら(あまあま)
+    - 九州そら(ツンツン)
+    - 九州そら(セクシー)
+    - 九州そら(ささやき)
+    - 九州そら(ヒソヒソ)
+  JimakuTextColor: MediumOrchid
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: MediumOrchid
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 17
   Name: 京町セイカ
   Kana: きょうまちせいか
   Engines:
-  - VR
-  - VP
+    - VR
+    - VP
+  PrimaryEngine: VR
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: LightGreen
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: LightGreen
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -253,38 +271,42 @@
   Name: GUMI
   Kana: ぐみ
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: LightGreen
+  JimakuOutlineColor: LightGreen
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: LightGreen
+  ActorOutlineColor: LightGreen
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 19
   Name: 栗田まろん
   Kana: くりたまろん
   Engines:
-  - AIV
+    - AIV
+    - VV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
   ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 20
   Name: 玄野武宏
   Kana: くろのたけひろ
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames:
-  - 玄野武宏(ノーマル)
-  - 玄野武宏(喜び)
-  - 玄野武宏(ツンギレ)
-  - 玄野武宏(悲しみ)
+    - 玄野武宏(ノーマル)
+    - 玄野武宏(喜び)
+    - 玄野武宏(ツンギレ)
+    - 玄野武宏(悲しみ)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -296,7 +318,8 @@
   Name: 剣崎雌雄
   Kana: けんざきめすお
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -309,10 +332,11 @@
   Name: 後鬼
   Kana: ごき
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames:
-  - 後鬼(人間ver.)
-  - 後鬼(ぬいぐるみver.)
+    - 後鬼(人間ver.)
+    - 後鬼(ぬいぐるみver.)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -324,13 +348,14 @@
   Name: 琴葉 葵
   Kana: ことはあおい
   Engines:
-  - VR
-  - AIV
+    - VR
+    - AIV
+  PrimaryEngine: VR
   AnotherNames:
-  - 琴葉 葵(v1)[VR]
-  - 琴葉 葵(蕾)[AIV]
-  - Aoi[AIV]
-  - 葵[AIV]
+    - 琴葉 葵(v1)[VR]
+    - 琴葉 葵(蕾)[AIV]
+    - Aoi[AIV]
+    - 葵[AIV]
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -342,13 +367,14 @@
   Name: 琴葉 茜
   Kana: ことはあかね
   Engines:
-  - VR
-  - AIV
+    - VR
+    - AIV
+  PrimaryEngine: VR
   AnotherNames:
-  - 琴葉 茜(v1)[VR]
-  - 琴葉 茜(蕾)[AIV]
-  - Akane[AIV]
-  - 茜[AIV]
+    - 琴葉 茜(v1)[VR]
+    - 琴葉 茜(蕾)[AIV]
+    - Akane[AIV]
+    - 茜[AIV]
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -360,7 +386,8 @@
   Name: 小春六花
   Kana: こはるりっか
   Engines:
-  - CA
+    - CA
+  PrimaryEngine: CA
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -373,7 +400,8 @@
   Name: 咲ちゃん
   Kana: さきちゃん
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -386,8 +414,9 @@
   Name: さとうささら
   Kana: さとうささら
   Engines:
-  - CA
-  - CC
+    - CA
+    - CC
+  PrimaryEngine: CA
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -400,7 +429,8 @@
   Name: 小夜(SAYO)
   Kana: さよ
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -413,7 +443,8 @@
   Name: 潮崎かずき
   Kana: しおざきかずき
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -426,7 +457,8 @@
   Name: 式大元
   Kana: しきたいげん
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -439,7 +471,8 @@
   Name: 式狼縁
   Kana: しきろうえん
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -452,14 +485,15 @@
   Name: 四国めたん
   Kana: しこくめたん
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames:
-  - 四国めたん(ノーマル)
-  - 四国めたん(あまあま)
-  - 四国めたん(ツンツン)
-  - 四国めたん(セクシー)
-  - 四国めたん(ささやき)
-  - 四国めたん(ヒソヒソ)
+    - 四国めたん(ノーマル)
+    - 四国めたん(あまあま)
+    - 四国めたん(ツンツン)
+    - 四国めたん(セクシー)
+    - 四国めたん(ささやき)
+    - 四国めたん(ヒソヒソ)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -471,7 +505,8 @@
   Name: 邪神ちゃん
   Kana: じゃしんちゃん
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -484,7 +519,8 @@
   Name: 女性1
   Kana: じょせい1
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -497,7 +533,8 @@
   Name: 女性2
   Kana: じょせい2
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -510,7 +547,8 @@
   Name: 女性3
   Kana: じょせい3
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -523,7 +561,8 @@
   Name: 女性4
   Kana: じょせい4
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -536,13 +575,14 @@
   Name: 白上虎太郎
   Kana: しらかみこたろう
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames:
-  - 白上虎太郎(ふつう)
-  - 白上虎太郎(わーい)
-  - 白上虎太郎(びくびく)
-  - 白上虎太郎(おこ)
-  - 白上虎太郎(ぴえーん)
+    - 白上虎太郎(ふつう)
+    - 白上虎太郎(わーい)
+    - 白上虎太郎(びくびく)
+    - 白上虎太郎(おこ)
+    - 白上虎太郎(ぴえーん)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -554,8 +594,9 @@
   Name: すずきつづみ
   Kana: すずきつづみ
   Engines:
-  - CA
-  - CC
+    - CA
+    - CC
+  PrimaryEngine: CA
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -568,14 +609,15 @@
   Name: ずんだもん
   Kana: ずんだもん
   Engines:
-  - VP
-  - VV
-  - ずんだもん(ノーマル)[VV]
-  - ずんだもん(あまあま)[VV]
-  - ずんだもん(ツンツン)[VV]
-  - ずんだもん(セクシー)[VV]
-  - ずんだもん(ささやき)[VV]
-  - ずんだもん(ヒソヒソ)[VV]
+    - VP
+    - VV
+    - ずんだもん(ノーマル)[VV]
+    - ずんだもん(あまあま)[VV]
+    - ずんだもん(ツンツン)[VV]
+    - ずんだもん(セクシー)[VV]
+    - ずんだもん(ささやき)[VV]
+    - ずんだもん(ヒソヒソ)[VV]
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -588,7 +630,8 @@
   Name: 鷹の爪吉田くん
   Kana: たかのつめよしだくん
   Engines:
-  - VR
+    - VR
+  PrimaryEngine: VR
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -601,7 +644,8 @@
   Name: タカハシ
   Kana: たかはし
   Engines:
-  - CC
+    - CC
+  PrimaryEngine: CC
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -614,9 +658,10 @@
   Name: 民安ともえ
   Kana: たみやすともえ
   Engines:
-  - VR
+    - VR
+  PrimaryEngine: VR
   AnotherNames:
-  - 民安ともえ(v1)
+    - 民安ともえ(v1)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -628,7 +673,8 @@
   Name: タンゲコトエ
   Kana: たんげことえ
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -641,7 +687,8 @@
   Name: 男性1
   Kana: だんせい1
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -654,7 +701,8 @@
   Name: 男性2
   Kana: だんせい2
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -667,7 +715,8 @@
   Name: 男性3
   Kana: だんせい3
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -680,7 +729,8 @@
   Name: 男性4
   Kana: だんせい4
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -693,7 +743,8 @@
   Name: ちび式じい
   Kana: ちびしきじい
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -706,10 +757,11 @@
   Name: ついなちゃん
   Kana: ついなちゃん
   Engines:
-  - VR
+    - VR
+  PrimaryEngine: VR
   AnotherNames:
-  - ついなちゃん(標準語)
-  - ついなちゃん(関西弁)
+    - ついなちゃん(標準語)
+    - ついなちゃん(関西弁)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -721,9 +773,10 @@
   Name: 月読アイ
   Kana: つくよみあい
   Engines:
-  - VR
+    - VR
+  PrimaryEngine: VR
   AnotherNames:
-  - 月読アイ(v1)
+    - 月読アイ(v1)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -735,9 +788,10 @@
   Name: 月読ショウタ
   Kana: つくよみしょうた
   Engines:
-  - VR
+    - VR
+  PrimaryEngine: VR
   AnotherNames:
-  - 月読ショウタ(v1)
+    - 月読ショウタ(v1)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -749,9 +803,10 @@
   Name: 弦巻マキ
   Kana: つるまきまき
   Engines:
-  - CA
+    - CA
+  PrimaryEngine: CA
   AnotherNames:
-  - 弦巻マキ English
+    - 弦巻マキ English
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -763,7 +818,8 @@
   Name: 東北イタコ
   Kana: とうほくいたこ
   Engines:
-  - VR
+    - VR
+  PrimaryEngine: VR
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -776,9 +832,10 @@
   Name: 東北きりたん
   Kana: とうほくきりたん
   Engines:
-  - VR
+    - VR
+  PrimaryEngine: VR
   AnotherNames:
-  - 東北きりたん(v1)
+    - 東北きりたん(v1)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -790,10 +847,11 @@
   Name: 東北ずん子
   Kana: とうほくずんこ
   Engines:
-  - VP
-  - VR
+    - VP
+    - VR
+  PrimaryEngine: VP
   AnotherNames:
-  - 東北ずん子(v1)[VR]
+    - 東北ずん子(v1)[VR]
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -805,12 +863,13 @@
   Name: ナースロボ＿タイプＴ
   Kana: なーすろぼたいぷてぃー
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames:
-  - ナースロボ＿タイプＴ(ノーマル)
-  - ナースロボ＿タイプＴ(楽々)
-  - ナースロボ＿タイプＴ(恐怖)
-  - ナースロボ＿タイプＴ(内緒話)
+    - ナースロボ＿タイプＴ(ノーマル)
+    - ナースロボ＿タイプＴ(楽々)
+    - ナースロボ＿タイプＴ(恐怖)
+    - ナースロボ＿タイプＴ(内緒話)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -822,7 +881,8 @@
   Name: 夏色花梨
   Kana: なつきかりん
   Engines:
-  - CA
+    - CA
+  PrimaryEngine: CA
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -835,7 +895,8 @@
   Name: 波音リツ
   Kana: なみねりつ
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -848,11 +909,12 @@
   Name: No.7
   Kana: なんばーせぶん
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames:
-  - No.7(ノーマル)
-  - No.7(アナウンス)
-  - No.7(読み聞かせ)
+    - No.7(ノーマル)
+    - No.7(アナウンス)
+    - No.7(読み聞かせ)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -864,7 +926,8 @@
   Name: 花隈千冬
   Kana: はなくまちふゆ
   Engines:
-  - CA
+    - CA
+  PrimaryEngine: CA
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -877,7 +940,8 @@
   Name: 桜乃そら
   Kana: はるのそら
   Engines:
-  - VR
+    - VR
+  PrimaryEngine: VR
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -890,7 +954,8 @@
   Name: 日ノ出賢
   Kana: ひのでけん
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -903,7 +968,8 @@
   Name: フリモメン
   Kana: ふりもめん
   Engines:
-  - VP
+    - VP
+  PrimaryEngine: VP
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -916,7 +982,8 @@
   Name: †聖騎士 紅桜†
   Kana: ほーりーないとべにざくら
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -929,12 +996,13 @@
   Name: WhiteCUL
   Kana: ほわいとかる
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames:
-  - WhiteCUL(ノーマル)
-  - WhiteCUL(たのしい)
-  - WhiteCUL(かなしい)
-  - WhiteCUL(ぴえーん)
+    - WhiteCUL(ノーマル)
+    - WhiteCUL(たのしい)
+    - WhiteCUL(かなしい)
+    - WhiteCUL(ぴえーん)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -946,8 +1014,10 @@
   Name: 水無瀬コウ
   Kana: みなせこう
   Engines:
-  - VR;水無瀬コウ(v1)
-  AnotherNames: []
+    - VR
+  PrimaryEngine: VR
+  AnotherNames:
+    - 水無瀬コウ(v1)
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -959,7 +1029,8 @@
   Name: 冥鳴ひまり
   Kana: めいめいひまり
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -972,7 +1043,8 @@
   Name: もち子さん
   Kana: もちこさん
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -985,7 +1057,8 @@
   Name: 結城 香
   Kana: ゆうきかおり
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -998,11 +1071,12 @@
   Name: 結月ゆかり
   Kana: ゆづきゆかり
   Engines:
-  - AIV
-  - VR
+    - AIV
+    - VR
+  PrimaryEngine: VR
   AnotherNames:
-  - 結月ゆかり(雫)[AIV]
-  - 結月ゆかり(v1)[VR]
+    - 結月ゆかり(雫)[AIV]
+    - 結月ゆかり(v1)[VR]
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1014,7 +1088,8 @@
   Name: 来果
   Kana: らいか
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -1027,7 +1102,8 @@
   Name: ria
   Kana: りあ
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -1040,7 +1116,8 @@
   Name: ロサ(ROSA)
   Kana: ろさ
   Engines:
-  - CA
+    - CA
+  PrimaryEngine: CA
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -1053,7 +1130,8 @@
   Name: 雀松朱司
   Kana: わかまつあかし
   Engines:
-  - VV
+    - VV
+  PrimaryEngine: VV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -1066,7 +1144,8 @@
   Name: 若穂みのり
   Kana: わこうみのり
   Engines:
-  - AIV
+    - AIV
+  PrimaryEngine: AIV
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -1079,10 +1158,11 @@
   Name: 秋静葉
   Kana: あきしずは
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり静葉
-  - しずは
+    - ゆっくり静葉
+    - しずは
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1094,10 +1174,11 @@
   Name: 秋穣子
   Kana: あきみのりこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり穣子
-  - みのりこ
+    - ゆっくり穣子
+    - みのりこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1109,10 +1190,11 @@
   Name: アリス・マーガトロイド
   Kana: ありすまーがとろいど
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりアリス
-  - ありす
+    - ゆっくりアリス
+    - ありす
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1124,10 +1206,11 @@
   Name: 飯綱丸龍
   Kana: いいずなまるめぐむ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり龍
-  - めぐむ
+    - ゆっくり龍
+    - めぐむ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1139,10 +1222,11 @@
   Name: 十六夜咲夜
   Kana: いざよいさくや
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり咲夜
-  - さくや
+    - ゆっくり咲夜
+    - さくや
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1154,10 +1238,11 @@
   Name: 因幡てゐ
   Kana: いなばてい
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりてゐ
-  - てゐ
+    - ゆっくりてゐ
+    - てゐ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1169,10 +1254,11 @@
   Name: 犬走椛
   Kana: いぬばしりもみじ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり椛
-  - もみじ
+    - ゆっくり椛
+    - もみじ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1184,11 +1270,12 @@
   Name: 茨木華扇
   Kana: いばらきかせん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり華扇
-  - かせん
-  - 茨華仙
+    - ゆっくり華扇
+    - かせん
+    - 茨華仙
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1200,10 +1287,11 @@
   Name: 伊吹萃香
   Kana: いぶきすいか
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり萃香
-  - すいか
+    - ゆっくり萃香
+    - すいか
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1215,10 +1303,11 @@
   Name: 今泉影狼
   Kana: いまいずみかげろう
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり影狼
-  - かげろう
+    - ゆっくり影狼
+    - かげろう
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1230,10 +1319,11 @@
   Name: 宇佐見蓮子
   Kana: うさみれんこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり蓮子
-  - れんこ
+    - ゆっくり蓮子
+    - れんこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1245,10 +1335,11 @@
   Name: 牛崎潤美
   Kana: うしざきうるみ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり潤美
-  - うるみ
+    - ゆっくり潤美
+    - うるみ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1260,10 +1351,11 @@
   Name: エタニティラルバ
   Kana: えたにてぃらるば
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりエタニティラルバ
-  - えたにてぃらるば
+    - ゆっくりエタニティラルバ
+    - えたにてぃらるば
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1275,10 +1367,11 @@
   Name: 戎瓔花
   Kana: えびすえいか
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり瓔花
-  - えいか
+    - ゆっくり瓔花
+    - えいか
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1290,10 +1383,11 @@
   Name: 奥野田美宵
   Kana: おくのだみよい
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり美宵
-  - みよい
+    - ゆっくり美宵
+    - みよい
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1305,10 +1399,11 @@
   Name: 小野塚小町
   Kana: おのづかこまち
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり小町
-  - こまち
+    - ゆっくり小町
+    - こまち
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1320,10 +1415,11 @@
   Name: 火焔猫燐
   Kana: かえんびょうりん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりおりん
-  - おりん
+    - ゆっくりおりん
+    - おりん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1335,10 +1431,11 @@
   Name: 鍵山雛
   Kana: かぎやまひな
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり雛
-  - ひな
+    - ゆっくり雛
+    - ひな
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1350,10 +1447,11 @@
   Name: 霍青娥
   Kana: かくせいが
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり青蛾
-  - せいが
+    - ゆっくり青蛾
+    - せいが
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1365,11 +1463,12 @@
   Name: 風見幽香
   Kana: かざみゆうか
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり幽香
-  - ゆうか
-  - のうかりん
+    - ゆっくり幽香
+    - ゆうか
+    - のうかりん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1381,10 +1480,11 @@
   Name: 幽谷響子
   Kana: かそだにきょうこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり響子
-  - きょうこ
+    - ゆっくり響子
+    - きょうこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1396,11 +1496,12 @@
   Name: 上白沢慧音
   Kana: かみしらさわけいね
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり慧音
-  - けーね
-  - きもけーね
+    - ゆっくり慧音
+    - けーね
+    - きもけーね
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1412,12 +1513,13 @@
   Name: 河城にとり
   Kana: かわしろにとり
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりにとり
-  - にとり
-  - メカにとり
-  - めかにとり
+    - ゆっくりにとり
+    - にとり
+    - メカにとり
+    - めかにとり
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1429,10 +1531,11 @@
   Name: 稀神サグメ
   Kana: きしんさぐめ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりサグメ
-  - さぐめ
+    - ゆっくりサグメ
+    - さぐめ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1444,10 +1547,11 @@
   Name: 鬼人正邪
   Kana: きじんせいじゃ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり正邪
-  - せいじゃ
+    - ゆっくり正邪
+    - せいじゃ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1459,10 +1563,11 @@
   Name: キスメ
   Kana: きすめ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりキスメ
-  - きすめ
+    - ゆっくりキスメ
+    - きすめ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1474,10 +1579,11 @@
   Name: 吉弔八千慧
   Kana: きっちょうやちえ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり八千慧
-  - やちえ
+    - ゆっくり八千慧
+    - やちえ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1489,10 +1595,11 @@
   Name: 霧雨魔理沙
   Kana: きりさめまりさ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり魔理沙
-  - まりさ
+    - ゆっくり魔理沙
+    - まりさ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1504,10 +1611,11 @@
   Name: 菅牧典
   Kana: くだまきつかさ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり典
-  - つかさ
+    - ゆっくり典
+    - つかさ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1519,10 +1627,11 @@
   Name: 雲居一輪
   Kana: くもいいちりん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり一輪
-  - いちりん
+    - ゆっくり一輪
+    - いちりん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1534,10 +1643,11 @@
   Name: クラウンピース
   Kana: くらうんぴーす
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりクラウンピース
-  - くらうんぴーす
+    - ゆっくりクラウンピース
+    - くらうんぴーす
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1549,10 +1659,11 @@
   Name: 驪駒早鬼
   Kana: くろこまさき
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり早鬼
-  - さき
+    - ゆっくり早鬼
+    - さき
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1564,10 +1675,11 @@
   Name: 黒谷ヤマメ
   Kana: くろだにやまめ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりヤマメ
-  - やまめ
+    - ゆっくりヤマメ
+    - やまめ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1579,10 +1691,11 @@
   Name: 小悪魔
   Kana: こあくま
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり小悪魔
-  - こあくま
+    - ゆっくり小悪魔
+    - こあくま
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1594,10 +1707,11 @@
   Name: 豪徳寺ミケ
   Kana: ごうとくじみけ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりミケ
-  - みけ
+    - ゆっくりミケ
+    - みけ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1609,10 +1723,11 @@
   Name: 東風谷早苗
   Kana: こちやさなえ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり早苗
-  - さなえ
+    - ゆっくり早苗
+    - さなえ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1624,10 +1739,11 @@
   Name: 駒草山如
   Kana: こまくにさんにょ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり山如
-  - さんにょ
+    - ゆっくり山如
+    - さんにょ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1639,10 +1755,11 @@
   Name: 高麗野あうん
   Kana: こまのあうん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりあうん
-  - あうん
+    - ゆっくりあうん
+    - あうん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1654,10 +1771,11 @@
   Name: 古明地こいし
   Kana: こめいじこいし
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりこいし
-  - こいし
+    - ゆっくりこいし
+    - こいし
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1669,10 +1787,11 @@
   Name: 古明地さとり
   Kana: こめいじさとり
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりさとり
-  - さとり
+    - ゆっくりさとり
+    - さとり
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1684,10 +1803,11 @@
   Name: 魂魄妖夢
   Kana: こんばくようむ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり妖夢
-  - ようむ
+    - ゆっくり妖夢
+    - ようむ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1699,10 +1819,11 @@
   Name: 西行寺幽々子
   Kana: さいぎょうじゆゆこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり幽々子
-  - ゆゆこ
+    - ゆっくり幽々子
+    - ゆゆこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1714,10 +1835,11 @@
   Name: 冴月麟
   Kana: さえつきりん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり冴月麟
-  - さえつきりん
+    - ゆっくり冴月麟
+    - さえつきりん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1729,10 +1851,11 @@
   Name: 坂田ネムノ
   Kana: さかたねむの
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりネムノ
-  - ねむの
+    - ゆっくりネムノ
+    - ねむの
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1744,10 +1867,11 @@
   Name: サニーミルク
   Kana: さにーみるく
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりサニーミルク
-  - さにーみるく
+    - ゆっくりサニーミルク
+    - さにーみるく
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1759,10 +1883,11 @@
   Name: 四季映姫・ヤマザナドゥ
   Kana: しきえいきやまざなどぅ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり映姫
-  - えいき
+    - ゆっくり映姫
+    - えいき
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1774,12 +1899,13 @@
   Name: 射命丸文
   Kana: しゃめいまるあや
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり文
-  - あや
-  - きめぇ丸
-  - きめぇまる
+    - ゆっくり文
+    - あや
+    - きめぇ丸
+    - きめぇまる
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1791,10 +1917,11 @@
   Name: シュガーサテラ
   Kana: しゅがーさてら
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - シュガーサテラ
-  - しゅがーさてら
+    - シュガーサテラ
+    - しゅがーさてら
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1806,10 +1933,11 @@
   Name: 純狐
   Kana: じゅんこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり純狐
-  - じゅんこ
+    - ゆっくり純狐
+    - じゅんこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1821,10 +1949,11 @@
   Name: 杖刀偶磨弓
   Kana: じょうとうぐうまゆみ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり磨弓
-  - まゆみ
+    - ゆっくり磨弓
+    - まゆみ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1836,10 +1965,11 @@
   Name: 少名針妙丸
   Kana: すくなしんみょうまる
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり針妙丸
-  - しんみょうまる
+    - ゆっくり針妙丸
+    - しんみょうまる
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1851,10 +1981,11 @@
   Name: スターサファイア
   Kana: すたーさふぁいあ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりスターサファイア
-  - すたーさふぁいあ
+    - ゆっくりスターサファイア
+    - すたーさふぁいあ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1866,10 +1997,11 @@
   Name: 清蘭
   Kana: せいらん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり清蘭
-  - せいらん
+    - ゆっくり清蘭
+    - せいらん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1881,10 +2013,11 @@
   Name: 赤蛮奇
   Kana: せきばんき
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり赤蛮奇
-  - せきばんき
+    - ゆっくり赤蛮奇
+    - せきばんき
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1896,10 +2029,11 @@
   Name: 蘇我屠自古
   Kana: そがのとじこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり屠自古
-  - とじこ
+    - ゆっくり屠自古
+    - とじこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1911,10 +2045,11 @@
   Name: 大妖精
   Kana: だいようせい
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり大妖精
-  - だいようせい
+    - ゆっくり大妖精
+    - だいようせい
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1926,10 +2061,11 @@
   Name: 多々良小傘
   Kana: たたらこがさ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり小傘
-  - こがさ
+    - ゆっくり小傘
+    - こがさ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1941,10 +2077,11 @@
   Name: 玉造魅須丸
   Kana: たまつくりみすまる
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり魅須丸
-  - みすまる
+    - ゆっくり魅須丸
+    - みすまる
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1956,10 +2093,11 @@
   Name: 橙
   Kana: ちぇん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり橙
-  - ちぇん
+    - ゆっくり橙
+    - ちぇん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1971,12 +2109,13 @@
   Name: チルノ
   Kana: ちるの
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりチルノ
-  - ちるの
-  - ⑨
-  - バカ
+    - ゆっくりチルノ
+    - ちるの
+    - ⑨
+    - バカ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -1988,10 +2127,11 @@
   Name: 九十九弁々
   Kana: つくもべんべん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり弁々
-  - べんべん
+    - ゆっくり弁々
+    - べんべん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2003,10 +2143,11 @@
   Name: 九十九八橋
   Kana: つくもやつはし
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり八橋
-  - やつはし
+    - ゆっくり八橋
+    - やつはし
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2018,7 +2159,8 @@
   Name: 罪袋
   Kana: つみぶくろ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -2031,10 +2173,11 @@
   Name: 丁礼田舞
   Kana: ていれいだまい
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり舞
-  - まい
+    - ゆっくり舞
+    - まい
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2046,10 +2189,11 @@
   Name: 天弓千亦
   Kana: てんきゅうちまた
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり千亦
-  - ちまた
+    - ゆっくり千亦
+    - ちまた
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2061,10 +2205,11 @@
   Name: 饕餮尤魔
   Kana: とうてつゆうま
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり尤魔
-  - ゆうま
+    - ゆっくり尤魔
+    - ゆうま
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2076,10 +2221,11 @@
   Name: 朱鷺子
   Kana: ときこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり朱鷺子
-  - ときこ
+    - ゆっくり朱鷺子
+    - ときこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2091,10 +2237,11 @@
   Name: 豊聡耳神子
   Kana: とよさとみみのみこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり神子
-  - みこ
+    - ゆっくり神子
+    - みこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2106,10 +2253,11 @@
   Name: 寅丸星
   Kana: とらまるしょう
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり星
-  - しょう
+    - ゆっくり星
+    - しょう
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2121,10 +2269,11 @@
   Name: ドレミー・スイート
   Kana: どれみーすいーと
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりドレミー
-  - どれみー
+    - ゆっくりドレミー
+    - どれみー
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2136,10 +2285,11 @@
   Name: 永江衣玖
   Kana: ながえいく
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり衣玖
-  - いく
+    - ゆっくり衣玖
+    - いく
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2151,10 +2301,11 @@
   Name: ナズーリン
   Kana: なずーりん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりナズーリン
-  - なずーりん
+    - ゆっくりナズーリン
+    - なずーりん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2166,10 +2317,11 @@
   Name: 爾子田里乃
   Kana: にしださとの
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり里乃
-  - さとの
+    - ゆっくり里乃
+    - さとの
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2181,10 +2333,11 @@
   Name: 庭渡久侘歌
   Kana: にわたりくたか
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり久侘歌
-  - くたか
+    - ゆっくり久侘歌
+    - くたか
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2196,10 +2349,11 @@
   Name: 博麗霊夢
   Kana: はくれいれいむ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり霊夢
-  - れいむ
+    - ゆっくり霊夢
+    - れいむ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2211,10 +2365,11 @@
   Name: 秦こころ
   Kana: はたのこころ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりこころ
-  - こころ
+    - ゆっくりこころ
+    - こころ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2226,10 +2381,11 @@
   Name: パチュリー・ノーレッジ
   Kana: ぱちゅりーのーれっじ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりパチェリー
-  - ぱちぇりー
+    - ゆっくりパチェリー
+    - ぱちぇりー
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2241,10 +2397,11 @@
   Name: 埴安神袿姫
   Kana: はにやすしんけいき
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり袿姫
-  - けいき
+    - ゆっくり袿姫
+    - けいき
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2256,10 +2413,11 @@
   Name: 稗田阿求
   Kana: ひえだのあきゅう
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり阿求
-  - あきゅう
+    - ゆっくり阿求
+    - あきゅう
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2271,10 +2429,11 @@
   Name: 姫海棠はたて
   Kana: ひめかいどうはたて
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりはたて
-  - はたて
+    - ゆっくりはたて
+    - はたて
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2286,10 +2445,11 @@
   Name: 聖白蓮
   Kana: ひじりびゃくれん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり聖
-  - ひじり
+    - ゆっくり聖
+    - ひじり
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2301,10 +2461,11 @@
   Name: 比那名居天子
   Kana: ひなないてんし
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり天子
-  - てんこ
+    - ゆっくり天子
+    - てんこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2316,10 +2477,11 @@
   Name: 姫虫百々世
   Kana: ひめむしももよ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり百々世
-  - ももよ
+    - ゆっくり百々世
+    - ももよ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2331,10 +2493,11 @@
   Name: 藤原妹紅
   Kana: ふじわらのもこう
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり妹紅
-  - もこう
+    - ゆっくり妹紅
+    - もこう
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2346,10 +2509,11 @@
   Name: 二ツ岩マミゾウ
   Kana: ふたついわまみぞう
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりマミゾウ
-  - まみぞう
+    - ゆっくりマミゾウ
+    - まみぞう
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2361,10 +2525,11 @@
   Name: フランドール・スカーレット
   Kana: ふらんどーるすかーれっと
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりフラン
-  - ふらん
+    - ゆっくりフラン
+    - ふらん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2376,10 +2541,11 @@
   Name: ヘカーティア・ラピスラズリ
   Kana: へかーてぃあらぴすらずり
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりヘカーティア
-  - へかーてぃあ
+    - ゆっくりヘカーティア
+    - へかーてぃあ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2391,10 +2557,11 @@
   Name: 封獣ぬえ
   Kana: ほうじゅうぬえ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりぬえ
-  - ぬえ
+    - ゆっくりぬえ
+    - ぬえ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2406,10 +2573,11 @@
   Name: 蓬莱山輝夜
   Kana: ほうらいさんかぐや
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり輝夜
-  - かぐや
+    - ゆっくり輝夜
+    - かぐや
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2421,10 +2589,11 @@
   Name: 星熊勇儀
   Kana: ほしぐまゆうぎ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり勇儀
-  - ゆうぎ
+    - ゆっくり勇儀
+    - ゆうぎ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2436,10 +2605,11 @@
   Name: 堀川雷鼓
   Kana: ほりかわらいこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり雷鼓
-  - らいこ
+    - ゆっくり雷鼓
+    - らいこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2451,10 +2621,11 @@
   Name: 紅美鈴
   Kana: ほんめいりん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり美鈴
-  - めーりん
+    - ゆっくり美鈴
+    - めーりん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2466,10 +2637,11 @@
   Name: マエリベリー・ハーン
   Kana: まえりべりーはーん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりメリー
-  - めりー
+    - ゆっくりメリー
+    - めりー
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2481,10 +2653,11 @@
   Name: 摩多羅隠岐奈
   Kana: またらおきな
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり隠岐奈
-  - おきな
+    - ゆっくり隠岐奈
+    - おきな
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2496,11 +2669,12 @@
   Name: ミスティア・ローレライ
   Kana: みすてぃあろーれり
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりミスチー
-  - みすちー
-  - みすちー２
+    - ゆっくりミスチー
+    - みすちー
+    - みすちー２
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2512,10 +2686,11 @@
   Name: 水橋パルスィ
   Kana: みずはしぱるすぃ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりパルスィ
-  - ぱるすぃ
+    - ゆっくりパルスィ
+    - ぱるすぃ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2527,10 +2702,11 @@
   Name: 宮出口瑞霊
   Kana: みやでぐみずち
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり瑞霊
-  - みずち
+    - ゆっくり瑞霊
+    - みずち
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2542,10 +2718,11 @@
   Name: 宮古芳香
   Kana: みやこよしか
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり芳香
-  - よしか
+    - ゆっくり芳香
+    - よしか
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2557,10 +2734,11 @@
   Name: 村紗水蜜
   Kana: むらさみなみつ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり村紗
-  - むらさ
+    - ゆっくり村紗
+    - むらさ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2572,10 +2750,11 @@
   Name: メディスン・メランコリー
   Kana: めでぃすんめらんこりー
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりメディスン
-  - めでぃすん
+    - ゆっくりメディスン
+    - めでぃすん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2587,10 +2766,11 @@
   Name: メルラン・プリズムリバー
   Kana: めるらんぷりずむりばー
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりメルラン
-  - めるらん
+    - ゆっくりメルラン
+    - めるらん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2602,10 +2782,11 @@
   Name: 本居小鈴
   Kana: もとおりこすず
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり小鈴
-  - こすず
+    - ゆっくり小鈴
+    - こすず
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2617,10 +2798,11 @@
   Name: 物部布都
   Kana: もののべのふと
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり布都
-  - ふと
+    - ゆっくり布都
+    - ふと
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2632,10 +2814,11 @@
   Name: 森近霖之助
   Kana: もりちかりんのすけ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり香霖
-  - こーりん
+    - ゆっくり香霖
+    - こーりん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2647,10 +2830,11 @@
   Name: 洩矢諏訪子
   Kana: もりやすわこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり諏訪子
-  - すわこ
+    - ゆっくり諏訪子
+    - すわこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2662,10 +2846,11 @@
   Name: 八雲紫
   Kana: やくもゆかり
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり紫
-  - ゆかり
+    - ゆっくり紫
+    - ゆかり
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2677,10 +2862,11 @@
   Name: 八雲藍
   Kana: やくもらん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり藍
-  - らん
+    - ゆっくり藍
+    - らん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2692,10 +2878,11 @@
   Name: 八意永琳
   Kana: やごころえいりん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり永琳
-  - えーりん
+    - ゆっくり永琳
+    - えーりん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2707,10 +2894,11 @@
   Name: 八坂神奈子
   Kana: やさかかなこ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり神奈子
-  - かなこ
+    - ゆっくり神奈子
+    - かなこ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2722,10 +2910,11 @@
   Name: 矢田寺成美
   Kana: やたでらなるみ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり成美
-  - なるみ
+    - ゆっくり成美
+    - なるみ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2737,10 +2926,11 @@
   Name: 山城たかね
   Kana: やましろたかね
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりたかね
-  - たかね
+    - ゆっくりたかね
+    - たかね
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2752,10 +2942,11 @@
   Name: 依神紫苑
   Kana: よりがみしおん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり紫苑
-  - しおん
+    - ゆっくり紫苑
+    - しおん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2767,10 +2958,11 @@
   Name: 依神女苑
   Kana: よりがみじょおん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり女苑
-  - じょおん
+    - ゆっくり女苑
+    - じょおん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2782,10 +2974,11 @@
   Name: リグル・ナイトバグ
   Kana: りぐるないとばぐ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりリグル
-  - りぐる
+    - ゆっくりリグル
+    - りぐる
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2797,10 +2990,11 @@
   Name: リリーホワイト
   Kana: りりーほわいと
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりリリーホワイト
-  - りりーほわいと
+    - ゆっくりリリーホワイト
+    - りりーほわいと
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2812,10 +3006,11 @@
   Name: リリーブラック
   Kana: りりーぶらっく
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりリリーブラック
-  - りりーぶらっく
+    - ゆっくりリリーブラック
+    - りりーぶらっく
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2827,10 +3022,11 @@
   Name: リリカ・プリズムリバー
   Kana: りりかぷりずむりばー
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりリリカ
-  - りりか
+    - ゆっくりリリカ
+    - りりか
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2842,7 +3038,8 @@
   Name: 鈴瑚
   Kana: りんご
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -2855,10 +3052,11 @@
   Name: ルーミア
   Kana: るーみあ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりルーミア
-  - るーみあ
+    - ゆっくりルーミア
+    - るーみあ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2870,10 +3068,11 @@
   Name: ルナサ・プリズムリバー
   Kana: るなさぷりずむりばー
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりルナサ
-  - るなさ
+    - ゆっくりルナサ
+    - るなさ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2885,10 +3084,11 @@
   Name: ルナチャイルド
   Kana: るなちゃいるど
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりルナチャイルド
-  - るなちゃいるど
+    - ゆっくりルナチャイルド
+    - るなちゃいるど
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2900,10 +3100,11 @@
   Name: 霊烏路空
   Kana: れいうじうつほ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりお空
-  - おくう
+    - ゆっくりお空
+    - おくう
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2915,10 +3116,11 @@
   Name: レイセン
   Kana: れいせん
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりレイセン
-  - れいせん
+    - ゆっくりレイセン
+    - れいせん
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2930,10 +3132,11 @@
   Name: 鈴仙・優曇華院・イナバ
   Kana: れいせんうどんげいんいなば
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり優曇華
-  - うどんげ
+    - ゆっくり優曇華
+    - うどんげ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2945,10 +3148,11 @@
   Name: レティ・ホワイトロック
   Kana: れてぃほわいとろっく
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりレティ
-  - れてぃ
+    - ゆっくりレティ
+    - れてぃ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2960,10 +3164,11 @@
   Name: レミリア・スカーレット
   Kana: れみりあすかーれっと
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりレミリア
-  - れみりあ
+    - ゆっくりレミリア
+    - れみりあ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2975,10 +3180,11 @@
   Name: わかさぎ姫
   Kana: わかさぎひめ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくりわかさぎ姫
-  - わかさぎひめ
+    - ゆっくりわかさぎ姫
+    - わかさぎひめ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -2990,10 +3196,11 @@
   Name: 綿月豊姫
   Kana: わたつきのとよひめ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり豊姫
-  - とよひめ
+    - ゆっくり豊姫
+    - とよひめ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -3005,10 +3212,11 @@
   Name: 綿月依姫
   Kana: わたつきのよりひめ
   Engines:
-  - AQ
+    - AQ
+  PrimaryEngine: AQ
   AnotherNames:
-  - ゆっくり依姫
-  - よりひめ
+    - ゆっくり依姫
+    - よりひめ
   JimakuTextColor: White
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
@@ -3020,7 +3228,8 @@
   Name: ナレーター
   Kana: なれーたー
   Engines:
-  - OTHER
+    - OTHER
+  PrimaryEngine: OTHER
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -3033,7 +3242,8 @@
   Name: その他
   Kana: そのた
   Engines:
-  - OTHER
+    - OTHER
+  PrimaryEngine: OTHER
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -3046,7 +3256,8 @@
   Name: 生声
   Kana: なまごえ
   Engines:
-  - OTHER
+    - OTHER
+  PrimaryEngine: OTHER
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -3056,10 +3267,11 @@
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 209
-  Name: '[状況説明]'
+  Name: "[状況説明]"
   Kana: じょうきょうせつめい
   Engines:
-  - NONE
+    - NONE
+  PrimaryEngine: NONE
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -3069,10 +3281,11 @@
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 210
-  Name: '[なし]'
+  Name: "[なし]"
   Kana: なし
   Engines:
-  - NONE
+    - NONE
+  PrimaryEngine: NONE
   AnotherNames: []
   JimakuTextColor: White
   JimakuOutlineColor: Black
@@ -3081,4 +3294,411 @@
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
-
+- Id: 211
+  Name: 男声2
+  Kana: だんせい2
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: Blue
+  JimakuOutlineColor: AliceBlue
+  JimakuOutlineWidth: 10
+  ActorTextColor: Blue
+  ActorOutlineColor: AliceBlue
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 212
+  Name: 男声1
+  Kana: だんせい1
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: Blue
+  JimakuOutlineColor: AliceBlue
+  JimakuOutlineWidth: 10
+  ActorTextColor: Blue
+  ActorOutlineColor: AliceBlue
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 213
+  Name: 男声3
+  Kana: だんせい3
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: Blue
+  JimakuOutlineColor: AliceBlue
+  JimakuOutlineWidth: 10
+  ActorTextColor: Blue
+  ActorOutlineColor: AliceBlue
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 214
+  Name: 女声1
+  Kana: じょせい1
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: LightPink
+  JimakuOutlineColor: LightPink
+  JimakuOutlineWidth: 10
+  ActorTextColor: LightPink
+  ActorOutlineColor: LightPink
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 215
+  Name: 女声2
+  Kana: じょせい2
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: LightPink
+  JimakuOutlineColor: LightPink
+  JimakuOutlineWidth: 10
+  ActorTextColor: LightPink
+  ActorOutlineColor: LightPink
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 216
+  Name: 女声3
+  Kana: じょせい3
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: LightPink
+  JimakuOutlineColor: LightPink
+  JimakuOutlineWidth: 10
+  ActorTextColor: LightPink
+  ActorOutlineColor: LightPink
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 217
+  Name: 女声4
+  Kana: じょせい4
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: LightPink
+  JimakuOutlineColor: LightPink
+  JimakuOutlineWidth: 10
+  ActorTextColor: LightPink
+  ActorOutlineColor: LightPink
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 218
+  Name: 女声5
+  Kana: じょせい5
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: LightPink
+  JimakuOutlineColor: LightPink
+  JimakuOutlineWidth: 10
+  ActorTextColor: LightPink
+  ActorOutlineColor: LightPink
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 219
+  Name: 女声6
+  Kana: じょせい6
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: LightPink
+  JimakuOutlineColor: LightPink
+  JimakuOutlineWidth: 10
+  ActorTextColor: LightPink
+  ActorOutlineColor: LightPink
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 220
+  Name: 春歌ナナ
+  Kana: はるかなな
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: MistyRose
+  JimakuOutlineColor: LightYellow
+  JimakuOutlineWidth: 10
+  ActorTextColor: MistyRose
+  ActorOutlineColor: LightYellow
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 221
+  Name: 猫使アル
+  Kana: ねこつかある
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames:
+    - 猫使アル(ノーマル)
+    - 猫使アル(おちつき)
+    - 猫使アル(うきうき)
+  JimakuTextColor: Crimson
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: Crimson
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 222
+  Name: 猫使ビィ
+  Kana: ねこつかびぃ
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames:
+    - 猫使ビィ(ノーマル)
+    - 猫使ビィ(おちつき)
+    - 猫使ビィ(人見知り)
+  JimakuTextColor: DodgerBlue
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: DodgerBlue
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 223
+  Name: 中国うさぎ
+  Kana: ちゅうごくうさぎ
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames:
+    - 中国うさぎ(ノーマル)
+    - 中国うさぎ(おどろき)
+    - 中国うさぎ(こわがり)
+    - 中国うさぎ(へろへろ)
+  JimakuTextColor: White
+  JimakuOutlineColor: DarkRed
+  JimakuOutlineWidth: 10
+  ActorTextColor: White
+  ActorOutlineColor: DarkRed
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 224
+  Name: あいえるたん
+  Kana: あいえるたん
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: Orange
+  JimakuOutlineColor: Blue
+  JimakuOutlineWidth: 10
+  ActorTextColor: Orange
+  ActorOutlineColor: Blue
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 225
+  Name: 満別花丸
+  Kana: まんべつはなまる
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames:
+    - 満別花丸(ノーマル)
+    - 満別花丸(元気)
+    - 満別花丸(ささやき)
+    - 満別花丸(ぶりっ子)
+    - 満別花丸(ボーイ)
+  JimakuTextColor: LightGreen
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: LightGreen
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 226
+  Name: 琴詠ニア
+  Kana: ことよみにあ
+  Engines:
+    - VV
+  PrimaryEngine: VV
+  AnotherNames: []
+  JimakuTextColor: Orange
+  JimakuOutlineColor: Turquoise
+  JimakuOutlineWidth: 10
+  ActorTextColor: Orange
+  ActorOutlineColor: Turquoise
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 227
+  Name: 紅桜ショウガ
+  Kana: べにざくらしょうが
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames: []
+  JimakuTextColor: Red
+  JimakuOutlineColor: Red
+  JimakuOutlineWidth: 10
+  ActorTextColor: Red
+  ActorOutlineColor: Red
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 228
+  Name: GUMI
+  Kana: ぐみ
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames: []
+  JimakuTextColor: LawnGreen
+  JimakuOutlineColor: LawnGreen
+  JimakuOutlineWidth: 10
+  ActorTextColor: LawnGreen
+  ActorOutlineColor: LawnGreen
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 229
+  Name: 紡乃世詞音
+  Kana: つのせことね
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames:
+    - 紡乃世詞音(蕾)
+  JimakuTextColor: LemonChiffon
+  JimakuOutlineColor: White
+  JimakuOutlineWidth: 10
+  ActorTextColor: LemonChiffon
+  ActorOutlineColor: White
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 230
+  Name: ユニティちゃん
+  Kana: ゆにてぃちゃん
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames: []
+  JimakuTextColor: Goldenrod
+  JimakuOutlineColor: DarkBlue
+  JimakuOutlineWidth: 10
+  ActorTextColor: Goldenrod
+  ActorOutlineColor: DarkBlue
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 231
+  Name: KYO
+  Kana: きょう
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames: []
+  JimakuTextColor: Blue
+  JimakuOutlineColor: Orange
+  JimakuOutlineWidth: 10
+  ActorTextColor: Blue
+  ActorOutlineColor: Orange
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 232
+  Name: YUU
+  Kana: ゆう
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames: []
+  JimakuTextColor: HotPink
+  JimakuOutlineColor: LightSeaGreen
+  JimakuOutlineWidth: 10
+  ActorTextColor: HotPink
+  ActorOutlineColor: LightSeaGreen
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 233
+  Name: WIL
+  Kana: うぃる
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames: []
+  JimakuTextColor: MediumSeaGreen
+  JimakuOutlineColor: Black
+  JimakuOutlineWidth: 10
+  ActorTextColor: MediumSeaGreen
+  ActorOutlineColor: Black
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 234
+  Name: VY Nancy
+  Kana: ぶいわいなんしー
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames: []
+  JimakuTextColor: Black
+  JimakuOutlineColor: Gold
+  JimakuOutlineWidth: 10
+  ActorTextColor: Black
+  ActorOutlineColor: Gold
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 235
+  Name: VY T-01号
+  Kana: ぶいわいてぃーぜろいちごう
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames: []
+  JimakuTextColor: RebeccaPurple
+  JimakuOutlineColor: RebeccaPurple
+  JimakuOutlineWidth: 10
+  ActorTextColor: RebeccaPurple
+  ActorOutlineColor: RebeccaPurple
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 236
+  Name: VY T-02号
+  Kana: ぶいわいてぃーぜろにごう
+  Engines:
+    - AIV
+  PrimaryEngine: AIV
+  AnotherNames: []
+  JimakuTextColor: RebeccaPurple
+  JimakuOutlineColor: RebeccaPurple
+  JimakuOutlineWidth: 10
+  ActorTextColor: RebeccaPurple
+  ActorOutlineColor: RebeccaPurple
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 237
+  Name: 田中傘
+  Kana: たなかさん
+  Engines:
+    - VT
+  PrimaryEngine: VT
+  AnotherNames: []
+  JimakuTextColor: BlanchedAlmond
+  JimakuOutlineColor: BlanchedAlmond
+  JimakuOutlineWidth: 10
+  ActorTextColor: BlanchedAlmond
+  ActorOutlineColor: BlanchedAlmond
+  ActorOutlineWidth: 10
+  ExtData: {}
+- Id: 238
+  Name: フィーちゃん
+  Kana: ふぃーちゃん
+  Engines:
+    - CA
+  PrimaryEngine: CA
+  AnotherNames: []
+  JimakuTextColor: Pink
+  JimakuOutlineColor: PaleVioletRed
+  JimakuOutlineWidth: 10
+  ActorTextColor: Pink
+  ActorOutlineColor: PaleVioletRed
+  ActorOutlineWidth: 10
+  ExtData: {}
