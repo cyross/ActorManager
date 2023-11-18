@@ -16,7 +16,7 @@ namespace VHActorManager.WebService
         {
             string origin = GetOrigin(request);
 
-            response.AddHeader("Content-Type", ContentType.Json);
+            response.AddHeader("Content-Type", ContentType.Binary);
 
             // 現在Webページ版はVueCLIプロジェクトを使用して開発中であり
             // npm run serveで動作させるために一時的にCORSを無視するようにする
