@@ -19,42 +19,55 @@ a,
   transition: 0.4s;
 }
 
-header {
-  height: 5vh;
-}
-
-footer {
-  height: 5vh;
+div.app {
+  height: 100%;
+  width: 100%;
 }
 
 div#loading {
-  height: 90vh;
+  height: 85%;
 }
 
-div.main_view {
-  height: 90vh;
+div.header-view {
+  font-size: 1.5vmin;
+}
+
+div.footer-view {
+  position: absolute;
+  bottom: 0px;
+  font-size: 1.5vmin;
+}
+
+div.main-view {
+  position: relative;
+  height: 85%;
+  font-size: 1.5vmin;
+}
+
+div.name-list {
+  height: 70dvh;
 }
 
 div.full_height {
-  height: 90vh;
+  height: 85%;
 }
 
 div.half_height {
-  height: 45vh;
+  height: 40%;
 }
 
 div.mini_height {
-  height: 15vh;
+  height: 20%;
 }
 
-div.detail_box {
-  height: 90vh;
-  font-size: xx-large;
+div.detail-box {
+  height: 70dvh;
+  font-size: 1.5vmin;
 }
 
 div.detail_half_box {
-  height: 45vh;
-  font-size: xx-large;
+  height: 50%;
+  font-size: 1.5vmin;
 }
 
 button.full_fit {
@@ -68,17 +81,17 @@ button.color-button {
 }
 
 span.preview_color_box {
-  font-size: larger;
+  font-size: 1.5vmin;
 }
 
 span.detail_color_box {
   border: solid black 1px;
   background-color: white;
-  font-size: 128pt;
+  font-size: 10vmin;
 }
 
 div.menu_title {
   text-align: center;
-  font-size: xx-large;
+  font-size: 1.5vmin;
   font-weight: bold;
 }

@@ -1,73 +1,67 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
-import type { Ref } from "vue";
-import type { AxiosResponse } from "axios";
+import { ref, computed, onMounted } from 'vue'
+import type { Ref } from 'vue'
+import type { AxiosResponse } from 'axios'
 
-import { useVEStore } from "../stores/ve";
-import { useConfigStore } from "../stores/config";
-import { useErrorAlertStore, useNoticeAlertStore } from "../stores/alert";
+import { useVEStore } from '../stores/ve'
+import { useConfigStore } from '../stores/config'
+import { useErrorAlertStore, useNoticeAlertStore } from '../stores/alert'
 
-import { callApi, callPostApi, callPutApi, callDeleteApi } from "../utils/apiCall";
+import { callApi, callPostApi, callPutApi, callDeleteApi } from '../utils/apiCall'
 
-import AlertsComponent from "../components/AlertsComponent.vue";
-import ModalDialog from "../components/dialogs/ModalDialog.vue";
-import EmptyRow from "../components/rows/EmptyRow.vue";
-import Col4TitleColumn from "../components/cols/Col4TitleCol.vue";
-import EditAndDeleteRow from "../components/rows/EditAndDeleteRow.vue";
-import DetailRow from "../components/rows/DetailRow.vue";
-import DialogShowButtonCol from "../components/cols/DialogShowButtonCol.vue";
-import CancelButtonCol from "../components/cols/CancelButtonCol.vue";
-import NewButtonRow from "../components/rows/NewButtonRow.vue";
-import EditExtDataRow from "../components/rows/EditExtDataRow.vue";
-import ExtDataRow from "../components/rows/ExtDataRow.vue";
-import NameButtonList from "../components/NameButtonList.vue";
+import AlertsComponent from '../components/AlertsComponent.vue'
+import ModalDialog from '../components/dialogs/ModalDialog.vue'
+import Col2TitleColumn from '../components/cols/Col2TitleCol.vue'
+import EditAndDeleteRow from '../components/rows/EditAndDeleteRow.vue'
+import DetailRow from '../components/rows/DetailRow.vue'
+import DialogShowButtonCol from '../components/cols/DialogShowButtonCol.vue'
+import CancelButtonCol from '../components/cols/CancelButtonCol.vue'
+import NewButtonRow from '../components/rows/NewButtonRow.vue'
+import EditExtDataRow from '../components/rows/EditExtDataRow.vue'
+import ExtDataRow from '../components/rows/ExtDataRow.vue'
+import NameButtonList from '../components/NameButtonList.vue'
 
-const errorAlertStore = useErrorAlertStore();
-const noticeAlertStore = useNoticeAlertStore();
-const veStore = useVEStore();
-const configStore = useConfigStore();
+const errorAlertStore = useErrorAlertStore()
+const noticeAlertStore = useNoticeAlertStore()
+const veStore = useVEStore()
+const configStore = useConfigStore()
 
-const loaded: Ref<Boolean> = ref(false);
+const loaded: Ref<Boolean> = ref(false)
 
 const showVEDetail = (index: number) => {
-  errorAlertStore.clear();
-  noticeAlertStore.clear();
+  errorAlertStore.clear()
+  noticeAlertStore.clear()
 
-  const getDetailApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/${index}/`;
+  const getDetailApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/${index}/`
 
-  callApi(
-    getDetailApi,
-    null,
-    "音声合成エンジン詳細取得エラー",
-    (response: AxiosResponse) => {
-      veStore.setDetail(index, response.data.Spec);
-    }
-  )
-};
+  callApi(getDetailApi, null, '音声合成エンジン詳細取得エラー', (response: AxiosResponse) => {
+    veStore.setDetail(index, response.data.Spec)
+  })
+}
 
 const resetVEView = () => {
-  veStore.editDisable();
-  veStore.resetDetail();
-};
+  veStore.editDisable()
+  veStore.resetDetail()
+}
 
 const newEdit = () => {
-  veStore.newEdit();
-};
+  veStore.newEdit()
+}
 
 const addExt = (key: string, value: string) => {
-  veStore.addExtData(key, value);
+  veStore.addExtData(key, value)
 }
 
 const removeExt = (key: string) => {
-  veStore.removeExtData(key);
-};
+  veStore.removeExtData(key)
+}
 
 const addVEOK = () => {
-  veStore.applyDetailFromEdit(veStore.edit);
+  veStore.applyDetailFromEdit(veStore.edit)
 
-  const title = veStore.titleByEdit;
+  const title = veStore.titleByEdit
 
-  const putApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/`;
+  const putApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/`
 
   callPutApi(
     putApi,
@@ -75,26 +69,26 @@ const addVEOK = () => {
     `${title}の追加に成功しました`,
     `${title}の追加エラー`,
     (response: AxiosResponse) => {
-      console.log(`returns ${response.status}`);
+      console.log(`returns ${response.status}`)
 
       veStore.appendName({
         Id: response.data.NewId,
-        Name: veStore.detail.Body.Name,
-      });
+        Name: veStore.detail.Body.Name
+      })
 
-      resetVEView();
+      resetVEView()
     }
   )
-};
+}
 
 const updateVEOK = () => {
-  veStore.applyDetailFromEdit(veStore.edit);
+  veStore.applyDetailFromEdit(veStore.edit)
 
-  const id = veStore.detail.Body.Id;
-  const name = veStore.detail.Body.Name;
-  const title = veStore.titleByEdit;
+  const id = veStore.detail.Body.Id
+  const name = veStore.detail.Body.Name
+  const title = veStore.titleByEdit
 
-  const postApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/${id}`;
+  const postApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/${id}`
 
   callPostApi(
     postApi,
@@ -102,175 +96,187 @@ const updateVEOK = () => {
     `${title}の更新に成功しました`,
     `${title}の更新エラー`,
     (response: AxiosResponse) => {
-      console.log(`returns ${response.status}`);
+      console.log(`returns ${response.status}`)
 
-      veStore.updateNameById(id, { Id: id, Name: name });
+      veStore.updateNameById(id, { Id: id, Name: name })
 
-      resetVEView();
+      resetVEView()
     }
   )
-};
+}
 
 const deleteVEOK = () => {
-  const id = veStore.detail.Body.Id;
-  const title = veStore.titleByEdit;
+  const id = veStore.detail.Body.Id
+  const title = veStore.titleByEdit
 
-  const deleteApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/${id}`;
+  const deleteApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/${id}`
 
   callDeleteApi(
     deleteApi,
     `${title}の削除に成功しました`,
     `${title}の削除エラー`,
     (response: AxiosResponse) => {
-      console.log(`returns ${response.status}`);
+      console.log(`returns ${response.status}`)
 
-      veStore.deleteNameById(id);
+      veStore.deleteNameById(id)
 
-      resetVEView();
+      resetVEView()
     }
   )
-};
+}
 
 const showEditVE = () => {
-  veStore.applyEditFromDetail();
-  veStore.editEnable();
-};
+  veStore.applyEditFromDetail()
+  veStore.editEnable()
+}
 
 const hideEditVE = () => {
-  veStore.editDisable();
-};
+  veStore.editDisable()
+}
 
 const isShowEdit = computed(() => {
-  return veStore.visibleEdit;
-});
+  return veStore.visibleEdit
+})
 
 const isShowDetail = computed(() => {
-  return veStore.visibleDetail;
-});
+  return veStore.visibleDetail
+})
 
 const isShowVEAddButton = computed(() => {
-  return veStore.isAdd;
-});
+  return veStore.isAdd
+})
 
 const isShowVEUpdateButton = computed(() => {
-  return veStore.isUpdate;
-});
+  return veStore.isUpdate
+})
 
 const addNotice = computed(() => {
-  return `${veStore.titleByEdit} を追加します。よろしいですか？`;
-});
+  return `${veStore.titleByEdit} を追加します。よろしいですか？`
+})
 
 const updateNotice = computed(() => {
-  return `${veStore.titleByDetailAndEdit} を更新します。よろしいですか？`;
-});
+  return `${veStore.titleByDetailAndEdit} を更新します。よろしいですか？`
+})
 
 const deleteNotice = computed(() => {
-  return `${veStore.titleByDetail} を削除します。よろしいですか？`;
-});
+  return `${veStore.titleByDetail} を削除します。よろしいですか？`
+})
 
 const encodeList = computed((): Array<string> => {
-  return veStore.encodes;
-});
+  return veStore.encodes
+})
 
 const sepList = computed((): Array<string> => {
-  return veStore.separators;
-});
+  return veStore.separators
+})
 
 onMounted(() => {
-  loaded.value = false;
+  loaded.value = false
 
-  const getNamesApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/Index/`;
+  const getNamesApi = `${configStore.apiBaseURL}/api/v1/VoiceEngineSpec/Index/`
 
-  callApi(
-    getNamesApi,
-    null,
-    "音声合成エンジン詳細取得エラー",
-    (response: AxiosResponse) => {
-      veStore.setNames(response.data.Names);
+  callApi(getNamesApi, null, '音声合成エンジン詳細取得エラー', (response: AxiosResponse) => {
+    veStore.setNames(response.data.Names)
 
-      loaded.value = true;
-    }
-  )
-});
+    loaded.value = true
+  })
+})
 </script>
 
 <template>
-  <div class="container main-view">
+  <div class="container main-view overflow-auto">
     <AlertsComponent />
     <div v-if="!loaded" id="loading" class="d-flex align-items-center">
       <div class="spinner" variant="primary"></div>
     </div>
     <div v-else class="container">
       <NewButtonRow v-if="!veStore.visibleEdit" :showFunc="newEdit" />
-      <EmptyRow v-if="!veStore.visibleEdit" />
       <div v-if="veStore.visibleEdit" class="row">
         <div class="container">
-          <div class="row">
-            <Col4TitleColumn title="名前" />
+          <div class="row py-1">
+            <Col2TitleColumn title="名前" />
             <div class="col">
               <div class="col">
-                <input v-model="veStore.edit.Name" class="form-control" placeholder="名前" />
+                <input v-model="veStore.edit.Name" class="form-control-sm" placeholder="名前" />
               </div>
             </div>
           </div>
-          <EmptyRow />
-          <div class="row">
-            <Col4TitleColumn title="正式名称" />
+          <div class="row py-1">
+            <Col2TitleColumn title="正式名称" />
             <div class="col">
-              <input v-model="veStore.edit.RealName" class="form-control" placeholder="正式名称" />
+              <input
+                v-model="veStore.edit.RealName"
+                class="form-control-sm"
+                placeholder="正式名称"
+              />
             </div>
           </div>
-          <EmptyRow />
-          <div class="row">
-            <Col4TitleColumn title="区切り文字" />
+          <div class="row py-1">
+            <Col2TitleColumn title="区切り文字" />
             <div class="col">
-              <select v-model="veStore.edit.Separator" class="form-select">
+              <select v-model="veStore.edit.Separator" class="form-select-sm">
                 <option v-for="(sep, index) in sepList" v-bind:key="index" :value="sep">
                   {{ sep }}
                 </option>
               </select>
             </div>
           </div>
-          <EmptyRow />
-          <div class="row">
-            <Col4TitleColumn title="エンコーディング" />
+          <div class="row py-1">
+            <Col2TitleColumn title="エンコーディング" />
             <div class="col">
-              <select v-model="veStore.edit.Encoding" class="form-select">
+              <select v-model="veStore.edit.Encoding" class="form-select-sm">
                 <option v-for="(encode, index) in encodeList" v-bind:key="index" :value="encode">
                   {{ encode }}
                 </option>
               </select>
             </div>
           </div>
-          <EmptyRow />
           <EditExtDataRow :ext="veStore.edit.ExtData" :addFunc="addExt" :removeFunc="removeExt" />
-          <EmptyRow />
-          <div class="row">
-            <DialogShowButtonCol v-if="isShowVEAddButton" id="confirm-add-ve" title="登録" variant="danger" />
-            <DialogShowButtonCol v-if="isShowVEUpdateButton" id="confirm-update-ve" title="追加" variant="warning" />
-            <DialogShowButtonCol v-if="isShowVEUpdateButton" id="confirm-update-ve" title="更新" variant="danger" />
+          <div class="row py-1">
+            <DialogShowButtonCol
+              v-if="isShowVEAddButton"
+              id="confirm-add-ve"
+              title="登録"
+              variant="danger"
+            />
+            <DialogShowButtonCol
+              v-if="isShowVEUpdateButton"
+              id="confirm-update-ve"
+              title="追加"
+              variant="warning"
+            />
+            <DialogShowButtonCol
+              v-if="isShowVEUpdateButton"
+              id="confirm-update-ve"
+              title="更新"
+              variant="danger"
+            />
             <CancelButtonCol :cancelFunc="hideEditVE" />
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row py-1">
         <div v-if="!isShowEdit" class="row">
-          <div class="col-4 full_height">
+          <div class="col-auto">
             <NameButtonList :names="veStore.names" :showFunc="showVEDetail" />
           </div>
           <div class="col">
-            <div class="container">
-              <div class="row half_height">
-                <div v-if="!isShowDetail" class="d-flex detail_box">
-                  <p>選択がされていません</p>
-                </div>
-                <div v-else class="d-flex detail_box">
-                  <div class="container">
+            <div class="row detail-box">
+              <div v-if="!isShowDetail" class="col">
+                <p>音声合成エンジンを選択してください</p>
+              </div>
+              <div v-else class="col">
+                <div class="row">
+                  <div class="col">
                     <DetailRow title="名前" :value="veStore.detail.Body.Name" />
                     <DetailRow title="正式名称" :value="veStore.detail.Body.RealName" />
                     <DetailRow title="区切り文字" :value="veStore.detail.Body.Separator" />
                     <DetailRow title="文字コード" :value="veStore.detail.Body.Encoding" />
                     <ExtDataRow :ext="veStore.detail.Body.ExtData" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
                     <EditAndDeleteRow :editFunc="showEditVE" deleteModalId="confirm-delete-ve" />
                   </div>
                 </div>

@@ -13,8 +13,7 @@ import { callApi, callPostApi, callPutApi, callDeleteApi } from '../utils/apiCal
 
 import AlertsComponent from '../components/AlertsComponent.vue'
 import ModalDialog from '../components/dialogs/ModalDialog.vue'
-import EmptyRow from '../components/rows/EmptyRow.vue'
-import Col4TitleColumn from '../components/cols/Col4TitleCol.vue'
+import Col2TitleColumn from '../components/cols/Col2TitleCol.vue'
 import EditAndDeleteRow from '../components/rows/EditAndDeleteRow.vue'
 import DetailRow from '../components/rows/DetailRow.vue'
 import ListDetailRow from '../components/rows/ListDetailRow.vue'
@@ -170,6 +169,9 @@ const deleteNotice = computed(() => {
   return `${actorStore.titleByDetail} を削除します。よろしいですか？`
 })
 
+const veSelectId = (index: number) => `ve_${index}`
+const pveCheckId = (index: number) => `pve_${index}`
+
 const UpdateColorNameJT = (target: HTMLSelectElement) => {
   console.log(`[JT:colorName]${target.value}`)
   actorStore.selectChangedColor(actorStore.edit.JimakuAttr.TextColor, target.value)
@@ -271,59 +273,79 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container main-view">
+  <div class="container main-view overflow-auto">
     <AlertsComponent />
     <div v-if="!loaded" id="loading" class="d-flex align-items-center">
       <div class="spinner" variant="primary"></div>
     </div>
     <div v-else class="container">
       <NewButtonRow v-if="!actorStore.visibleEdit" :showFunc="newEdit" />
-      <EmptyRow v-if="!actorStore.visibleEdit" />
-      <div v-if="actorStore.visibleEdit" class="row">
+      <div v-if="actorStore.visibleEdit" class="row py-1">
         <div class="container">
           <div class="row">
-            <Col4TitleColumn title="名前" />
+            <Col2TitleColumn title="名前" />
             <div class="col">
               <div class="col">
-                <input v-model="actorStore.edit.Name" class="form-control" placeholder="名前" />
+                <input v-model="actorStore.edit.Name" class="form-control-sm" placeholder="名前" />
               </div>
             </div>
           </div>
-          <EmptyRow />
-          <div class="row">
-            <Col4TitleColumn title="かな" />
+          <div class="row py-1">
+            <Col2TitleColumn title="かな" />
             <div class="col">
               <div class="col">
-                <input v-model="actorStore.edit.Kana" class="form-control" placeholder="かな" />
+                <input v-model="actorStore.edit.Kana" class="form-control-sm" placeholder="かな" />
               </div>
             </div>
           </div>
-          <EmptyRow />
-          <div class="row">
-            <Col4TitleColumn title="対応音声合成エンジン" />
+          <div class="row py-1">
+            <Col2TitleColumn title="対応音声合成エンジン" />
             <div class="col">
-              <div
-                v-for="(veName, index) in veStore.options"
-                v-bind:key="index"
-                class="input-group"
-              >
-                <input
-                  :id="'ve_' + index"
-                  type="checkbox"
-                  :value="veName"
-                  v-model="actorStore.edit.Engines"
-                />
-                &nbsp;{{ veName }}
+              <div class="row">
+                <div v-for="(veName, index) in veStore.options" v-bind:key="index" class="col-auto">
+                  <div class="input-group">
+                    <input
+                      :id="veSelectId(index)"
+                      type="checkbox"
+                      class="form-check-input"
+                      :value="veName"
+                      v-model="actorStore.edit.Engines"
+                    />
+                    <label class="form-check-label" :for="veSelectId(index)"
+                      >&nbsp;{{ veName }}</label
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <EmptyRow />
-          <div class="row">
-            <Col4TitleColumn title="別名" />
+          <div class="row py-1">
+            <Col2TitleColumn title="優先音声合成エンジン" />
+            <div class="col">
+              <div class="row">
+                <div v-for="(veName, index) in veStore.options" v-bind:key="index" class="col-auto">
+                  <div class="input-group">
+                    <input
+                      :id="pveCheckId(index)"
+                      type="radio"
+                      class="form-check-input"
+                      :value="veName"
+                      v-model="actorStore.edit.PrimaryEngine"
+                    />
+                    <label class="form-check-label" :for="pveCheckId(index)"
+                      >&nbsp;{{ veName }}</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row py-1">
+            <Col2TitleColumn title="別名" />
             <div class="col">
               <textarea
                 v-model="actorStore.edit.AliasText"
-                class="form-control"
+                class="form-control-sm"
                 id="actorEditAliases"
               ></textarea>
               <ul>
@@ -334,7 +356,6 @@ onMounted(() => {
               </ul>
             </div>
           </div>
-          <EmptyRow />
           <InputColorRow
             title="字幕文字色"
             :modelValue="actorStore.edit.JimakuAttr.TextColor"
@@ -343,7 +364,6 @@ onMounted(() => {
             :updateRgbFunc="UpdateColorRgbJT"
             :changeCheckFunc="changeColorTypeJT"
           />
-          <EmptyRow />
           <InputColorRow
             title="字幕枠色"
             :modelValue="actorStore.edit.JimakuAttr.OutlineColor"
@@ -352,22 +372,18 @@ onMounted(() => {
             :updateRgbFunc="UpdateColorRgbJO"
             :changeCheckFunc="changeColorTypeJO"
           />
-          <EmptyRow />
-          <div class="row">
-            <Col4TitleColumn title="字幕枠幅" />
+          <div class="row py-1">
+            <Col2TitleColumn title="字幕枠幅" />
             <div class="col">
-              <div class="col">
-                <input
-                  v-model="actorStore.edit.JimakuAttr.OutlineWidth"
-                  type="number"
-                  class="form-control"
-                  placeholder="字幕枠幅"
-                />
-              </div>
+              <input
+                v-model="actorStore.edit.JimakuAttr.OutlineWidth"
+                type="number"
+                class="form-control-sm"
+                placeholder="字幕枠幅"
+              />
             </div>
           </div>
-          <EmptyRow />
-          <div class="row">
+          <div class="row py-1">
             <div class="col-4">&nbsp;</div>
             <div class="col-1">
               <button
@@ -400,7 +416,6 @@ onMounted(() => {
             </div>
             <div class="col">&nbsp;</div>
           </div>
-          <EmptyRow />
           <InputColorRow
             title="声優名文字色"
             :modelValue="actorStore.edit.ActorNameAttr.TextColor"
@@ -409,7 +424,6 @@ onMounted(() => {
             :updateRgbFunc="UpdateColorRgbAT"
             :changeCheckFunc="changeColorTypeAT"
           />
-          <EmptyRow />
           <InputColorRow
             title="声優名枠色"
             :modelValue="actorStore.edit.ActorNameAttr.OutlineColor"
@@ -418,28 +432,23 @@ onMounted(() => {
             :updateRgbFunc="UpdateColorRgbAO"
             :changeCheckFunc="changeColorTypeAO"
           />
-          <EmptyRow />
-          <div class="row">
-            <Col4TitleColumn title="声優名枠幅" />
+          <div class="row py-1">
+            <Col2TitleColumn title="声優名枠幅" />
             <div class="col">
-              <div class="col">
-                <input
-                  v-model="actorStore.edit.ActorNameAttr.OutlineWidth"
-                  type="number"
-                  class="form-control"
-                  placeholder="声優名枠幅"
-                />
-              </div>
+              <input
+                v-model="actorStore.edit.ActorNameAttr.OutlineWidth"
+                type="number"
+                class="form-control-sm"
+                placeholder="声優名枠幅"
+              />
             </div>
           </div>
-          <EmptyRow />
           <EditExtDataRow
             :ext="actorStore.edit.ExtData"
             :addFunc="addExt"
             :removeFunc="removeExt"
           />
-          <EmptyRow />
-          <div class="row">
+          <div class="row py-1">
             <DialogShowButtonCol
               v-if="isShowActorAddButton"
               id="confirm-add-actor"
@@ -462,24 +471,28 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div v-else class="row">
+      <div v-else class="row py-1">
         <div v-if="!isShowEdit" class="row">
-          <div class="col-4 full_height">
+          <div class="col-auto">
             <NameButtonList :names="actorStore.names" :showFunc="showActorDetail" />
           </div>
           <div class="col">
-            <div class="container">
-              <div class="row half_height">
-                <div v-if="!isShowDetail" class="d-flex detail_box">
-                  <p>選択がされていません</p>
-                </div>
-                <div v-else class="d-flex detail_box">
-                  <div class="container">
+            <div class="row detail-box">
+              <div v-if="!isShowDetail" class="col">
+                <p>声優を選択してください</p>
+              </div>
+              <div v-else class="col">
+                <div class="row">
+                  <div class="col">
                     <DetailRow title="名前" :value="actorStore.detail.Body.Name" />
                     <DetailRow title="かな" :value="actorStore.detail.Body.Kana" />
                     <ListDetailRow
                       title="対応音声合成エンジン"
                       :list="actorStore.detail.Body.Engines"
+                    />
+                    <DetailRow
+                      title="優先音声合成エンジン"
+                      :value="actorStore.detail.Body.PrimaryEngine"
                     />
                     <ListDetailRow title="別名" :list="actorStore.detail.Body.AnotherNames" />
                     <ColorAttrRow
@@ -507,6 +520,10 @@ onMounted(() => {
                       :value="actorStore.detail.Body.ActorOutlineWidth.toString()"
                     />
                     <ExtDataRow :ext="actorStore.detail.Body.ExtData" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
                     <EditAndDeleteRow
                       :editFunc="showEditActor"
                       deleteModalId="confirm-delete-actor"

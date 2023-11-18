@@ -166,10 +166,10 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: "#ff8080"
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: "#ff8080"
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -289,10 +289,10 @@
     - VV
   PrimaryEngine: AIV
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: "#762E05"
   JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: "#762E05"
   ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
@@ -321,11 +321,11 @@
     - VV
   PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: Gray
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: Gray
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 22
@@ -337,11 +337,11 @@
   AnotherNames:
     - 後鬼(人間ver.)
     - 後鬼(ぬいぐるみver.)
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: RoyalBlue
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: RoyalBlue
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 23
@@ -356,10 +356,10 @@
     - 琴葉 葵(蕾)[AIV]
     - Aoi[AIV]
     - 葵[AIV]
-  JimakuTextColor: White
+  JimakuTextColor: LightBlue
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: LightBlue
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -369,16 +369,16 @@
   Engines:
     - VR
     - AIV
-  PrimaryEngine: VR
+  PrimaryEngine: ""
   AnotherNames:
     - 琴葉 茜(v1)[VR]
     - 琴葉 茜(蕾)[AIV]
     - Akane[AIV]
     - 茜[AIV]
-  JimakuTextColor: White
+  JimakuTextColor: "#ffc0c0"
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: "#ffc0c0"
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -389,10 +389,10 @@
     - CA
   PrimaryEngine: CA
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: Silver
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: Silver
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -418,11 +418,11 @@
     - CC
   PrimaryEngine: CA
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: Coral
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: Coral
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 28
@@ -432,11 +432,11 @@
     - VV
   PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: DimGray
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: DimGray
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 29
@@ -494,11 +494,11 @@
     - 四国めたん(セクシー)
     - 四国めたん(ささやき)
     - 四国めたん(ヒソヒソ)
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: DeepPink
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: DeepPink
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 33
@@ -508,11 +508,11 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: SpringGreen
+  JimakuOutlineColor: DarkGoldenrod
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: SpringGreen
+  ActorOutlineColor: DarkGoldenrod
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 34
@@ -522,10 +522,10 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: "#ffc0c0"
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: "#ffc0c0"
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -536,10 +536,10 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: "#ffc0c0"
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: "#ffc0c0"
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -550,10 +550,10 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: "#ffc0c0"
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: "#ffc0c0"
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -564,10 +564,10 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: "#ffc0c0"
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: "#ffc0c0"
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -583,10 +583,10 @@
     - 白上虎太郎(びくびく)
     - 白上虎太郎(おこ)
     - 白上虎太郎(ぴえーん)
-  JimakuTextColor: White
+  JimakuTextColor: LightGreen
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: LightGreen
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -619,10 +619,10 @@
     - ずんだもん(ヒソヒソ)[VV]
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: PaleGreen
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: PaleGreen
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -690,11 +690,11 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: RoyalBlue
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: RoyalBlue
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 46
@@ -704,11 +704,11 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: RoyalBlue
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: RoyalBlue
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 47
@@ -718,11 +718,11 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: RoyalBlue
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: RoyalBlue
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 48
@@ -732,11 +732,11 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: RoyalBlue
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: RoyalBlue
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 49
@@ -746,10 +746,10 @@
     - VV
   PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: LightCyan
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: LightCyan
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -852,10 +852,10 @@
   PrimaryEngine: VP
   AnotherNames:
     - 東北ずん子(v1)[VR]
-  JimakuTextColor: White
+  JimakuTextColor: PaleGreen
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: PaleGreen
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -870,10 +870,10 @@
     - ナースロボ＿タイプＴ(楽々)
     - ナースロボ＿タイプＴ(恐怖)
     - ナースロボ＿タイプＴ(内緒話)
-  JimakuTextColor: White
+  JimakuTextColor: LemonChiffon
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: LemonChiffon
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -898,11 +898,11 @@
     - VV
   PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: IndianRed
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: IndianRed
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 60
@@ -915,11 +915,11 @@
     - No.7(ノーマル)
     - No.7(アナウンス)
     - No.7(読み聞かせ)
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: DarkBlue
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: DarkBlue
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 61
@@ -971,10 +971,10 @@
     - VP
   PrimaryEngine: VP
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: Turquoise
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: Turquoise
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -985,11 +985,11 @@
     - VV
   PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: Red
+  JimakuOutlineColor: Red
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: Red
+  ActorOutlineColor: Red
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 66
@@ -1003,10 +1003,10 @@
     - WhiteCUL(たのしい)
     - WhiteCUL(かなしい)
     - WhiteCUL(ぴえーん)
-  JimakuTextColor: White
+  JimakuTextColor: LightSkyBlue
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: LightSkyBlue
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -1032,11 +1032,11 @@
     - VV
   PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: BlueViolet
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: BlueViolet
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 69
@@ -1077,11 +1077,11 @@
   AnotherNames:
     - 結月ゆかり(雫)[AIV]
     - 結月ゆかり(v1)[VR]
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: Orchid
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: Orchid
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 72
@@ -1119,10 +1119,10 @@
     - CA
   PrimaryEngine: CA
   AnotherNames: []
-  JimakuTextColor: White
+  JimakuTextColor: "#FFE0C0"
   JimakuOutlineColor: Black
   JimakuOutlineWidth: 10
-  ActorTextColor: White
+  ActorTextColor: "#FFE0C0"
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
@@ -1133,11 +1133,11 @@
     - VV
   PrimaryEngine: VV
   AnotherNames: []
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: DimGray
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: DimGray
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 76
@@ -1600,11 +1600,11 @@
   AnotherNames:
     - ゆっくり魔理沙
     - まりさ
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: Black
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: Black
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 105
@@ -2354,11 +2354,11 @@
   AnotherNames:
     - ゆっくり霊夢
     - れいむ
-  JimakuTextColor: White
-  JimakuOutlineColor: Black
+  JimakuTextColor: Red
+  JimakuOutlineColor: White
   JimakuOutlineWidth: 10
-  ActorTextColor: White
-  ActorOutlineColor: Black
+  ActorTextColor: Red
+  ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 152
@@ -3548,20 +3548,6 @@
   ActorOutlineWidth: 10
   ExtData: {}
 - Id: 228
-  Name: GUMI
-  Kana: ぐみ
-  Engines:
-    - AIV
-  PrimaryEngine: AIV
-  AnotherNames: []
-  JimakuTextColor: LawnGreen
-  JimakuOutlineColor: LawnGreen
-  JimakuOutlineWidth: 10
-  ActorTextColor: LawnGreen
-  ActorOutlineColor: LawnGreen
-  ActorOutlineWidth: 10
-  ExtData: {}
-- Id: 229
   Name: 紡乃世詞音
   Kana: つのせことね
   Engines:
@@ -3576,7 +3562,7 @@
   ActorOutlineColor: White
   ActorOutlineWidth: 10
   ExtData: {}
-- Id: 230
+- Id: 229
   Name: ユニティちゃん
   Kana: ゆにてぃちゃん
   Engines:
@@ -3590,7 +3576,7 @@
   ActorOutlineColor: DarkBlue
   ActorOutlineWidth: 10
   ExtData: {}
-- Id: 231
+- Id: 230
   Name: KYO
   Kana: きょう
   Engines:
@@ -3604,7 +3590,7 @@
   ActorOutlineColor: Orange
   ActorOutlineWidth: 10
   ExtData: {}
-- Id: 232
+- Id: 231
   Name: YUU
   Kana: ゆう
   Engines:
@@ -3618,7 +3604,7 @@
   ActorOutlineColor: LightSeaGreen
   ActorOutlineWidth: 10
   ExtData: {}
-- Id: 233
+- Id: 232
   Name: WIL
   Kana: うぃる
   Engines:
@@ -3632,7 +3618,7 @@
   ActorOutlineColor: Black
   ActorOutlineWidth: 10
   ExtData: {}
-- Id: 234
+- Id: 233
   Name: VY Nancy
   Kana: ぶいわいなんしー
   Engines:
@@ -3646,7 +3632,7 @@
   ActorOutlineColor: Gold
   ActorOutlineWidth: 10
   ExtData: {}
-- Id: 235
+- Id: 234
   Name: VY T-01号
   Kana: ぶいわいてぃーぜろいちごう
   Engines:
@@ -3660,7 +3646,7 @@
   ActorOutlineColor: RebeccaPurple
   ActorOutlineWidth: 10
   ExtData: {}
-- Id: 236
+- Id: 235
   Name: VY T-02号
   Kana: ぶいわいてぃーぜろにごう
   Engines:
@@ -3674,7 +3660,7 @@
   ActorOutlineColor: RebeccaPurple
   ActorOutlineWidth: 10
   ExtData: {}
-- Id: 237
+- Id: 236
   Name: 田中傘
   Kana: たなかさん
   Engines:
@@ -3688,7 +3674,7 @@
   ActorOutlineColor: BlanchedAlmond
   ActorOutlineWidth: 10
   ExtData: {}
-- Id: 238
+- Id: 237
   Name: フィーちゃん
   Kana: ふぃーちゃん
   Engines:

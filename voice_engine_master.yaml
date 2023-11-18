@@ -56,8 +56,8 @@ Specs:
 - Id: 9
   Name: VT
   RealName: Voisona Talk
-  Separator: utf-8
-  Encoding: ','
+  Separator: ','
+  Encoding: utf-8
   ExtData: {}
 SanitizeRegexp:
   VR:
