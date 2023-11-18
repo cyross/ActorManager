@@ -13,6 +13,7 @@ namespace VHActorManager.Master
         private const string SPEC_NAME = "Name";
         private const string SPEC_KANA = "Kana";
         private const string SPEC_ENGINES = "Engines";
+        private const string SPEC_PRIMARY_ENGINE = "PrimaryEngine";
         private const string SPEC_ANOTHER_NAMES = "AnotherNames";
         private const string SPEC_JIMAKU_TEXT_COLOR = "JimakuTextColor";
         private const string SPEC_JIMAKU_OUTLINE_COLOR = "JimakuOutlineColor";
@@ -203,6 +204,9 @@ namespace VHActorManager.Master
                     break;
                 case SPEC_KANA:
                     currentSpec.Kana = GetString(node);
+                    break;
+                case SPEC_PRIMARY_ENGINE:
+                    currentSpec.PrimaryEngine = GetString(node);
                     break;
                 case SPEC_JIMAKU_TEXT_COLOR:
                     currentSpec.JimakuTextColor = GetString(node);
