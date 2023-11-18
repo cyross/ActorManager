@@ -24,7 +24,7 @@ namespace VHActorManager.Specs
                 string r = color.Substring(1, 2);
                 string g = color.Substring(3, 2);
                 string b = color.Substring(5, 2);
-                ColorSpecs[name] = string.Format("{0},{1},{2}", r, g, b);
+                ColorSpecs[name] = string.Format("{0},{1},{2}", Convert.ToInt32(r, 16), Convert.ToInt32(g, 16), Convert.ToInt32(b, 16));
             }
             else
             {
